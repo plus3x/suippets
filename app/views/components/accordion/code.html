@@ -1,0 +1,96 @@
+<p> Code </p>
+
+<div class="wrap-code">
+  <p> Javascript ES5 / jQuery</p>
+  <pre class="class-name: 'code'; brush: js;">
+    function accordion() {
+      var accordionElement = $( "[accordion]" ).not( "pre [accordion]" );
+      var activeTitleClass = "accordion-title-active";
+
+      accordionElement.each(function( index, element ) {
+        var accordionContent = $( element ).find( "[accordion-content]" ).first().hide();
+        var accordionTitle = $( element ).find( "[accordion-title]" ).first();
+
+        accordionTitle.on( "click", function( event ) {
+          accordionTitle.toggleClass( activeTitleClass );
+          accordionContent.slideToggle( 200 );
+          event.stopPropagation();
+        });
+      });
+    };
+  </pre>
+</div>
+
+<div class="wrap-code">
+  <p> HTML </p>
+  <pre class="class-name: 'code'; brush: xml;">
+
+    <!-- Basic markup -->
+
+    <div accordion>
+      <p accordion-title> ... </p>
+      <div accordion-content> ... </div>
+    </div>
+
+    <!-- Markup of example  -->
+
+    <div accordion class="accordion">
+      <p accordion-title class="accordion-title"> Accordion title (click me!) </p>
+      <div accordion-content class="accordion-content">
+          ...
+          <div accordion class="accordion">
+            <p accordion-title class="accordion-title"> Sub - Accordion title (click me!) </p>
+            <div accordion-content class="accordion-content">
+              ...
+                <div accordion class="accordion">
+                  <p accordion-title class="accordion-title"> Sub Sub - Accordion title (click me!) </p>
+                  <div accordion-content class="accordion-content">
+                    ...
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div accordion class="accordion">
+      <p accordion-title class="accordion-title"> Accordion title (click me!) </p>
+      <div accordion-content class="accordion-content">
+        ...
+       </div>
+    </div>
+
+  </pre>
+</div>
+
+<div class="wrap-code">
+  <p> CSS </p>
+  <pre class="class-name: 'code'; brush: css;">
+
+    /*Style of example*/
+
+    .accordion {
+      margin: 0 0 20px 0;
+    }
+
+    .accordion-title {
+      margin: 0;
+      padding: 8px 20px 8px 20px;
+      cursor: pointer;
+      border: solid #dfdfdf 1px;
+      background: #f2f2f2;
+    }
+
+    .accordion-title-active {
+      color: #fff;
+      border: solid #3193cb 1px;
+      background: #3193cb;
+    }
+
+    .accordion-content {
+      padding: 8px 20px 8px 20px;
+      border: solid #dfdfdf 1px;
+      border-top: none;
+    }
+  </pre>
+</div>

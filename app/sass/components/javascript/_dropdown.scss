@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Dropdown
+   ========================================================================== */
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content{
+  width: 300px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: 0px;
+  background: #3193cb;
+  z-index: 1;
+  color: #ffffff;
+  top: 52px;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.dropdown-content::after{
+  bottom: 100%;
+  left: 25px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #074b71;
+  border-width: 9px;
+  margin-left: -9px;
+}

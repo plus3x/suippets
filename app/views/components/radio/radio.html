@@ -1,0 +1,17 @@
+@@include("parts/header.html", {"local": "../"})
+
+  <main class="main">
+    <section class="sidebar">
+      @@include("parts/sidebar.html", {"local": "../"})
+    </section>
+
+    <section class="center">
+      <div class="container">
+        <h1 class="page-title"> Radio </h1>
+        @@include("components/radio/example.html")
+        @@include("components/radio/code.html", {"local": "../"})
+      </div>
+    </section>
+  </main>
+
+@@include("parts/footer.html", {"local": "../"})

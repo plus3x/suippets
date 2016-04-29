@@ -1,0 +1,126 @@
+<p> Code </p>
+
+<div class="wrap-code">
+  <p> Javascript </p>
+  <pre class="class-name: 'code'; brush: js;">
+    function offcanvas() {
+      var allOffCanvasTarget = $( "[offcanvas-target]" ).not("pre [offcanvas-target]");
+      var allOffCanvasWrapper = $( "[offcanvas-wrapper]" ).not("pre [offcanvas-wrapper]");
+      var $window = $( window );
+      var removeWheel = false;
+
+      allOffCanvasWrapper.detach().addClass("offcanvas-hidden").appendTo("html");
+
+      function remove() {
+        allOffCanvasWrapper.removeClass("offcanvas-active").addClass("offcanvas-hidden");
+      }
+
+      allOffCanvasTarget.each(function( index, element ) {
+        var target = $( element );
+        var targetIndex = target.attr("offcanvas-target");
+        var wrapper = $("[offcanvas-wrapper=" + targetIndex + "]");
+        var content = wrapper.find("[offcanvas-content]");
+
+        target.on("click", function() {
+          wrapper.toggleClass("offcanvas-hidden offcanvas-active");
+        });
+
+        content.on("click mouseover mousemove", function( event ) {
+          event.stopPropagation();
+          $window.on("wheel", removeWheel );
+        });
+
+        wrapper.on("click", remove );
+        $window.on("scroll", remove );
+
+        wrapper.on("click mouseover mousemove", function() {
+          $window.off("wheel", removeWheel );
+          $window.on("scroll", remove );
+        });
+      });
+    };
+  </pre>
+</div>
+
+<div class="wrap-code">
+  <p> HTML </p>
+  <pre class="class-name: 'code'; brush: xml;">
+
+    <!-- Basic Markup -->
+
+    <button offcanvas-target="1" type="button"> ... </button>
+    <div offcanvas-wrapper="1">
+      <div offcanvas-content class="offcanvas-content">
+        ...
+      </div>
+    </div>
+
+    <!-- Markup of example -->
+
+    <button offcanvas-target="1" type="button" class="btn"> Open offcanvas #1 </button>
+    <button offcanvas-target="2" type="button" class="btn"> Open offcanvas #2 </button>
+    <div offcanvas-wrapper="1">
+      <div offcanvas-content class="offcanvas-content">
+        Offcanvas #1
+      </div>
+    </div>
+
+
+    <div offcanvas-wrapper="2">
+      <div offcanvas-content class="offcanvas-content">
+        Offcanvas #2
+      </div>
+    </div>
+  </pre>
+</div>
+
+<div class="wrap-code">
+  <p> CSS </p>
+  <pre class="class-name: 'code'; brush: css;">
+
+    /*Style of example*/
+
+    .offcanvas-hidden {
+      position: fixed;
+      z-index: -10;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all .1s linear .1s;
+    }
+
+    .offcanvas-active {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all .2s linear 0s;
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .offcanvas-hidden > .offcanvas-content {
+      position: absolute;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      transition: all .1s linear 0s;
+      background: #383838;
+      padding: 20px;
+    }
+
+    .offcanvas-active > .offcanvas-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      transition: all .2s linear 0s;
+      color: #ffffff;
+      overflow: auto;
+      background: #383838;
+      padding: 20px;
+    }
+  </pre>
+</div>

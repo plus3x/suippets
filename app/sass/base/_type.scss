@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Type
+   ========================================================================== */
+
+//Fonts
+$link-color: #3a82f3;
+$font-color: #717171;
+
+//Selection
+$selection-background-color: #008cff;
+$selection-font-color: #fff;
+
+//Line
+$line-background-color: #fff;
+$line-border-color: #e4e4e4;
+
+body,
+html {
+  //font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  font-smooth: auto;
+  line-height: 1.6em;
+  word-wrap: break-word;
+  color: $font-color;
+  -webkit-font-smoothing: none;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+  line-height: 1.3em;
+}
+
+h3 {
+  font-size: 1.6em;
+  line-height: 1.3em;
+}
+
+h4 {
+  font-size: 1.4em;
+  line-height: 1.5em;
+}
+
+h5 {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+blockquote {
+  font-style: oblique;
+  line-height: 1.8em;
+  padding: 0 0 0 10px;
+  border-left: solid $line-border-color 5px;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: darken( $link-color, 20% );
+  }
+}
+
+ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: solid $line-border-color 1px;
+}
+
+*::selection {
+  color: $selection-font-color;
+  background: $selection-background-color;
+}
+
+pre, code {
+  font-family: Consolas, monaco, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: .8em;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shCore.css">
+  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shThemeDefault.css">
+
+</head>
+<body>
+
+
+  <main class="main">
+    <section class="sidebar">
+      <div class="logo">
+  <a href="/">
+    <img src="../app/img/logo.svg" alt="logo">
+  </a>
+</div>
+
+<nav class="menu">
+  <h5 class="menu-title"> Javascript </h6>
+  <a href="/pages/accordion.html" class="menu-item">Accordion</a>
+  <a href="/pages/modal.html" class="menu-item"> Modal </a>
+  <a href="/pages/tabs.html" class="menu-item"> Tabs </a>
+  <a href="/pages/dropdown.html" class="menu-item"> Dropdown </a>
+  <a href="/pages/offcanvas.html" class="menu-item"> Offcanvas </a>
+
+  <h5 class="menu-title"> CSS </h6>
+  <a href="/pages/radio.html" class="menu-item"> Radio </a>
+  <a href="/pages/checkbox.html" class="menu-item"> Check </a>
+
+</nav>
+
+    </section>
+
+    <section class="center">
+      <div class="container">
+        <h1 class="page-title"> Radio </h1>
+        <!-- radio example -->
+
+<div class="page-example">
+
+  <p> Example </p>
+
+  <form action="#">
+    <input type="radio" name="foo" id="radio0" checked>
+    <label for="radio0"> Default Radio :( </label>
+    <br>
+    <input class="radio" type="radio" name="foo" id="radio1" checked>
+    <label for="radio1"> Styled Radio 1 </label>
+    <br>
+    <input class="radio" type="radio" name="foo" id="radio2">
+    <label for="radio2"> Styled Radio 2 </label>
+    <br>
+    <input class="radio" type="radio" name="radio2" id="radio2" disabled="">
+    <label for="radio2"> Styled Radio (disabled) </label>
+  </form>
+
+</div>
+
+        <p> Code </p>
+
+<div class="wrap-code">
+  <p> HTML </p>
+  <pre class="class-name: 'code'; brush: xml;">
+    <input class="radio" type="radio" name="foo" id="bar">
+    <label for="bar"> Radio </label>
+  </pre>
+</div>
+
+<div class="wrap-code">
+  <p> CSS </p>
+  <pre class="class-name: 'code'; brush: css;">
+    .radio {
+      display: none;
+    }
+
+    .radio[disabled] + label::before {
+      cursor: no-drop;
+      opacity: .2;
+    }
+
+    .radio + label {
+      display: inline-block;
+      margin: 0;
+      padding: 5px 5px 5px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .radio + label::before {
+      position: relative;
+      top: 5px;
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      margin: 0 10px 0 0;
+      padding: 3px;
+      content: '';
+      cursor: pointer;
+      border: solid #333 2px;
+      border-radius: 100%;
+      box-shadow: inset 0 0 0 2px #fff;
+    }
+
+    .radio:checked + label::before {
+      background: #39f;
+    }
+  </pre>
+</div>
+
+      </div>
+    </section>
+  </main>
+
+<script src="../bower_components/SyntaxHighlighter/scripts/XRegExp.js"></script>
+<script src="../bower_components/SyntaxHighlighter/scripts/shCore.js"> </script>
+<script src="../bower_components/SyntaxHighlighter/scripts/shBrushJScript.js"> </script>
+<script src="../@bower_components/SyntaxHighlighter/scripts/shBrushSass.js"> </script>
+<script src="../bower_components/SyntaxHighlighter/scripts/shBrushCss.js"> </script>
+<script src="../bower_components/SyntaxHighlighter/scripts/shBrushXml.js"> </script>
+
+<script >
+   SyntaxHighlighter.all();
+   SyntaxHighlighter.defaults.toolbar = false;
+   SyntaxHighlighter.defaults[ "tab-size" ] = 2;
+</script>
+
+<script src="../dist/vendors.js"></script>
+<script src="../dist/bundle.js"></script>
+
+</body>
+</html>
+

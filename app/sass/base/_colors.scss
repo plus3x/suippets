@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+$success-color: rgb(22, 186, 88);
+$info-color: rgb(19, 182, 226);
+$error-color: rgb(221, 52, 52);
+
+.success{
+  background: $success-color;
+}
+
+.info{
+  background: $info-color;
+}
+
+.error{
+  background: $error-color;
+}

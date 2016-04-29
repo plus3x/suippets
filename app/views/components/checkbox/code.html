@@ -1,0 +1,49 @@
+<p> Code </p>
+
+<div class="wrap-code">
+  <p> HTML </p>
+  <pre class="class-name: 'code'; brush: xml;">
+    <input class="checkbox" name="check" id="foo" type="checkbox"> </input>
+    <label for="foo"> Checkbox </label>
+  </pre>
+</div>
+
+<div class="wrap-code">
+  <p> CSS </p>
+  <pre class="class-name: 'code'; brush: css;">
+    .checkbox {
+      display: none;
+    }
+
+    .checkbox[disabled] + label::before {
+      cursor: no-drop;
+      opacity: .2;
+    }
+
+    .checkbox + label {
+      display: inline-block;
+      margin: 0;
+      padding: 5px 5px 5px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .checkbox + label::before {
+      position: relative;
+      top: 5px;
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      margin: 0 10px 0 0;
+      padding: 3px;
+      content: '';
+      cursor: pointer;
+      border: solid #333 2px;
+      box-shadow: inset 0 0 0 2px #fff;
+    }
+
+    .checkbox:checked + label::before {
+      background: #39f;
+    }
+  </pre>
+</div>

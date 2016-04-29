@@ -1,0 +1,112 @@
+<p> Code </p>
+
+<div class="wrap-code">
+  <p> Javascript ES5 / jQuery</p>
+  <pre class="class-name: 'code'; brush: js;">
+    function modal() {
+      var body = $( "body" );
+      var $window = $( window );
+      var modalTargets = $( "[modal-target]" ).not( "pre [modal-target]" );
+      var modalClose = $( "[modal-close]" ).not( "pre [modal-close]" );
+      var modalWrappers = $( "[modal-wrapper]" ).not( "pre [modal-wrapper]" );
+      var modalContent = $( "[modal-content]" ).not( "pre [modal-content]" );
+
+      modalWrappers.detach().hide().appendTo( "html" );
+
+      function styleOfWrapper( scrollPosition ) {
+        modalWrappers.css({
+          "position": "absolute",
+          "background": "rgba(0, 0, 0, 0.7)",
+          "top": scrollPosition + "px",
+          "left": "0px",
+          "width": "100%",
+          "overflow-y": "auto",
+          "height": "100%",
+          "z-index": "99999999999"
+        });
+      }
+
+      function openModal( scrollPosition, wrapper ) {
+        wrapper.fadeIn( 100 );
+        body.css({ "overflow-y": "hidden" });
+        styleOfWrapper( scrollPosition, wrapper );
+      }
+
+      function closeModal( wrapper ) {
+        wrapper.fadeOut( 100 );
+        body.css({ "overflow-y": "scroll" });
+      }
+
+      modalTargets.each(function( index, element ) {
+        var targetIndex = $( element ).attr("modal-target");
+        var modalWrapper = $( "[modal-wrapper=" + targetIndex + "]" );
+        var	modalContent = modalWrapper.find( "[modal-content]" );
+
+        modalContent.on( "click", function( event ) {
+          event.stopPropagation();
+        });
+
+        $( element ).on( "click", function() {
+          openModal( $window.scrollTop(), modalWrapper );
+        });
+
+        modalWrapper.on( "click", function() {
+          closeModal( modalWrapper );
+        });
+
+        modalClose.on( "click", function() {
+          closeModal( modalWrapper );
+        });
+
+        $window.on( "keydown", function( event ) {
+          if ( event.keyCode == 27 ) {
+            closeModal( modalWrapper );
+          }
+        });
+      });
+    };
+  </pre>
+</div>
+
+<div class="wrap-code">
+  <p> HTML </p>
+  <pre class="class-name: 'code'; brush: xml;">
+
+    <!-- Basic markup -->
+
+    <button class="btn" modal-target="1"> Open modal </button>
+    <div modal-wrapper="1">
+      <div modal-content class="modal-content"> ... </div>
+    </div>
+
+    <!-- Markup of example -->
+
+    <button class="btn" modal-target="1"> Open modal 1 </button>
+    <div modal-wrapper="1">
+      <div modal-content> ... </div>
+    </div>
+
+    <button class="btn" modal-target="2"> Open modal 2 </button>
+    <div modal-wrapper="2">
+      <div modal-content> ... </div>
+    </div>
+
+    <button class="btn" modal-target="1"> Open modal 1 </button>
+
+  </pre>
+</div>
+
+<div class="wrap-code">
+  <p> CSS </p>
+  <pre class="class-name: 'code'; brush: css;">
+
+    /*style of example*/
+
+    .modal-content{
+      background: #ffffff;
+      width: 800px;
+      padding: 30px;
+      margin: 70px auto 20px auto;
+    }
+  </pre>
+</div>

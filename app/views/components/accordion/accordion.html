@@ -1,0 +1,17 @@
+@@include("parts/header.html", {"local": "../"})
+
+  <main class="main">
+    <section class="sidebar">
+      @@include("parts/sidebar.html", {"local": "../"})
+    </section>
+
+    <section class="center">
+      <div class="container">
+        <h1 class="page-title"> Accordion </h1>
+        @@include("components/accordion/example.html")
+        @@include("components/accordion/code.html", {"local": "../"})
+      </div>
+    </section>
+  </main>
+
+@@include("parts/footer.html", {"local": "../"})

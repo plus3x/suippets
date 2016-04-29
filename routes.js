@@ -1,0 +1,38 @@
+"use strict";
+
+const PAGES = {
+  "index": {
+    "entry": "./app/views/index.html",
+    "output": "./"
+  },
+  "accordion": {
+    "entry": "./app/views/components/accordion/accordion.html",
+    "output": "./pages"
+  },
+  "modal": {
+    "entry": "./app/views/components/modal/modal.html",
+    "output": "./pages"
+  },
+  "tabs": {
+    "entry": "./app/views/components/tabs/tabs.html",
+    "output": "./pages"
+  },
+  "dropdown": {
+    "entry": "./app/views/components/dropdown/dropdown.html",
+    "output": "./pages"
+  },
+  "radio": {
+    "entry": "./app/views/components/radio/radio.html",
+    "output": "./pages"
+  },
+  "checkbox": {
+    "entry": "./app/views/components/checkbox/checkbox.html",
+    "output": "./pages"
+  },
+  "offcanvas": {
+    "entry": "./app/views/components/offcanvas/offcanvas.html",
+    "output": "./pages"
+  }
+};
+
+module.exports = PAGES;

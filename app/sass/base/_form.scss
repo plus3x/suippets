@@ -1,0 +1,202 @@
+/* ==========================================================================
+   Form
+   ========================================================================== */
+
+//Font
+$form-font-color: #4a4a4a;
+
+//Basic inputs
+$input-background: #fff;
+$input-background-focus: #fff;
+$input-border-color: #ccc;
+$input-border-color-focus: #279ddf;
+$input-font-color: #5a5a5a;
+$input-placeholder-color: #5a5a5a;
+
+//Checkbox / radio
+$check-border-color: #333;
+$check-background-actived: #39f;
+
+//Fieldset
+$fieldset-border-color: #ddd;
+
+//Disabled
+$disabled-background: #f5f5f5;
+
+/* Fieldset and label
+   ========================================================================== */
+label {
+  display: inline-block;
+  margin: 0 0 5px 0;
+}
+
+fieldset {
+  padding: 15px;
+  border: solid $fieldset-border-color 1px;
+}
+
+legend {
+  font-weight: bold;
+  margin: 0 0 0 30px;
+  padding: 0 15px 0 15px;
+  color: $form-font-color;
+}
+
+/* Basic inputs and textarea
+   ========================================================================== */
+.form-control {
+  font-family: inherit;
+  font-size: 1em;
+  width: 100%;
+  height: 35px;
+  padding: 2px 12px 2px 12px;
+  transition: all .2s linear 0s;
+  color: $form-font-color;
+  border: solid 1px $input-border-color;
+  border-radius: 3px;
+  background: $input-background;
+
+  &:focus {
+    border: solid 1px $input-border-color-focus;
+    outline: none;
+    background: $input-background-focus;
+  }
+
+  &[disabled] {
+    cursor: no-drop;
+    background: $disabled-background;
+  }
+}
+
+textarea.form-control {
+  font-family: inherit;
+  min-height: 100px;
+  padding: 10px 15px 10px 15px;
+  color: $form-font-color;
+
+  &[disabled] {
+    cursor: no-drop;
+    background: $disabled-background;
+  }
+}
+
+.form-control-file {
+  font-size: .9em;
+  width: 100%;
+  padding: 4px;
+  cursor: pointer;
+  border: solid $input-border-color 1px;
+}
+
+/* Select
+   ========================================================================== */
+.form-select {
+  font-size: .95em;
+  width: 100%;
+  height: 35px;
+  padding: 2px 1px 3px 12px;
+  cursor: pointer;
+  transition: all .2s linear 0s;
+  color: $form-font-color;
+  border: solid 1px $input-border-color;
+  border-radius: 3px;
+  background: $input-background;
+
+  &[disabled] {
+    cursor: no-drop;
+    background: $disabled-background;
+  }
+
+  &:focus {
+    border: solid 1px $input-border-color-focus;
+    outline: none;
+    background: $input-background-focus;
+  }
+
+  &::after {
+    content: 'teste';
+  }
+}
+
+/* State input
+   ========================================================================== */
+input[type=number],
+input[type=email] {
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+/* Checkbox and radio
+   ========================================================================== */
+.form-checkbox {
+  display: none;
+}
+
+.form-checkbox[disabled] + label::before {
+  cursor: no-drop;
+  opacity: .2;
+}
+
+.form-checkbox + label {
+  display: inline-block;
+  margin: 0;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-checkbox + label::before {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 10px 0 0;
+  padding: 3px;
+  content: '';
+  cursor: pointer;
+  border: solid $check-border-color 2px;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.form-checkbox:checked + label::before {
+  background: $check-background-actived;
+}
+
+/*Radio*/
+.form-radio {
+  display: none;
+}
+
+.form-radio[disabled] + label::before {
+  cursor: no-drop;
+  opacity: .2;
+}
+
+.form-radio + label {
+  display: inline-block;
+  margin: 0;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-radio + label::before {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 10px 0 0;
+  padding: 3px;
+  content: '';
+  cursor: pointer;
+  border: solid $check-border-color 2px;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.form-radio:checked + label::before {
+  background: $check-background-actived;
+}

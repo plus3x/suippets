@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+$background-color: #fff;
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  visibility: visible;
+  vertical-align: top;
+}
+
+body,
+html {
+  background: $background-color;
+}

@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Grid content
+   ========================================================================== */
+
+/* The content grid is divided in 12 columns for various combinantions */
+
+/*
+  <div class="grid-content">
+    <div class="col-2-12"> ... </div>
+    <div class="col-2-12"> ... </div>
+  </div>
+*/
+
+$content-divider: 12;
+$content-mobile-break-point: 680px;
+
+.grid-content:before,
+.grid-content:after {
+  display: table;
+  content: '';
+}
+
+.grid-content:after {
+  clear: both;
+}
+
+.grid-content {
+  clear: both;
+  zoom: 1;
+  margin: 0;
+  padding: 0;
+
+  .row {
+    display: block;
+    float: left;
+  }
+
+  @for $index from 1 through 12 {
+    .col-#{$index}-12 {
+      width: calc( (1 / #{$index} * 100%));
+      display: block;
+      float: left;
+    }
+  }
+
+  @media all and (max-width: $content-mobile-break-point) {
+    @for $index from 1 through 12 {
+      .col-#{$index}-12 {
+        width: 100%;
+      }
+    }
+  }
+} 
