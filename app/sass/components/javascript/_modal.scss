@@ -2,9 +2,44 @@
    Modal
    ========================================================================== */
 
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 0 20px;
+  visibility: hidden;
+}
+
+.modal-wrapper.modal-hidden {
+  transition: background .2s linear .2s, visibility 0s linear .4s;
+  background-color: rgba(#000, 0);
+  visibility: hidden;
+}
+
+.modal-wrapper.modal-actived {
+  transition: background .2s linear 0s;
+  background-color: rgba(#000, .7);
+  visibility: visible;
+}
+
 .modal-content{
-  background: #ffffff;
-  width: 800px;
+  max-width: 800px;
   padding: 30px;
-  margin: 70px auto 20px auto;
+  border-radius: 7px;
+  background: #fff;
+  transition: all .4s cubic-bezier(.68,-0.55,.27,1.55) 0s;
+}
+
+.modal-hidden .modal-content {
+  margin: -100px auto 0 auto;
+  opacity: 0;
+  box-shadow: 0 0 30px rgba(#080808, 0.65);
+}
+
+.modal-actived .modal-content {
+  margin: 60px auto 60px auto;
+  opacity: 1;
+  box-shadow: 0 0 30px rgba(#080808, 0.65);
 }

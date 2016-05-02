@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Menu
+   ========================================================================== */
+
+.menu{
+  width: 100%;
+  background: #3193cb;
+}
+
+.menu ul{
+  padding: 0px;
+  list-style: none;
+}
+
+/* Level 1
+   ========================================================================== */
+
+.menu-lv1{
+  display: flex;
+}
+
+.menu-lv1-item{
+  position: relative;
+}
+
+.menu-lv1-item:hover, .menu-lv1-item:hover .menu-lv2{
+  background: #27729d;
+  visibility: visible;
+}
+
+.menu-lv1-item > a{
+  width: 90px;
+  display: block;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Level 2
+   ========================================================================== */
+
+.menu-lv2{
+  position: absolute;
+  z-index: 10;
+  width: 150px;
+  visibility: hidden;
+}
+
+.menu-lv2-item{
+  position: relative;
+}
+
+.menu-lv2-item:hover, .menu-lv2-item:hover > .menu-lv3{
+  background: #222;
+  display: block;
+}
+
+.menu-lv2-item > a{
+  display: block;
+  width: 100%;
+  color: #fff;
+  padding: 7px 20px 7px 20px;
+  text-decoration: none;
+}
+
+/* Level 3
+  ========================================================================== */
+
+.menu-lv3{
+  position: absolute;
+  left: 150px;
+  top: 0px;
+  display: none;
+  width: 200px;
+}
+
+.menu-lv3-item > a{
+  padding: 7px 20px 7px 20px;
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+
+.menu-lv3-item > a:hover{
+  background: #000;
+  color: #fff;
+}

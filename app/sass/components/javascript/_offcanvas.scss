@@ -2,45 +2,46 @@
    Offcanvas
    ========================================================================== */
 
-.offcanvas-hidden {
+.offcanvas {
   position: fixed;
-  z-index: -10;
   top: 0;
+  visibility: hidden;
   width: 100%;
   height: 100%;
-  transition: all .1s linear .1s;
 }
 
-.offcanvas-active {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  width: 100%;
-  height: 100%;
+.offcanvas.offcanvas-hidden {
+  visibility: hidden;
+  transition: all .1s linear .2s;
+}
+
+.offcanvas.offcanvas-active {
+  visibility: visible;
   transition: all .2s linear 0s;
   background: rgba(0, 0, 0, .5);
 }
 
-.offcanvas-hidden > .offcanvas-content {
+.offcanvas-content {
   position: absolute;
   top: 0;
-  left: -250px;
-  width: 250px;
+  overflow: auto;
   height: 100%;
-  transition: all .1s linear 0s;
-  background: #383838;
   padding: 20px;
+  color: #fff;
+  background: #383838;
+  visibility: hidden;
 }
 
-.offcanvas-active > .offcanvas-content {
-  position: absolute;
-  top: 0;
+.offcanvas-hidden .offcanvas-content {
+  visibility: hidden;
+  left: -250px;
+  width: 250px;
+  transition: all 0.3s cubic-bezier(.22,.61,.36,1) 0s;
+}
+
+.offcanvas-active .offcanvas-content {
+  visibility: visible;
   left: 0;
   width: 250px;
-  height: 100%;
-  transition: all .2s linear 0s;
-  color: #ffffff;
-  overflow: auto;
-  background: #383838;
-  padding: 20px;
+  transition: all 0.3s cubic-bezier(.22,.61,.36,1) 0s;
 }

@@ -5,25 +5,27 @@
 .logo{
   width: 100%;
   margin: 50px 0 50px 0;
+  padding: 0px;
 
   img{
     width: 120px;
-    margin: 20px auto 0 auto;
+    height: 100%;
+    margin: 0 auto 0 auto;
     display: block;
   }
 }
 
-.menu{
+.sidebar-menu{
   width: 120px;
   min-height: 200px;
   margin: 0 auto 0 auto;
 }
 
-.menu-title{
+.sidebar-menu-title{
   margin: 30px 0 10px 0;
 }
 
-.menu-item{
+.sidebar-menu-item{
   cursor: pointer;
   display: block;
 }

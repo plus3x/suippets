@@ -32,6 +32,10 @@ const PAGES = {
   "offcanvas": {
     "entry": "./app/views/components/offcanvas/offcanvas.html",
     "output": "./pages"
+  },
+  "menu": {
+    "entry": "./app/views/components/menu/menu.html",
+    "output": "./pages"
   }
 };
 

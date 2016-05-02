@@ -7,60 +7,47 @@
       var body = $( "body" );
       var $window = $( window );
       var modalTargets = $( "[modal-target]" ).not( "pre [modal-target]" );
-      var modalClose = $( "[modal-close]" ).not( "pre [modal-close]" );
       var modalWrappers = $( "[modal-wrapper]" ).not( "pre [modal-wrapper]" );
       var modalContent = $( "[modal-content]" ).not( "pre [modal-content]" );
 
-      modalWrappers.detach().hide().appendTo( "html" );
+      modalWrappers.detach().addClass( "modal-hidden" ).appendTo( "html" );
 
-      function styleOfWrapper( scrollPosition ) {
-        modalWrappers.css({
-          "position": "absolute",
-          "background": "rgba(0, 0, 0, 0.7)",
-          "top": scrollPosition + "px",
-          "left": "0px",
-          "width": "100%",
-          "overflow-y": "auto",
-          "height": "100%",
-          "z-index": "99999999999"
-        });
-      }
-
-      function openModal( scrollPosition, wrapper ) {
-        wrapper.fadeIn( 100 );
+      function openModal( modalWrapper ) {
+        modalWrapper.removeClass("modal-hidden").addClass("modal-actived");
         body.css({ "overflow-y": "hidden" });
-        styleOfWrapper( scrollPosition, wrapper );
       }
 
-      function closeModal( wrapper ) {
-        wrapper.fadeOut( 100 );
+      function hideModal( modalWrapper ) {
+        modalWrapper.addClass("modal-hidden").removeClass("modal-actived");
         body.css({ "overflow-y": "scroll" });
       }
 
       modalTargets.each(function( index, element ) {
+        var target = $( element );
         var targetIndex = $( element ).attr("modal-target");
         var modalWrapper = $( "[modal-wrapper=" + targetIndex + "]" );
-        var	modalContent = modalWrapper.find( "[modal-content]" );
+        var modalClose = modalWrapper.find("[modal-close]");
+        var modalContent = modalWrapper.find( "[modal-content]" );
+
+        target.on("click", function() {
+          openModal( modalWrapper );
+        });
 
         modalContent.on( "click", function( event ) {
           event.stopPropagation();
         });
 
-        $( element ).on( "click", function() {
-          openModal( $window.scrollTop(), modalWrapper );
+        modalWrapper.on("click", function() {
+          hideModal( modalWrapper );
         });
 
-        modalWrapper.on( "click", function() {
-          closeModal( modalWrapper );
-        });
-
-        modalClose.on( "click", function() {
-          closeModal( modalWrapper );
+        modalClose.on("click", function() {
+          hideModal( modalWrapper );
         });
 
         $window.on( "keydown", function( event ) {
           if ( event.keyCode == 27 ) {
-            closeModal( modalWrapper );
+            hideModal( modalWrapper );
           }
         });
       });
@@ -74,24 +61,30 @@
 
     <!-- Basic markup -->
 
-    <button class="btn" modal-target="1"> Open modal </button>
-    <div modal-wrapper="1">
+    <button modal-target="1"> ... </button>
+    <div modal-wrapper="1" class="modal-wrapper">
       <div modal-content class="modal-content"> ... </div>
     </div>
 
     <!-- Markup of example -->
 
     <button class="btn" modal-target="1"> Open modal 1 </button>
-    <div modal-wrapper="1">
-      <div modal-content> ... </div>
-    </div>
-
     <button class="btn" modal-target="2"> Open modal 2 </button>
-    <div modal-wrapper="2">
-      <div modal-content> ... </div>
+    <button class="btn" modal-target="1"> Open modal 1 </button>
+
+    <div modal-wrapper="1" class="modal-wrapper">
+      <div modal-content class="modal-content">
+        ...
+        <button modal-close class="btn" type="button"> Close modal </button>
+      </div>
     </div>
 
-    <button class="btn" modal-target="1"> Open modal 1 </button>
+    <div modal-wrapper="2" class="modal-wrapper">
+      <div modal-content class="modal-content">
+        ...
+        <button modal-close class="btn" type="button"> Close modal </button>
+      </div>
+    </div>
 
   </pre>
 </div>
@@ -99,14 +92,46 @@
 <div class="wrap-code">
   <p> CSS </p>
   <pre class="class-name: 'code'; brush: css;">
+    .modal-wrapper {
+      position: fixed;
+      top: 0;
+      overflow: auto;
+      width: 100%;
+      height: 100%;
+      padding: 0 20px 0 20px;
+      visibility: hidden;
+    }
 
-    /*style of example*/
+    .modal-wrapper.modal-hidden {
+      transition: background .2s linear .2s, visibility 0s linear .4s;
+      background-color: rgba(#000, 0);
+      visibility: hidden;
+    }
+
+    .modal-wrapper.modal-actived {
+      transition: background .2s linear 0s;
+      background-color: rgba(#000, .7);
+      visibility: visible;
+    }
 
     .modal-content{
-      background: #ffffff;
-      width: 800px;
+      max-width: 800px;
       padding: 30px;
-      margin: 70px auto 20px auto;
+      border-radius: 7px;
+      background: #fff;
+      transition: all .4s cubic-bezier(.68,-0.55,.27,1.55) 0s;
+    }
+
+    .modal-hidden .modal-content {
+      margin: -100px auto 0 auto;
+      opacity: 0;
+      box-shadow: 0 0 30px rgba(#080808, 0.65);
+    }
+
+    .modal-actived .modal-content {
+      margin: 60px auto 60px auto;
+      opacity: 1;
+      box-shadow: 0 0 30px rgba(#080808, 0.65);
     }
   </pre>
 </div>

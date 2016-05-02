@@ -4,12 +4,12 @@ function offcanvas() {
   var allOffCanvasTarget = $( "[offcanvas-target]" ).not("pre [offcanvas-target]");
   var allOffCanvasWrapper = $( "[offcanvas-wrapper]" ).not("pre [offcanvas-wrapper]");
   var $window = $( window );
-  var removeWheel = false;
 
   allOffCanvasWrapper.detach().addClass("offcanvas-hidden").appendTo("html");
 
-  function remove() {
+  function removeOffCanvas() {
     allOffCanvasWrapper.removeClass("offcanvas-active").addClass("offcanvas-hidden");
+    $window.off("scroll");
   }
 
   allOffCanvasTarget.each(function( index, element ) {
@@ -18,21 +18,28 @@ function offcanvas() {
     var wrapper = $("[offcanvas-wrapper=" + targetIndex + "]");
     var content = wrapper.find("[offcanvas-content]");
 
+
     target.on("click", function() {
+      var scrollPosition = $( document ).scrollTop();
       wrapper.toggleClass("offcanvas-hidden offcanvas-active");
+
+      $window.on( "scroll", function() {
+        $( this ).scrollTop( scrollPosition );
+      });
     });
 
-    content.on("click mouseover mousemove", function( event ) {
+    content.on("click", function( event ) {
       event.stopPropagation();
-      $window.on("wheel", removeWheel );
     });
 
-    wrapper.on("click", remove );
-    $window.on("scroll", remove );
+    wrapper.on("click", function() {
+      removeOffCanvas();
+    });
 
-    wrapper.on("click mouseover mousemove", function() {
-      $window.off("wheel", removeWheel );
-      $window.on("scroll", remove );
+    $window.on( "keydown", function( event ) {
+      if ( event.keyCode == 27 ) {
+        removeOffCanvas();
+      }
     });
   });
 };
