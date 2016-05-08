@@ -7,8 +7,6 @@
 
   <link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shCore.css">
-  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shThemeDefault.css">
 
 </head>
 <body>
@@ -23,7 +21,7 @@
 </div>
 
 <nav class="sidebar-menu">
-  <h5 class="sidebar-menu-title"> Javascript </h6>
+  <h5 class="sidebar-menu-title"> JAVASCRIPT </h6>
   <a href="/pages/accordion.html" class="sidebar-menu-item">Accordion</a>
   <a href="/pages/modal.html" class="sidebar-menu-item"> Modal </a>
   <a href="/pages/tabs.html" class="sidebar-menu-item"> Tabs </a>
@@ -74,100 +72,7 @@
 
         <p> Code </p>
 
-<div class="wrap-code">
-  <p> Javascript ES5 / jQuery</p>
-  <pre class="class-name: 'code'; brush: js;">
-    function tabs() {
-      var allTabs = $( "[tabs]" ).not( "pre [tabs]" );
-      var activeTitleClass = "tab-title-active";
-
-      allTabs.each(function( index, element ) {
-        var tabWrapper = $( element );
-        var tabTitle = $( element ).find( "[tab-title]" );
-        var tabContent = $( element ).find( "[tab-content]" );
-        var firstIndex = tabTitle.first().attr( "tab-title" );
-
-        tabTitle.first().addClass( activeTitleClass );
-        tabContent.hide();
-        tabWrapper.find( "[tab-content=" + firstIndex + "]" ).show();
-
-        tabTitle.on( "click", function() {
-          var tabIndex = $( this ).attr( "tab-title" );
-
-          tabWrapper.find( "[tab-content]" ).hide();
-          tabWrapper.find( "[tab-content=" + tabIndex + "]" ).show();
-          tabWrapper.find( "[tab-title]" ).removeClass( activeTitleClass );
-          tabWrapper.find( "[tab-title=" + tabIndex + "]" ).addClass( activeTitleClass );
-        });
-      });
-    }
-  </pre>
-</div>
-
-<div class="wrap-code">
-  <p> HTML </p>
-  <pre class="class-name: 'code'; brush: xml;">
-
-    <!-- Basic markup -->
-
-    <div tabs>
-      <p tab-title="1"> ... </p>
-      <p tab-title="2"> ... </p>
-      <p tab-title="3"> ... </p>
-
-      <div tab-content="1"> ... </div>
-      <div tab-content="2"> ... </div>
-      <div tab-content="3"> ... </div>
-    </div>
-
-    <!-- Markup of example -->
-
-    <div tabs class="tabs">
-      <div class="tab-titles">
-        <p tab-title="1" class="tab-title"> ... </p>
-        <p tab-title="2" class="tab-title"> ... </p>
-        <p tab-title="3" class="tab-title"> ... </p>
-      </div>
-      <div tab-content="1" class="tab-content"> ... </div>
-      <div tab-content="2" class="tab-content"> ... </div>
-      <div tab-content="3" class="tab-content"> ... </div>
-    </div>
-
-  </pre>
-</div>
-
-<div class="wrap-code">
-  <p> CSS </p>
-  <pre class="class-name: 'code'; brush: css;">
-    /*style of example*/
-
-    .tab-titles{
-      display: flex;
-    }
-
-    .tab-title{
-      border: solid black 1px;
-      margin: 0px;
-      width: 100%;
-      padding: 5px 20px 5px 20px;
-      cursor: pointer;
-      border: solid #dfdfdf 1px;
-      background: #f2f2f2;
-    }
-
-    .tab-title-active{
-      color: #fff;
-      border: solid #3193cb 1px;
-      background: #3193cb;
-    }
-
-    .tab-content{
-      border: solid #dfdfdf 1px;
-      border-top: none;
-      padding: 20px;
-    }
-  </pre>
-</div>
+<script src="https://gist.github.com/C4co/c97cf4a1caedefee45502426e471b430.js"></script>
 
       </div>
     </section>
@@ -176,19 +81,6 @@
 <footer class="footer">
   Suippets ♥ Carlos Costa (C4co)
 </footer>
-
-<script src="../bower_components/SyntaxHighlighter/scripts/XRegExp.js"></script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shCore.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushJScript.js"> </script>
-<script src="../@bower_components/SyntaxHighlighter/scripts/shBrushSass.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushCss.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushXml.js"> </script>
-
-<script >
-   SyntaxHighlighter.all();
-   SyntaxHighlighter.defaults.toolbar = false;
-   SyntaxHighlighter.defaults[ "tab-size" ] = 2;
-</script>
 
 <script src="../dist/vendors.js"></script>
 <script src="../dist/bundle.js"></script>

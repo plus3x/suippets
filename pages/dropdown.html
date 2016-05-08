@@ -7,8 +7,6 @@
 
   <link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shCore.css">
-  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shThemeDefault.css">
 
 </head>
 <body>
@@ -23,7 +21,7 @@
 </div>
 
 <nav class="sidebar-menu">
-  <h5 class="sidebar-menu-title"> Javascript </h6>
+  <h5 class="sidebar-menu-title"> JAVASCRIPT </h6>
   <a href="/pages/accordion.html" class="sidebar-menu-item">Accordion</a>
   <a href="/pages/modal.html" class="sidebar-menu-item"> Modal </a>
   <a href="/pages/tabs.html" class="sidebar-menu-item"> Tabs </a>
@@ -65,103 +63,7 @@
 
         <p> Code </p>
 
-<div class="wrap-code">
-  <p> Javascript ES5 / jQuery</p>
-  <pre class="class-name: 'code'; brush: js;">
-    function dropdown() {
-      var allDropdown = $( "[dropdown]" ).not( "pre [dropdown]" );
-      var allDropdownContent = allDropdown.find( "[dropdown-content]" );
-      var $document = $( document );
-      var eventType = "click";
-
-      allDropdown.each(function( index, element ) {
-        var dropdownContent = $( element ).find( "[dropdown-content]" );
-        var dropdownTarget = $( element ).find( "[dropdown-target]" );
-
-        dropdownContent.hide();
-
-        dropdownTarget.on( eventType, function( event ) {
-          event.stopPropagation();
-          allDropdownContent.not( dropdownContent ).hide();
-          dropdownContent.fadeToggle( 50, "linear" );
-        });
-      });
-
-      allDropdownContent.on( eventType, function( event ) {
-        event.stopPropagation();
-      });
-
-      $document.on( eventType, function() {
-        allDropdownContent.fadeOut( 200, "linear" );
-      });
-    }
-  </pre>
-</div>
-
-<div class="wrap-code">
-  <p> HTML </p>
-  <pre class="class-name: 'code'; brush: xml;">
-
-    <!-- Basic markup -->
-
-    <div dropdown>
-      <p dropdown-target> ... </p>
-      <div dropdown-content> ... </div>
-    </div>
-
-    <!-- Markup of example -->
-
-    <div dropdown class="dropdown">
-      <button class="btn" dropdown-target> Click me! </button>
-      <div dropdown-content class="dropdown-content"> ... </div>
-    </div>
-
-    <div dropdown class="dropdown">
-      <button class="btn" dropdown-target> Click me! </button>
-      <div dropdown-content class="dropdown-content"> ... </div>
-    </div>
-
-  </pre>
-</div>
-
-<div class="wrap-code">
-  <p> CSS </p>
-  <pre class="class-name: 'code'; brush: css;">
-    .dropdown{
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content{
-      width: 300px;
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      margin: 0px;
-      background: #3193cb;
-      z-index: 1;
-      color: #ffffff;
-      top: 52px;
-      padding: 20px;
-      border-radius: 3px;
-    }
-
-    .dropdown-content::after{
-      bottom: 100%;
-      left: 25px;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-color: rgba(136, 183, 213, 0);
-      border-bottom-color: #074b71;
-      border-width: 9px;
-      margin-left: -9px;
-    }
-  </pre>
-</div>
+<script src="https://gist.github.com/C4co/e645d58ed6e5cb74c7c768572b528982.js"></script>
 
       </div>
     </section>
@@ -170,19 +72,6 @@
 <footer class="footer">
   Suippets ♥ Carlos Costa (C4co)
 </footer>
-
-<script src="../bower_components/SyntaxHighlighter/scripts/XRegExp.js"></script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shCore.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushJScript.js"> </script>
-<script src="../@bower_components/SyntaxHighlighter/scripts/shBrushSass.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushCss.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushXml.js"> </script>
-
-<script >
-   SyntaxHighlighter.all();
-   SyntaxHighlighter.defaults.toolbar = false;
-   SyntaxHighlighter.defaults[ "tab-size" ] = 2;
-</script>
 
 <script src="../dist/vendors.js"></script>
 <script src="../dist/bundle.js"></script>

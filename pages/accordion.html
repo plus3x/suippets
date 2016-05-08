@@ -7,8 +7,6 @@
 
   <link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shCore.css">
-  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shThemeDefault.css">
 
 </head>
 <body>
@@ -23,7 +21,7 @@
 </div>
 
 <nav class="sidebar-menu">
-  <h5 class="sidebar-menu-title"> Javascript </h6>
+  <h5 class="sidebar-menu-title"> JAVASCRIPT </h6>
   <a href="/pages/accordion.html" class="sidebar-menu-item">Accordion</a>
   <a href="/pages/modal.html" class="sidebar-menu-item"> Modal </a>
   <a href="/pages/tabs.html" class="sidebar-menu-item"> Tabs </a>
@@ -80,100 +78,7 @@
 
         <p> Code </p>
 
-<div class="wrap-code">
-  <p> Javascript ES5 / jQuery</p>
-  <pre class="class-name: 'code'; brush: js;">
-    function accordion() {
-      var accordionElement = $( "[accordion]" ).not( "pre [accordion]" );
-      var activeTitleClass = "accordion-title-active";
-
-      accordionElement.each(function( index, element ) {
-        var accordionContent = $( element ).find( "[accordion-content]" ).first().hide();
-        var accordionTitle = $( element ).find( "[accordion-title]" ).first();
-
-        accordionTitle.on( "click", function( event ) {
-          accordionTitle.toggleClass( activeTitleClass );
-          accordionContent.slideToggle( 200 );
-          event.stopPropagation();
-        });
-      });
-    };
-  </pre>
-</div>
-
-<div class="wrap-code">
-  <p> HTML </p>
-  <pre class="class-name: 'code'; brush: xml;">
-
-    <!-- Basic markup -->
-
-    <div accordion>
-      <p accordion-title> ... </p>
-      <div accordion-content> ... </div>
-    </div>
-
-    <!-- Markup of example  -->
-
-    <div accordion class="accordion">
-      <p accordion-title class="accordion-title"> Accordion title (click me!) </p>
-      <div accordion-content class="accordion-content">
-          ...
-          <div accordion class="accordion">
-            <p accordion-title class="accordion-title"> Sub - Accordion title (click me!) </p>
-            <div accordion-content class="accordion-content">
-              ...
-                <div accordion class="accordion">
-                  <p accordion-title class="accordion-title"> Sub Sub - Accordion title (click me!) </p>
-                  <div accordion-content class="accordion-content">
-                    ...
-                  </div>
-                </div>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <div accordion class="accordion">
-      <p accordion-title class="accordion-title"> Accordion title (click me!) </p>
-      <div accordion-content class="accordion-content">
-        ...
-       </div>
-    </div>
-
-  </pre>
-</div>
-
-<div class="wrap-code">
-  <p> CSS </p>
-  <pre class="class-name: 'code'; brush: css;">
-
-    /*Style of example*/
-
-    .accordion {
-      margin: 0 0 20px 0;
-    }
-
-    .accordion-title {
-      margin: 0;
-      padding: 8px 20px 8px 20px;
-      cursor: pointer;
-      border: solid #dfdfdf 1px;
-      background: #f2f2f2;
-    }
-
-    .accordion-title-active {
-      color: #fff;
-      border: solid #3193cb 1px;
-      background: #3193cb;
-    }
-
-    .accordion-content {
-      padding: 8px 20px 8px 20px;
-      border: solid #dfdfdf 1px;
-      border-top: none;
-    }
-  </pre>
-</div>
+<script src="https://gist.github.com/C4co/0a39dd42777c94a261043e2ac78057bc.js"></script>
 
       </div>
     </section>
@@ -182,19 +87,6 @@
 <footer class="footer">
   Suippets ♥ Carlos Costa (C4co)
 </footer>
-
-<script src="../bower_components/SyntaxHighlighter/scripts/XRegExp.js"></script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shCore.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushJScript.js"> </script>
-<script src="../@bower_components/SyntaxHighlighter/scripts/shBrushSass.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushCss.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushXml.js"> </script>
-
-<script >
-   SyntaxHighlighter.all();
-   SyntaxHighlighter.defaults.toolbar = false;
-   SyntaxHighlighter.defaults[ "tab-size" ] = 2;
-</script>
 
 <script src="../dist/vendors.js"></script>
 <script src="../dist/bundle.js"></script>

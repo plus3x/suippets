@@ -7,8 +7,6 @@
 
   <link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shCore.css">
-  <link rel="stylesheet" href="../bower_components/SyntaxHighlighter/styles/shThemeDefault.css">
 
 </head>
 <body>
@@ -23,7 +21,7 @@
 </div>
 
 <nav class="sidebar-menu">
-  <h5 class="sidebar-menu-title"> Javascript </h6>
+  <h5 class="sidebar-menu-title"> JAVASCRIPT </h6>
   <a href="/pages/accordion.html" class="sidebar-menu-item">Accordion</a>
   <a href="/pages/modal.html" class="sidebar-menu-item"> Modal </a>
   <a href="/pages/tabs.html" class="sidebar-menu-item"> Tabs </a>
@@ -66,131 +64,7 @@
 
         <p> Code </p>
 
-<div class="wrap-code">
-  <p> Javascript </p>
-  <pre class="class-name: 'code'; brush: js;">
-    function offcanvas() {
-      var allOffCanvasTarget = $( "[offcanvas-target]" ).not("pre [offcanvas-target]");
-      var allOffCanvasWrapper = $( "[offcanvas-wrapper]" ).not("pre [offcanvas-wrapper]");
-      var $window = $( window );
-      var removeWheel = false;
-
-      allOffCanvasWrapper.detach().addClass("offcanvas-hidden").appendTo("html");
-
-      function remove() {
-        allOffCanvasWrapper.removeClass("offcanvas-active").addClass("offcanvas-hidden");
-      }
-
-      allOffCanvasTarget.each(function( index, element ) {
-        var target = $( element );
-        var targetIndex = target.attr("offcanvas-target");
-        var wrapper = $("[offcanvas-wrapper=" + targetIndex + "]");
-        var content = wrapper.find("[offcanvas-content]");
-
-        target.on("click", function() {
-          wrapper.toggleClass("offcanvas-hidden offcanvas-active");
-        });
-
-        content.on("click mouseover mousemove", function( event ) {
-          event.stopPropagation();
-          $window.on("wheel", removeWheel );
-        });
-
-        wrapper.on("click", remove );
-        $window.on("scroll", remove );
-
-        wrapper.on("click mouseover mousemove", function() {
-          $window.off("wheel", removeWheel );
-          $window.on("scroll", remove );
-        });
-      });
-    };
-  </pre>
-</div>
-
-<div class="wrap-code">
-  <p> HTML </p>
-  <pre class="class-name: 'code'; brush: xml;">
-
-    <!-- Basic Markup -->
-
-    <button offcanvas-target="1" type="button"> ... </button>
-    <div offcanvas-wrapper="1" class="offcanvas">
-      <div offcanvas-content class="offcanvas-content">
-        ...
-      </div>
-    </div>
-
-    <!-- Markup of example -->
-
-    <button offcanvas-target="1" type="button" class="btn"> Open offcanvas #1 </button>
-    <button offcanvas-target="2" type="button" class="btn"> Open offcanvas #2 </button>
-    <div offcanvas-wrapper="1" class="offcanvas">
-      <div offcanvas-content class="offcanvas-content">
-        Offcanvas #1
-      </div>
-    </div>
-
-
-    <div offcanvas-wrapper="2" class="offcanvas">
-      <div offcanvas-content class="offcanvas-content">
-        Offcanvas #2
-      </div>
-    </div>
-  </pre>
-</div>
-
-<div class="wrap-code">
-  <p> CSS </p>
-  <pre class="class-name: 'code'; brush: css;">
-
-    /*Style of example*/
-
-    .offcanvas {
-      position: fixed;
-      top: 0;
-      visibility: hidden;
-      width: 100%;
-      height: 100%;
-    }
-
-    .offcanvas.offcanvas-hidden {
-      visibility: hidden;
-      transition: all .1s linear .2s;
-    }
-
-    .offcanvas.offcanvas-active {
-      visibility: visible;
-      transition: all .2s linear 0s;
-      background: rgba(0, 0, 0, .5);
-    }
-
-    .offcanvas-content {
-      position: absolute;
-      top: 0;
-      overflow: auto;
-      height: 100%;
-      padding: 20px;
-      color: #fff;
-      background: #383838;
-      visibility: hidden;
-    }
-
-    .offcanvas-hidden .offcanvas-content {
-      visibility: hidden;
-      left: -250px;
-      width: 250px;
-      transition: all 0.3s cubic-bezier(.22,.61,.36,1) 0s;
-    }
-
-    .offcanvas-active .offcanvas-content {
-      visibility: visible;
-      left: 0;
-      width: 250px;
-      transition: all 0.3s cubic-bezier(.22,.61,.36,1) 0s;
-    }
-  </pre>
-</div>
+<script src="https://gist.github.com/C4co/bb882f78a7e26235999b5a94b34521d6.js"></script>
 
       </div>
     </section>
@@ -199,19 +73,6 @@
 <footer class="footer">
   Suippets ♥ Carlos Costa (C4co)
 </footer>
-
-<script src="../bower_components/SyntaxHighlighter/scripts/XRegExp.js"></script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shCore.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushJScript.js"> </script>
-<script src="../@bower_components/SyntaxHighlighter/scripts/shBrushSass.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushCss.js"> </script>
-<script src="../bower_components/SyntaxHighlighter/scripts/shBrushXml.js"> </script>
-
-<script >
-   SyntaxHighlighter.all();
-   SyntaxHighlighter.defaults.toolbar = false;
-   SyntaxHighlighter.defaults[ "tab-size" ] = 2;
-</script>
 
 <script src="../dist/vendors.js"></script>
 <script src="../dist/bundle.js"></script>
