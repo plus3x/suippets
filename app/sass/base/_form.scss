@@ -50,7 +50,7 @@ legend {
   width: 100%;
   height: 35px;
   padding: 2px 12px 2px 12px;
-  transition: all .2s linear 0s;
+  transition: border .2s linear 0s;
   color: $form-font-color;
   border: solid 1px $input-border-color;
   border-radius: 3px;
@@ -96,7 +96,7 @@ textarea.form-control {
   height: 35px;
   padding: 2px 1px 3px 12px;
   cursor: pointer;
-  transition: all .2s linear 0s;
+  transition: border .2s linear 0s;
   color: $form-font-color;
   border: solid 1px $input-border-color;
   border-radius: 3px;
@@ -141,19 +141,16 @@ input[type=email] {
 .form-checkbox + label {
   display: inline-block;
   margin: 0;
-  padding: 5px 5px 5px 5px;
   cursor: pointer;
-  user-select: none;
 }
 
 .form-checkbox + label::before {
   position: relative;
   top: 5px;
   display: inline-block;
-  width: 22px;
-  height: 22px;
-  margin: 0 10px 0 0;
-  padding: 3px;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 0;
   content: '';
   cursor: pointer;
   border: solid $check-border-color 2px;
@@ -177,19 +174,16 @@ input[type=email] {
 .form-radio + label {
   display: inline-block;
   margin: 0;
-  padding: 5px 5px 5px 5px;
   cursor: pointer;
-  user-select: none;
 }
 
 .form-radio + label::before {
   position: relative;
-  top: 5px;
   display: inline-block;
-  width: 22px;
-  height: 22px;
-  margin: 0 10px 0 0;
-  padding: 3px;
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  margin: 0 5px 0 0;
   content: '';
   cursor: pointer;
   border: solid $check-border-color 2px;

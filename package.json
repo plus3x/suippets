@@ -4,8 +4,7 @@
   "description": "front-end snippets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "buid": "npm install"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carlos Costa (c4co)",
   "license": "ISC",
@@ -17,6 +16,7 @@
     "browserify": "^13.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
     "gulp-file-include": "^0.13.7",
     "gulp-sass": "^2.3.1",
     "gulp-uglify": "^1.5.3",

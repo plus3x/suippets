@@ -26,11 +26,16 @@ input[type=submit] {
 .btn {
   font-family: inherit;
   font-size: .96em;
+  line-height: 0px;
   display: inline-block;
   margin: 0 0 5px 0;
-  padding: 5px 10px 7px 10px;
+  min-width: 70px;
+  padding: 10px 15px 11px 15px;
+  height: 35px;
   cursor: pointer;
-  transition: all .1s linear 0s;
+  transition: border .1s linear 0s;
+  text-align: center;
+  vertical-align: middle;
   color: $button-color;
   border: solid 1px $button-border-color;
   border-radius: 3px;
@@ -45,11 +50,10 @@ input[type=submit] {
   &:active {
     background: $button-background-active;
   }
-
 }
 
-a.btn {
-  line-height: 28px;
+a.btn{
+  line-height: 0.2em;
 }
 
 button.btn[disabled],
@@ -61,5 +65,4 @@ input[type=submit].btn[disabled] {
   &:hover {
     border: solid $button-border-color 1px;
   }
-
 }

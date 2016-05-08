@@ -13,13 +13,13 @@
 }
 
 .modal-wrapper.modal-hidden {
-  transition: background .2s linear .2s, visibility 0s linear .4s;
+  transition: background .3s linear .3s, visibility 0s linear .6s;
   background-color: rgba(#000, 0);
   visibility: hidden;
 }
 
 .modal-wrapper.modal-actived {
-  transition: background .2s linear 0s;
+  transition: background .3s linear 0s;
   background-color: rgba(#000, .7);
   visibility: visible;
 }
@@ -29,7 +29,7 @@
   padding: 30px;
   border-radius: 7px;
   background: #fff;
-  transition: all .4s cubic-bezier(.68,-0.55,.27,1.55) 0s;
+  transition: all .6s cubic-bezier(.68,-0.55,.27,1.55) 0s;
 }
 
 .modal-hidden .modal-content {

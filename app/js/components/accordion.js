@@ -1,6 +1,7 @@
 import $ from "jquery";
 
 function accordion() {
+  var collapsable = false;
   var accordionElement = $( "[accordion]" ).not( "pre [accordion]" );
   var activeTitleClass = "accordion-title-active";
 
@@ -10,7 +11,7 @@ function accordion() {
 
     accordionTitle.on( "click", function( event ) {
       accordionTitle.toggleClass( activeTitleClass );
-      accordionContent.slideToggle( 200 );
+      accordionContent.slideToggle( 200, "linear" );
       event.stopPropagation();
     });
   });
