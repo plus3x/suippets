@@ -2,36 +2,50 @@
    Dropdown
    ========================================================================== */
 
-.dropdown{
+.dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropdown-content{
-  width: 300px;
+.dropdown-content {
   position: absolute;
-  left: 0px;
-  right: 0px;
-  margin: 0px;
-  background: #3193cb;
-  z-index: 1;
-  color: #ffffff;
-  top: 52px;
+  top: 72px;
+  right: 0;
+  left: 0;
+  width: 300px;
+  margin: 0;
   padding: 20px;
+  color: #fff;
   border-radius: 3px;
+  background: #3193cb;
+  z-index: 10;
+  transition: visibility 0.2s linear 0s, top 0.2s linear 0s, opacity 0.2s linear 0s;
+  opacity: 0;
 }
 
-.dropdown-content::after{
+.dropdown-content.dropdown-hidden{
+  visibility: hidden;
+  top: 72px;
+  opacity: 0;
+}
+
+.dropdown-content.dropdown-activated{
+  visibility: visible;
+  top: 52px;
+  opacity: 1;
+}
+
+.dropdown-content::after {
+  position: absolute;
   bottom: 100%;
   left: 25px;
-  border: solid transparent;
-  content: " ";
-  height: 0;
   width: 0;
-  position: absolute;
+  height: 0;
+  margin-left: -9px;
+  content: ' ';
   pointer-events: none;
+  border: solid transparent;
+  border-width: 9px;
   border-color: rgba(136, 183, 213, 0);
   border-bottom-color: #074b71;
-  border-width: 9px;
-  margin-left: -9px;
 }

@@ -10,12 +10,12 @@ function dropdown() {
     var dropdownContent = $( element ).find( "[dropdown-content]" );
     var dropdownTarget = $( element ).find( "[dropdown-target]" );
 
-    dropdownContent.hide();
+    dropdownContent.addClass("dropdown-hidden");
 
     dropdownTarget.on( eventType, function( event ) {
       event.stopPropagation();
-      allDropdownContent.not( dropdownContent ).hide();
-      dropdownContent.fadeToggle( 50, "linear" );
+      allDropdownContent.not( dropdownContent ).removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
+      dropdownContent.toggleClass( "dropdown-activated" ).toggleClass( "dropdown-hidden" );
     });
   });
 
@@ -24,7 +24,7 @@ function dropdown() {
   });
 
   $document.on( eventType, function() {
-    allDropdownContent.fadeOut( 200, "linear" );
+    allDropdownContent.removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
   });
 }
 

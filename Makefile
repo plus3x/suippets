@@ -20,7 +20,7 @@ node-exec:
 	docker exec -i -t $(node-name) /bin/bash
 
 install:
-	npm install && npm install -g gulp && npm install -g bower
+	npm install && npm install -g gulp
 
 all:
 	chown dev -R *
