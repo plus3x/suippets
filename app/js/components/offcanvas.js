@@ -4,7 +4,6 @@ function offcanvas() {
   var allOffCanvasTarget = $( "[offcanvas-target]" ).not("pre [offcanvas-target]");
   var allOffCanvasWrapper = $( "[offcanvas-wrapper]" ).not("pre [offcanvas-wrapper]");
   var $window = $( window );
-  var $document = $( document );
 
   allOffCanvasWrapper.detach().addClass("offcanvas-hidden").appendTo("html");
 
@@ -19,8 +18,9 @@ function offcanvas() {
     var wrapper = $("[offcanvas-wrapper=" + targetIndex + "]");
     var content = wrapper.find("[offcanvas-content]");
 
+
     target.on("click", function() {
-      var scrollPosition = $document.scrollTop();
+      var scrollPosition = $( document ).scrollTop();
       wrapper.toggleClass("offcanvas-hidden offcanvas-active");
 
       $window.on( "scroll", function() {
