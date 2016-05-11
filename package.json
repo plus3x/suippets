@@ -13,7 +13,6 @@
     "babelify": "^7.2.0",
     "browser-sync": "^2.12.3",
     "browserify": "^13.0.0",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^0.13.7",
