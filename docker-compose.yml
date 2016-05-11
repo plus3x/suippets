@@ -1,0 +1,9 @@
+node:
+  image: c4co/node
+  ports:
+    - 3000:3000
+  volumes:
+    - ./:/app
+  container_name: suippets
+  tty: true
+  stdin_open: true
