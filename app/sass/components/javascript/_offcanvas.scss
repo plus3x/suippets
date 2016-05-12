@@ -17,7 +17,7 @@
 
 .offcanvas.offcanvas-active {
   visibility: visible;
-  transition: all .2s linear 0s;
+  transition: all .3s linear 0s;
   background: rgba(0, 0, 0, .5);
 }
 
@@ -30,18 +30,17 @@
   color: #fff;
   background: #000;
   visibility: hidden;
+  transition: all 0.3s cubic-bezier(.65,.05,.36,1) 0s;
 }
 
 .offcanvas-hidden .offcanvas-content {
   visibility: hidden;
   left: -250px;
   width: 250px;
-  transition: all 0.3s cubic-bezier(.22,.61,.36,1) 0s;
 }
 
 .offcanvas-active .offcanvas-content {
   visibility: visible;
   left: 0;
   width: 250px;
-  transition: all 0.3s cubic-bezier(.22,.61,.36,1) 0s;
 }
