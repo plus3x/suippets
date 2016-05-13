@@ -42,6 +42,10 @@ const PAGES = {
   "switch": {
     "entry": "./app/views/components/switch/switch.html",
     "output": "./pages"
+  },
+  "type": {
+    "entry": "./app/views/components/type/type.html",
+    "output": "./pages"
   }
 };
 
