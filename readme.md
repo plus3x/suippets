@@ -1,4 +1,4 @@
-
+<img width=100 src="https://dl.dropboxusercontent.com/s/f90hi2k99xxw5xn/suippets-logo.png?dl=0">
 
 # Suippets
 
@@ -9,7 +9,7 @@ Node / Npm
 
 ### Install
 ```
-$npm install
+$ npm install
 ```
 
 ### Run
@@ -19,17 +19,34 @@ gulp
 ```
 
 ### Syntax highlight
+Use github gists
 
-HTML structure to examples
-```
-<div class="wrap-code">
-  <p> Javascript ES5 / jQuery</p>
-  <pre class="class-name: 'code'; brush: js;">
-    ...
-  </pre>
-</div>
+### Page structure
 
 ```
+  views
+  |
+  ├─ components
+  | |
+  | ├─ page1
+  | ├─ page2
+  | ├─ page3
+  | ├─ pageN
+  | | |
+  | | ├─ page.html
+  | | ├─ example.html
+  | | ├─ code.html
+```
+
+Registre page in routes.js
+
+````
+"page": {
+  "entry": "./app/views/components/page/page.html",
+  "output": "./pages"
+}
+````
+Registre page
 
 ### License
 
