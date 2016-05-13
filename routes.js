@@ -1,3 +1,5 @@
+// Routes
+
 "use strict";
 
 const PAGES = {
@@ -35,6 +37,10 @@ const PAGES = {
   },
   "menu": {
     "entry": "./app/views/components/menu/menu.html",
+    "output": "./pages"
+  },
+  "switch": {
+    "entry": "./app/views/components/switch/switch.html",
     "output": "./pages"
   }
 };
