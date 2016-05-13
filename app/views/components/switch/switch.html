@@ -1,0 +1,17 @@
+@@include("parts/header.html", {"local": "../"})
+
+  <main class="main">
+    <section class="sidebar">
+      @@include("parts/sidebar.html", {"local": "../"})
+    </section>
+
+    <section class="center">
+      <div class="container">
+        <h1 class="page-title"> Switch </h1>
+        @@include("components/switch/example.html")
+        @@include("components/switch/code.html", {"local": "../"})
+      </div>
+    </section>
+  </main>
+
+@@include("parts/footer.html", {"local": "../"})
