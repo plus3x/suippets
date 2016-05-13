@@ -33,31 +33,37 @@ p {
 h1 {
   font-size: 2em;
   line-height: 1.2em;
+  margin: 0 0 20px 0;
 }
 
 h2 {
   font-size: 1.8em;
   line-height: 1.3em;
+  margin: 0 0 20px 0;
 }
 
 h3 {
   font-size: 1.6em;
   line-height: 1.3em;
+  margin: 0 0 20px 0;
 }
 
 h4 {
   font-size: 1.4em;
   line-height: 1.5em;
+  margin: 0 0 20px 0;
 }
 
 h5 {
   font-size: 1.2em;
   line-height: 1.5em;
+  margin: 0 0 20px 0;
 }
 
 h6 {
   font-size: 1em;
   line-height: 1.5em;
+  margin: 0 0 20px 0;
 }
 
 blockquote {
@@ -93,6 +99,7 @@ hr {
   height: 1px;
   border: none;
   border-top: solid $line-border-color 1px;
+  margin: 20px 0 20px 0;
 }
 
 *::selection {
