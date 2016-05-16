@@ -46,6 +46,10 @@ const PAGES = {
   "type": {
     "entry": "./app/views/components/type/type.html",
     "output": "./pages"
+  },
+  "forms": {
+    "entry": "./app/views/components/forms/forms.html",
+    "output": "./pages"
   }
 };
 
