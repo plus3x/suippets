@@ -1,11 +1,11 @@
 /* ==========================================================================
-   Button
-   ========================================================================== */
+Button
+========================================================================== */
 
 /*
-  <button class="btn"></button>
-  <a class="btn"></a>
-  <input type="submit" class="btn" />
+<button class="btn"></button>
+<a class="btn"></a>
+<input type="submit" class="btn" />
 */
 
 //Button normal
@@ -26,12 +26,12 @@ input[type=submit] {
 .btn {
   font-family: inherit;
   font-size: .96em;
-  line-height: 0px;
+  line-height: 0;
   display: inline-block;
-  margin: 0 0 5px 0;
   min-width: 70px;
-  padding: 10px 15px 12px 15px;
   height: 35px;
+  margin: 0 0 5px 0;
+  padding: .99rem .99rem 1.2rem .99rem;
   cursor: pointer;
   transition: border .1s linear 0s;
   text-align: center;
@@ -52,8 +52,8 @@ input[type=submit] {
   }
 }
 
-a.btn{
-  line-height: 0.2em;
+a.btn {
+  line-height: .13em;
 }
 
 button.btn[disabled],
