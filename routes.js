@@ -50,6 +50,10 @@ const PAGES = {
   "forms": {
     "entry": "./app/views/components/forms/forms.html",
     "output": "./pages"
+  },
+  "buttons": {
+    "entry": "./app/views/components/buttons/buttons.html",
+    "output": "./pages"
   }
 };
 
