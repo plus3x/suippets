@@ -1,17 +1,17 @@
 "use strict";
 
 let
-gulp = require("gulp"),
-sass = require("gulp-sass"),
-autoprefixer = require("gulp-autoprefixer"),
-browserSync = require("browser-sync").create(),
-concat = require("gulp-concat"),
-browserify = require("browserify"),
-babelify = require("babelify"),
-uglify = require("gulp-uglify"),
-fileinclude = require("gulp-file-include"),
-source = require("vinyl-source-stream"),
-PAGES = require("./routes.js");
+gulp = require( "gulp" ),
+sass = require( "gulp-sass" ),
+autoprefixer = require( "gulp-autoprefixer" ),
+browserSync = require( "browser-sync").create(),
+concat = require( "gulp-concat" ),
+browserify = require( "browserify" ),
+babelify = require( "babelify" ),
+uglify = require( "gulp-uglify" ),
+fileinclude = require( "gulp-file-include" ),
+source = require( "vinyl-source-stream" ),
+PAGES = require( "./routes.js" );
 
 let packageJson = require( "./package.json" );
 const DEPENDENCIES = Object.keys( packageJson && packageJson.dependencies || {});
@@ -71,7 +71,7 @@ gulp.task( "scripts", () => {
     extensions: [ "js" ],
     debug: true
   })
-  .transform( "babelify", { presets: [ "es2015" ] })
+  .transform( "babelify", { presets: [ "es2015" ] } )
   .external( DEPENDENCIES )
   .bundle()
   .on( "error", handleErrors )
@@ -87,15 +87,15 @@ gulp.task( "compress-scripts", () => {
 
 // Sass tasks
 
-gulp.task("sass", () => {
+gulp.task( "sass", () => {
   return gulp.src( ENTRIES.SASS_MAIN )
-  .pipe( sass().on("error", sass.logError ) )
+  .pipe( sass().on( "error", sass.logError ) )
   .pipe( sass({ outputStyle: "compressed" }) )
   .pipe( gulp.dest( OUTPUT.CSS ) )
   .pipe( browserSync.stream() );
 });
 
-gulp.task("autoprefixer", () => {
+gulp.task( "autoprefixer", () => {
   return gulp.src( ENTRIES.CSS )
   .pipe( autoprefixer({
       browsers: [ "last 2 versions" ],
@@ -125,7 +125,7 @@ gulp.task( "fileinclude", () => {
 
 // Browser sync tasks
 
-gulp.task("browser-sync", () => {
+gulp.task( "browser-sync", () => {
   browserSync.init({
     open: false,
     server: {
@@ -134,20 +134,22 @@ gulp.task("browser-sync", () => {
   });
 });
 
-gulp.task("files:watch", () => {
-  gulp.watch( ENTRIES.JS_ALL, [ "scripts" ]);
-  gulp.watch( ENTRIES.JS_BUNDLE ).on("change", browserSync.reload );
-  gulp.watch( ENTRIES.HTML_ALL, [ "fileinclude" ]);
+gulp.task( "files:watch", () => {
+  gulp.watch( ENTRIES.JS_ALL, [ "scripts" ] );
+  gulp.watch( ENTRIES.JS_BUNDLE ).on( "change", browserSync.reload );
+  gulp.watch( ENTRIES.HTML_ALL, [ "fileinclude" ] );
   gulp.watch( OUTPUT.PAGES ).on( "change", browserSync.reload );
-  gulp.watch( ENTRIES.SASS_ALL, [ "sass" ]);
-  gulp.watch( ENTRIES.CSS, [ "autoprefixer" ]);
+  gulp.watch( ENTRIES.SASS_ALL, [ "sass" ] );
+  gulp.watch( ENTRIES.CSS, [ "autoprefixer" ] );
 });
 
 // Exec
 
-gulp.task("default", [
+gulp.task( "default", [
   "vendors",
   "scripts",
+  "sass",
+  "autoprefixer",
   "fileinclude",
   "files:watch",
   "browser-sync"
