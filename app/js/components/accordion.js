@@ -1,7 +1,6 @@
 import $ from "jquery";
 
 function accordion() {
-  var collapsable = false;
   var accordionElement = $( "[accordion]" ).not( "pre [accordion]" );
   var activeTitleClass = "accordion-title-active";
 
