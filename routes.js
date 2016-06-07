@@ -62,6 +62,10 @@ const PAGES = {
   "grid-layout": {
     "entry": "./app/views/components/grid-layout/grid-layout.html",
     "output": "./pages"
+  },
+  "tables": {
+    "entry": "./app/views/components/tables/tables.html",
+    "output": "./pages"
   }
 };
 
