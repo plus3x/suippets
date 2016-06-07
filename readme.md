@@ -50,4 +50,4 @@ Registre page
 
 ### License
 
-Copyright (c) 2016 - C4co | Licensed under the MIT License
+2016 - C4co | Licensed under the MIT License
