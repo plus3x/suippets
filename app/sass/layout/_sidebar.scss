@@ -2,9 +2,19 @@
    Sidebar
    ========================================================================== */
 
+.sidebar{
+  width: 200px;
+  border-right: solid rgb(223, 223, 223) 1px;
+  flex-shrink: 0;
+}
+
+.toggle-sidebar{
+  display: block !important;
+}
+
 .logo{
-  width: 100%;
-  margin: 40px 0 50px 0;
+  width: 80%;
+  margin: 40px auto 50px auto;
   padding: 0px;
 
   img{
@@ -23,10 +33,16 @@
 
 .sidebar-menu-title{
   margin: 30px 0 10px 0;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .sidebar-menu-item{
   cursor: pointer;
   display: block;
+}
+
+@media all and (max-width: 800px){ 
+  .sidebar{
+    display: none;
+  }
 }
