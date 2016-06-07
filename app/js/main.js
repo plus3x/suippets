@@ -9,7 +9,7 @@ import tabs from "./components/tabs.js";
 import dropdown from "./components/dropdown.js";
 import offcanvas from "./components/offcanvas.js";
 
-$( () => {
+$(() => {
   importView();
   targetView();
   urlView();
@@ -21,3 +21,8 @@ $( () => {
   tabs();
   offcanvas();
 });
+
+// Mobile menu
+$('.open-menu').on('click', function(){
+	$('.sidebar').toggleClass('toggle-sidebar');
+})
