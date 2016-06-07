@@ -2,15 +2,6 @@
    Grid layout
    ========================================================================== */
 
-/* The grid is divided in 12 columns for various combinantions */
-
-/*
-  <div class="grid-layout">
-    <div class="col-2-12"> ... </div>
-    <div class="col-2-12"> ... </div>
-  </div>
-*/
-
 $layout-divider: 12;
 $layout-mobile-break-point: 680px;
 
