@@ -9,24 +9,27 @@ $table-border-color: #e4e4e4;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
-
+ 
   td {
-    padding: 7px;
-    border: solid $table-border-color 1px;
+    padding: 10px 0px 10px 0px;
+    border-bottom: solid $table-border-color 1px;
+    width: auto;
+    display: table-cell;
+    width: 2%;
   }
 
   th {
     font-weight: bold;
-    padding: 7px;
+    padding: 10px 0px 10px 0px;
     text-align: left;
-    border: solid $table-border-color 1px;
+    border-bottom: solid $table-border-color 1px;
   }
 
   caption {
     margin: 0 0 -1px 0;
-    padding: 7px;
-    border: solid $table-border-color 1px;
+    padding: 10px 0px 10px 0px;
+    border-bottom: solid $table-border-color 1px;
+    border-top: solid $table-border-color 1px;
     font-weight: bold;
   }
-
 }
