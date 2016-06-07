@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header{
+	height: 70px;
+	border-bottom: solid rgb(223, 223, 223) 1px;
+	display: none;
+	padding: 15px;
+}
+
+@media all and (max-width: 800px){ 
+  .header{
+    display: block;
+  }
+}
