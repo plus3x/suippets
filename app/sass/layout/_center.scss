@@ -2,16 +2,14 @@
    Center
    ========================================================================== */
 
+body, html{
+  overflow-x: hidden;
+}
+
 .main{
   width: 100%;
   min-height: 1000px;
   display: flex;
-}
-
-.sidebar{
-  width: 200px;
-  border-right: solid rgb(223, 223, 223) 1px;
-  flex-shrink: 0;
 }
 
 .center{
