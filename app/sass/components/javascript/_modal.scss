@@ -13,14 +13,14 @@
 }
 
 .modal-wrapper.modal-hidden {
-  transition: background .3s linear .3s, visibility 0s linear .6s;
+  transition: background .1s linear 0, visibility 0s linear .1s;
   background-color: rgba(#000, 0);
   visibility: hidden;
 }
 
 .modal-wrapper.modal-actived {
-  transition: background .3s linear 0s;
-  background-color: rgba(#000, .7);
+  transition: background .1s linear 0s;
+  background-color: rgba(#000, .3);
   visibility: visible;
 }
 
@@ -29,17 +29,16 @@
   padding: 30px;
   border-radius: 7px;
   background: #fff;
-  transition: all .6s cubic-bezier(.68,-0.55,.27,1.55) 0s;
+  transition: all .1s linear 0s;
 }
 
 .modal-hidden .modal-content {
-  margin: -100px auto 0 auto;
+  margin: 30px auto 0 auto;
   opacity: 0;
-  box-shadow: 0 0 30px rgba(#080808, 0.65);
 }
 
 .modal-actived .modal-content {
   margin: 60px auto 60px auto;
   opacity: 1;
-  box-shadow: 0 0 30px rgba(#080808, 0.65);
+  box-shadow: 0 0 30px rgba(#080808, 0.2);
 }
