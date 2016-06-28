@@ -10,7 +10,7 @@ function accordion() {
 
     accordionTitle.on( "click", function( event ) {
       accordionTitle.toggleClass( activeTitleClass );
-      accordionContent.slideToggle( 200, "linear" );
+      accordionContent.slideToggle( 100, "linear" );
       event.stopPropagation();
     });
   });
