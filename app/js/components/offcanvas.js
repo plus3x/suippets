@@ -1,8 +1,8 @@
 import $ from "jquery";
 
 function offcanvas() {
-  var allOffCanvasTarget = $( "[offcanvas-target]" ).not("pre [offcanvas-target]");
-  var allOffCanvasWrapper = $( "[offcanvas-wrapper]" ).not("pre [offcanvas-wrapper]");
+  var allOffCanvasTarget = $( "[offcanvas-target]" );
+  var allOffCanvasWrapper = $( "[offcanvas-wrapper]" );
   var $window = $( window );
   var $document = $( document );
 

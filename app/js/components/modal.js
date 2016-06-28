@@ -4,9 +4,9 @@ function modal() {
   var body = $( "body" );
   var $window = $( window );
   var $document = $( document  );
-  var modalTargets = $( "[modal-target]" ).not( "pre [modal-target]" );
-  var modalWrappers = $( "[modal-wrapper]" ).not( "pre [modal-wrapper]" );
-  var modalContent = $( "[modal-content]" ).not( "pre [modal-content]" );
+  var modalTargets = $( "[modal-target]" );
+  var modalWrappers = $( "[modal-wrapper]" );
+  var modalContent = $( "[modal-content]" );
 
   modalWrappers.detach().addClass( "modal-hidden" ).appendTo( "html" );
 
