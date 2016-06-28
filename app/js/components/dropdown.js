@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 function dropdown() {
-  var allDropdown = $( "[dropdown]" ).not( "pre [dropdown]" );
+  var allDropdown = $( "[dropdown]" );
   var allDropdownContent = allDropdown.find( "[dropdown-content]" );
   var $document = $( document );
   var eventType = "click";
