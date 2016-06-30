@@ -55,14 +55,6 @@ const PAGES = {
     "entry": "./app/views/components/buttons/buttons.html",
     "output": "./pages"
   },
-  "grid-content": {
-    "entry": "./app/views/components/grid-content/grid-content.html",
-    "output": "./pages"
-  },
-  "grid-layout": {
-    "entry": "./app/views/components/grid-layout/grid-layout.html",
-    "output": "./pages"
-  },
   "tables": {
     "entry": "./app/views/components/tables/tables.html",
     "output": "./pages"
