@@ -1,4 +1,4 @@
-import $ from "jquery";
+import $ from "jquery-slim";
 
 function modal() {
   var body = $( "body" );

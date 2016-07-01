@@ -1,4 +1,4 @@
-import $ from "jquery";
+import $ from "jquery-slim";
 
 function offcanvas() {
   var allOffCanvasTarget = $( "[offcanvas-target]" );
@@ -6,25 +6,24 @@ function offcanvas() {
   var $window = $( window );
   var $document = $( document );
 
-  allOffCanvasWrapper.detach().addClass("offcanvas-hidden").appendTo("html");
+  allOffCanvasWrapper.detach().addClass( "offcanvas-hidden" ).appendTo( "html" );
 
   function removeOffCanvas() {
-    allOffCanvasWrapper.removeClass("offcanvas-active").addClass("offcanvas-hidden");
+    allOffCanvasWrapper.removeClass( "offcanvas-active" ).addClass( "offcanvas-hidden" );
     $window.off("scroll");
   }
 
   allOffCanvasTarget.each(function( index, element ) {
     var target = $( element );
-    var targetIndex = target.attr("offcanvas-target");
-    var wrapper = $("[offcanvas-wrapper=" + targetIndex + "]");
-    var content = wrapper.find("[offcanvas-content]");
-
+    var targetIndex = target.attr( "offcanvas-target" );
+    var wrapper = $( "[offcanvas-wrapper=" + targetIndex + "]" );
+    var content = wrapper.find( "[offcanvas-content]" );
 
     target.on("click", function() {
       var scrollPosition = $document.scrollTop();
-      wrapper.toggleClass("offcanvas-hidden offcanvas-active");
+      wrapper.toggleClass( "offcanvas-hidden offcanvas-active" );
 
-      $window.on( "scroll", function() {
+      $window.on("scroll", function() {
         $( this ).scrollTop( scrollPosition );
       });
     });
@@ -37,7 +36,7 @@ function offcanvas() {
       removeOffCanvas();
     });
 
-    $window.on( "keydown", function( event ) {
+    $window.on("keydown", function( event ) {
       if ( event.keyCode == 27 ) {
         removeOffCanvas();
       }

@@ -1,7 +1,7 @@
-import $ from "jquery";
+import $ from "jquery-slim";
 
 function tabs() {
-  var allTabs = $( "[tabs]" ).not( "pre [tabs]" );
+  var allTabs = $( "[tabs]" );
   var activeTitleClass = "tab-title-active";
 
   allTabs.each(function( index, element ) {

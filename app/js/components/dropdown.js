@@ -1,4 +1,4 @@
-import $ from "jquery";
+import $ from "jquery-slim";
 
 function dropdown() {
   var allDropdown = $( "[dropdown]" );
