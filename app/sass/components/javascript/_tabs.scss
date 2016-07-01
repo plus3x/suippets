@@ -2,11 +2,11 @@
    Tabs
    ========================================================================== */
 
-.tab-titles{
+.tab-titles {
   display: flex;
 }
 
-.tab-title{
+.tab-title {
   border: solid black 1px;
   margin: 0px;
   width: 100%;
@@ -16,13 +16,13 @@
   background: #f2f2f2;
 }
 
-.tab-title-active{
+.tab-title-active {
   color: #fff;
   border: solid #3193cb 1px;
   background: #3193cb;
 }
 
-.tab-content{
+.tab-content {
   border: solid #dfdfdf 1px;
   border-top: none;
   padding: 20px;

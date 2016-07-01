@@ -1,10 +1,9 @@
 /* ==========================================================================
-Form
-========================================================================== */
+   Form
+   ========================================================================== */
 
 //Font
 $form-font-color: #4a4a4a;
-
 //Basic inputs
 $input-background: #fff;
 $input-background-focus: #fff;
@@ -12,14 +11,11 @@ $input-border-color: #ccc;
 $input-border-color-focus: #279ddf;
 $input-font-color: #5a5a5a;
 $input-placeholder-color: #5a5a5a;
-
 //Checkbox / radio
 $check-border-color: #333;
 $check-background-actived: #39f;
-
 //Fieldset
 $fieldset-border-color: #ddd;
-
 //Disabled
 $disabled-background: #f5f5f5;
 
@@ -67,6 +63,7 @@ legend {
     cursor: no-drop;
     background: $disabled-background;
   }
+
 }
 
 textarea.form-control {
@@ -80,6 +77,7 @@ textarea.form-control {
     cursor: no-drop;
     background: $disabled-background;
   }
+
 }
 
 .form-control-file {
@@ -119,6 +117,7 @@ textarea.form-control {
   &::after {
     content: 'teste';
   }
+
 }
 
 /* State input
@@ -128,6 +127,7 @@ input[type=email] {
   &:invalid {
     box-shadow: none;
   }
+
 }
 
 /* Checkbox and radio

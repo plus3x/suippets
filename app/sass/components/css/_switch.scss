@@ -2,16 +2,16 @@
    Switch
    ========================================================================== */
 
-.form-switch{
+.form-switch {
   cursor: pointer;
   display: block;
 }
 
-.form-switch input[type=checkbox]{
+.form-switch input[type=checkbox] {
   display: none;
 }
 
-.form-switch div{
+.form-switch div {
   display: block;
   width: 50px;
   height: 27px;
@@ -21,7 +21,7 @@
   transition: all .2s linear 0s;
 }
 
-.form-switch div::before{
+.form-switch div::before {
   content: " ";
   display: block;
   width: 23px;
@@ -29,15 +29,15 @@
   border-radius: 40px;
   background: white;
   position: absolute;
-  transition: all .2s cubic-bezier(.65,.05,.36,1) 0s;
+  transition: all .2s cubic-bezier(.65, .05, .36, 1) 0s;
   left: 2px;
   top: 2px;
 }
 
-.form-switch input[type=checkbox]:checked + div{
+.form-switch input[type=checkbox]:checked + div {
   background: #3193cb;
 }
 
-.form-switch input[type=checkbox]:checked + div::before{
+.form-switch input[type=checkbox]:checked + div::before {
   left: 25px;
 }

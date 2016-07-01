@@ -20,17 +20,17 @@
   background: #3193cb;
   z-index: 10;
   transition-property: visibility, top, opacity;
-  transition: .1s cubic-bezier(.86,0,.07,1) 0s;
+  transition: .1s cubic-bezier(.86, 0, .07, 1) 0s;
   opacity: 0;
 }
 
-.dropdown-content.dropdown-hidden{
+.dropdown-content.dropdown-hidden {
   visibility: hidden;
   top: 72px;
   opacity: 0;
 }
 
-.dropdown-content.dropdown-activated{
+.dropdown-content.dropdown-activated {
   visibility: visible;
   top: 52px;
   opacity: 1;

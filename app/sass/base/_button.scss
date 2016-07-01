@@ -1,6 +1,6 @@
 /* ==========================================================================
-Button
-========================================================================== */
+   Button
+   ========================================================================== */
 
 /*
 <button class="btn"></button>
@@ -14,7 +14,6 @@ $button-border-color-hover: #797979;
 $button-background: #fff;
 $button-background-active: #f2f2f2;
 $button-color: #747474;
-
 //Disabled button
 $button-disabled-background: #f2f2f2;
 
@@ -50,6 +49,7 @@ input[type=submit] {
   &:active {
     background: $button-background-active;
   }
+
 }
 
 a.btn {
@@ -65,4 +65,5 @@ input[type=submit].btn[disabled] {
   &:hover {
     border: solid $button-border-color 1px;
   }
+
 }

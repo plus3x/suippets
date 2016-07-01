@@ -5,11 +5,9 @@
 //Fonts
 $link-color: #3a82f3;
 $font-color: #717171;
-
 //Selection
 $selection-background-color: #008cff;
 $selection-font-color: #fff;
-
 //Line
 $line-background-color: #fff;
 $line-border-color: #e4e4e4;
@@ -82,8 +80,9 @@ a {
   }
 
   &:active {
-    color: darken( $link-color, 20% );
+    color: darken($link-color, 20%);
   }
+
 }
 
 ul {
@@ -107,7 +106,8 @@ hr {
   background: $selection-background-color;
 }
 
-pre, code {
+pre,
+code {
   font-family: Consolas, monaco, monospace;
   font-size: 1em;
 }
