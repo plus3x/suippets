@@ -7,8 +7,8 @@ const PAGES = {
     "entry": "./app/views/index.html",
     "output": "./"
   },
-  "accordion": {
-    "entry": "./app/views/components/accordion/accordion.html",
+  "expander": {
+    "entry": "./app/views/components/expander/expander.html",
     "output": "./pages"
   },
   "modal": {
