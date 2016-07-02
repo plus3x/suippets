@@ -5,6 +5,7 @@ import modal from "./components/modal.js";
 import tabs from "./components/tabs.js";
 import dropdown from "./components/dropdown.js";
 import offcanvas from "./components/offcanvas.js";
+import alert from "./components/alert.js";
 
 // Components
 $(() => {
@@ -13,9 +14,10 @@ $(() => {
 	modal();
 	tabs();
 	offcanvas();
+	alert();
 });
 
 // Mobile menu
 $('.open-menu').on('click', function(){
 	$('.sidebar').toggleClass('toggle-sidebar');
-})
+});
