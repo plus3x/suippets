@@ -161,8 +161,6 @@ gulp.task( "production", [
   "sass",
   "autoprefixer",
   "fileinclude",
-  "files:watch",
-  "browser-sync",
   "compress-scripts",
   "compress-vendors"
 ]);

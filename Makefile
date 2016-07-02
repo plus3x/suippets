@@ -4,8 +4,14 @@
 branch:
 	git checkout -b gh-pages
 
-# 2 - Run production tasks
+# 2 - Remove "pages/" and "dist/" in .gitignore
+
+# 3 - Run production tasks
 production:
 	gulp production
 
-# 3 - Configure menu links, adding "/suippets" in "href" path
+# 4 - Configure menu links, adding "/suippets" in "href" path
+
+# 5 - Sending to github
+push:
+	git push origin gh-pages
