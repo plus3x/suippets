@@ -156,6 +156,13 @@ gulp.task( "default", [
 ]);
 
 gulp.task( "production", [
+  "vendors",
+  "scripts",
+  "sass",
+  "autoprefixer",
+  "fileinclude",
+  "files:watch",
+  "browser-sync"
   "compress-scripts",
   "compress-vendors"
 ]);
