@@ -79,7 +79,7 @@ gulp.task( "scripts", () => {
   .pipe( gulp.dest( OUTPUT.PATH ) );
 });
 
-gulp.task( "compress-scripts", () => {
+gulp.task( "compress-scripts", [ "scripts" ], () => {
   return gulp.src( ENTRIES.JS_BUNDLE )
   .pipe( uglify() )
   .pipe( gulp.dest( OUTPUT.PATH ) );
