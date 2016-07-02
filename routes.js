@@ -1,5 +1,3 @@
-// Routes
-
 "use strict";
 
 const PAGES = {
