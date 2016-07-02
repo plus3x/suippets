@@ -58,6 +58,10 @@ const PAGES = {
   "tables": {
     "entry": "./app/views/components/tables/tables.html",
     "output": "./pages"
+  },
+  "alerts": {
+    "entry": "./app/views/components/alerts/alerts.html",
+    "output": "./pages"
   }
 };
 
