@@ -1,0 +1,55 @@
+/* ==========================================================================
+   alerts
+   ========================================================================== */
+
+.alert{
+  padding: 8px 40px 10px 20px;
+  margin: 10px 0 10px 0;
+  border-radius: 2px;
+  position: relative;
+}
+
+.alert-danger{
+  background: #de5050;
+  color: #ffffff; 
+}
+
+.alert-info{
+  background: #3399ff;
+  color: #ffffff; 
+}
+
+.alert-success{
+  background: #009999;
+  color: #ffffff; 
+}
+
+.alert-warnning{
+  background: #ef963e;
+  color: #ffffff; 
+}
+
+.alert-remove{
+  opacity: 0;
+  transition: opacity 0.1s linear 0s;
+}
+
+.alert-close{
+  display: inline block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+}
+
+.icon-home{
+  font-size: 11px;
+  position: absolute;
+  top: 16px;
+  color: #000;
+  left: 10px;
+  opacity: 0.4;
+  margin: 0px !important;
+}

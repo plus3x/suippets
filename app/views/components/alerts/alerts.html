@@ -1,0 +1,20 @@
+@@include("parts/header.html", {"local": "../"})
+
+<main class="main">
+  <section class="sidebar">
+    @@include("parts/sidebar.html", {"local": "../"})
+  </section>
+
+  <section class="center">
+    <div class="container">
+      <h1 class="page-title"> Alerts </h1>
+      
+      <p> HTML / Sass </p>
+
+      @@include("components/alerts/example.html")
+      @@include("components/alerts/code.html", {"local": "../"})
+    </div>
+  </section>
+</main>
+
+@@include("parts/footer.html", {"local": "../"})
