@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 247.3 194.7" style="enable-background:new 0 0 247.3 194.7;" xml:space="preserve">
+	 viewBox="0 0 293.5 143.1" style="enable-background:new 0 0 293.5 143.1;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#27AAE1;}
 </style>
-<path class="st0" d="M128.5,0h-3.7H43.3L0,66.1v63h5.9L0,140.8v53.9h94.8l27.5-30.8l0.9-3l34.3,33.8h83.8l5.9-21.3V0H128.5z
-	 M15.6,163.9v-34.8H81V98.3H15.6V59.6L48.5,9.5H119v11.1l-0.2,0.8v25.7H58.1v24.6h60.7v67.4l-22.1,24.8H15.6z M237.8,163.9h-70.5
-	l-32.9-32.6V9.5h43.3v116.8H194V9.5h43.8V163.9z"/>
+<g>
+	<path class="st0" d="M0.9,0h141.4l0.9,0.9v141.4l-0.9,0.9H0.9L0,142.2V0.9L0.9,0z M28.4,28.4l0.4,25.4l-0.4,24.9h70.9l0.9,0.9v19.8
+		l-0.9,0.9H28.8v14.2h85.5V64.5H43.4l-0.9-0.9V43.4l0.9-0.9h70.9V28.4H28.4z"/>
+	<path class="st0" d="M151.3,0h141.4l0.9,0.9v141.4l-0.9,0.9H151.3l-0.9-0.9V0.9L151.3,0z M179.2,28.4v85.9h85.5V28.4h-13.8v70.9
+		l-0.9,0.9h-56.3l-0.9-0.9V28.4H179.2z"/>
+</g>
 </svg>
