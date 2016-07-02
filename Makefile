@@ -1,17 +1,19 @@
 # Building for Github pages
 
-# 1 - Create "gh-pages" branch
+# 1 - create branch "gh-pages"
 branch:
 	git checkout -b gh-pages
 
-# 2 - Remove "pages/" and "dist/" in .gitignore
+# 2 - Configure links in menu, adding "/suippets" 
 
 # 3 - Run production tasks
-production:
+prod:
 	gulp production
 
-# 4 - Configure menu links, adding "/suippets" in "href" path
+# 4 - exclude unecessary files
+clear:
+	rm -Rf app/ docker-compose.yml gulpfile.js node_modules/ package.json readme.md routes.js .jscsrc 
 
-# 5 - Sending to github
+# 5 - Sendding to github
 push:
 	git push origin gh-pages
