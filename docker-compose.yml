@@ -1,5 +1,5 @@
 node:
-  image: c4co/node
+  image: node
   ports:
     - 3000:3000
   volumes:
