@@ -4,6 +4,8 @@
 
 Micro front-end snippets
 
+[Live project](https://c4co.github.io/suippets/)
+
 ### Dependencies
 Node / Npm
 
