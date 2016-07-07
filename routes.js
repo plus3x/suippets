@@ -1,3 +1,4 @@
+
 "use strict";
 
 const PAGES = {
@@ -63,4 +64,4 @@ const PAGES = {
   }
 };
 
-module.exports = PAGES;
+export default PAGES;
