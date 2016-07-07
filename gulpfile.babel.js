@@ -1,22 +1,23 @@
 "use strict";
 
-let
-gulp = require( "gulp" ),
-sass = require( "gulp-sass" ),
-autoprefixer = require( "gulp-autoprefixer" ),
-browserSync = require( "browser-sync").create(),
-concat = require( "gulp-concat" ),
-browserify = require( "browserify" ),
-babelify = require( "babelify" ),
-uglify = require( "gulp-uglify" ),
-fileinclude = require( "gulp-file-include" ),
-source = require( "vinyl-source-stream" ),
-PAGES = require( "./routes.js" );
+import gulp from "gulp";
+import sass from "gulp-sass";
+import autoprefixer from "gulp-autoprefixer";
+import bSync from "browser-sync";
+import concat from "gulp-concat";
+import browserify from "browserify";
+import babelify from "babelify";
+import uglify from "gulp-uglify";
+import fileinclude from "gulp-file-include";
+import source from "vinyl-source-stream";
+import PAGES from "./routes.js";
 
+let browserSync = bSync.create();
 let packageJson = require( "./package.json" );
+
 const DEPENDENCIES = Object.keys( packageJson && packageJson.dependencies || {});
 
-let ENTRIES = {
+const ENTRIES = {
   SASS_ALL: "./app/sass/**/*.scss",
   SASS_MAIN: "./app/sass/style.scss",
   CSS: "./dist/css/style.css",
@@ -28,7 +29,7 @@ let ENTRIES = {
   HTML_ALL: "./app/views/**/*.html"
 };
 
-let OUTPUT = {
+const OUTPUT = {
   INDEX: "./",
   CSS: "./dist/css",
   BUNDLE: "bundle.js",
