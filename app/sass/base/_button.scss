@@ -19,7 +19,7 @@ input[type=submit] {
 .btn {
   font-family: inherit;
   font-size: .96em;
-  line-height: 0;
+  line-height: .1em;
   display: inline-block;
   min-width: 70px;
   height: 35px;
@@ -45,10 +45,6 @@ input[type=submit] {
     background: $button-background-active;
   }
 
-}
-
-a.btn {
-  line-height: .13em;
 }
 
 button.btn[disabled],
