@@ -5,6 +5,7 @@
 .tooltip{
   position: relative;
   cursor: pointer;
+  display: inline-block;
 }
 
 .tooltip:hover:after {
@@ -31,7 +32,7 @@
   bottom: 1.2em;
   content: "";
   display: block;
-  left: 3px;
+  left: 10px;
   position: absolute;
   z-index: 99;
 }
