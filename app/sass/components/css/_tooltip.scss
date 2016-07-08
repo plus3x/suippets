@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Tooltips
+   ========================================================================== */
+
+.tooltip{
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip:hover:after {
+  background: #222;
+  border-radius: 3px;
+  bottom: 1.8em;
+  color: #fff;
+  font-size: 14px;
+  content: attr(tooltip-message);
+  display: block;
+  left: -5px;
+  padding: .15em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  white-space: nowrap;
+  z-index: 98;
+}
+
+// Arrow
+.tooltip:hover:before {
+  border: solid;
+  border-color: #222 transparent;
+  border-width: .4em .4em 0 .4em;
+  bottom: 1.2em;
+  content: "";
+  display: block;
+  left: 3px;
+  position: absolute;
+  z-index: 99;
+}

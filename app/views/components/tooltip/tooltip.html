@@ -1,0 +1,20 @@
+@@include("parts/header.html", {"local": "../"})
+
+<main class="main">
+  <section class="sidebar">
+    @@include("parts/sidebar.html", {"local": "../"})
+  </section>
+
+  <section class="center">
+    <div class="container">
+      <h1 class="page-title"> Text Tootip </h1>
+      
+      <p> HTML / Sass / jQuery slim </p>
+
+      @@include("components/tooltip/example.html")
+      @@include("components/tooltip/code.html", {"local": "../"})
+    </div>
+  </section>
+</main>
+
+@@include("parts/footer.html", {"local": "../"})
