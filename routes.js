@@ -61,6 +61,10 @@ const PAGES = {
   "alerts": {
     "entry": "./app/views/components/alerts/alerts.html",
     "output": "./pages"
+  },
+  "tooltip": {
+    "entry": "./app/views/components/tooltip/tooltip.html",
+    "output": "./pages"
   }
 };
 

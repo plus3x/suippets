@@ -107,7 +107,7 @@ gulp.task( "autoprefixer", () => {
   .pipe( browserSync.stream() );
 });
 
-// file include
+// File include
 
 gulp.task( "fileinclude", () => {
   function pages( entry, output ) {
