@@ -54,8 +54,8 @@ const PAGES = {
     "entry": "./app/views/components/buttons/buttons.html",
     "output": "./pages"
   },
-  "tables": {
-    "entry": "./app/views/components/tables/tables.html",
+  "table": {
+    "entry": "./app/views/components/table/table.html",
     "output": "./pages"
   },
   "alerts": {

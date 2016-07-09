@@ -3,12 +3,13 @@
    ========================================================================== */
 
 .page-title{
-  margin: 20px 0 20px 0;
+  margin: 20px 0 50px 0;
+  font-weight: normal;
 }
 
 .page-section{
   color: #009999;
-  font-size: 1.2em;
+  font-size: 1.1em;
   border-bottom: solid #e5e5e5 1px;
   text-transform: uppercase;
   padding: 0 0 5px 0;
@@ -19,26 +20,26 @@
   margin: 0 0 40px 0;
 }
 
-.wrap-code{
-  border: solid rgb(223, 223, 223) 1px;
-  margin: 0 0 20px 0;
-  max-width: 100%;
+.code{
+  position: relative;
+  width: 100%;
+  margin: 0 0 30px 0;
+  overflow: auto;
+  font-size: 13px;
+  background: #fdfdfd;
+  border-radius: 4px;
+  border: solid #f1f1f1 4px;
 
-  p{
-   margin: 0 0 20px 0;
-   padding: 10px 20px 0 20px;
-  }
-
-  .code{
-   padding: 0px 0px 10px 0px;
-   margin: 0px !important;
-   max-width: 100%;
+  pre{
+    margin: 0px;
+    padding: 20px;
   }
 }
 
-.su-element{
-  border: solid #d5d5d5 1px;
-  padding: 30px 10px 30px 10px;
-  text-align: center;
-  font-size: 1em;
+.code-title{
+  font-size: 1.3em;
+  padding: 10px;
+  margin: 0px;
+  border-bottom: solid #f1f1f1 4px;
+  font-weight: normal;
 }

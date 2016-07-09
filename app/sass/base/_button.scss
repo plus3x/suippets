@@ -44,7 +44,6 @@ input[type=submit] {
   &:active {
     background: $button-background-active;
   }
-
 }
 
 button.btn[disabled],
@@ -56,5 +55,4 @@ input[type=submit].btn[disabled] {
   &:hover {
     border: solid $button-border-color 1px;
   }
-
 }

@@ -1,60 +1,52 @@
-<!--  Form examples -->
+<form action="">
 
-<div class="page-example">
+  <fieldset>
+    <legend> Legend </legend>
 
-  <h4 class="page-section"> Example </h4>
+    <label> Input text </label>
+    <input class="form-control" type="text" placeholder="Placeholder"/>
 
-  <form action="">
+    <label> Input password </label>
+    <input class="form-control" type="password" placeholder="Placeholder" value="132456789"/>
 
-    <fieldset>
-      <legend> Legend </legend>
+    <label> Input Number </label>
+    <input class="form-control" type="number" placeholder="Placeholder"/>
 
-      <label> Input text </label>
-      <input class="form-control" type="text" placeholder="Placeholder"/>
+    <label> Disable input </label>
+    <input class="form-control" type="password" placeholder="Placeholder" disabled=""/>
 
-      <label> Input password </label>
-      <input class="form-control" type="password" placeholder="Placeholder" value="132456789"/>
+    <label> Select </label>
+    <select class="form-select">
+      <option> First </option>
+      <option> Second </option>
+      <option> Thrid </option>
+    </select>
 
-      <label> Input Number </label>
-      <input class="form-control" type="number" placeholder="Placeholder"/>
+    <label>Text area </label>
+    <textarea class="form-control" placeholder="insert a value"></textarea>
 
-      <label> Disable input </label>
-      <input class="form-control" type="password" placeholder="Placeholder" disabled=""/>
+    <input class="form-checkbox" id="first-check" type="checkbox"/>
+    <label for="first-check"> Checkbox </label>
 
-      <label> Select </label>
-      <select class="form-select">
-        <option> First </option>
-        <option> Second </option>
-        <option> Thrid </option>
-      </select>
+    <br/>
 
-      <label>Text area </label>
-      <textarea class="form-control" placeholder="insert a value"></textarea>
+    <input class="form-checkbox" id="second-check" type="checkbox" disabled />
+    <label for="second-check"> Disabled checkbox </label>
 
-      <input class="form-checkbox" id="first-check" type="checkbox"/>
-      <label for="first-check"> Checkbox </label>
+    <br/>
 
-      <br/>
+    <input class="form-radio" id="primeiro-radio" type="radio" name="foo"/>
+    <label for="primeiro-radio"> Radio </label>
 
-      <input class="form-checkbox" id="second-check" type="checkbox" disabled />
-      <label for="second-check"> Disabled checkbox </label>
+    <br/>
 
-      <br/>
+    <input class="form-radio" id="segundo-radio" type="radio" name="foo" disabled />
+    <label for="segundo-radio"> Disabled radio </label>
 
-      <input class="form-radio" id="primeiro-radio" type="radio" name="foo"/>
-      <label for="primeiro-radio"> Radio </label>
+    <br><br>
+    <input type="file" class="form-control-file">
+    <br><br>
+    <button class="btn"> Submit </button>
+  </fieldset>
 
-      <br/>
-
-      <input class="form-radio" id="segundo-radio" type="radio" name="foo" disabled />
-      <label for="segundo-radio"> Disabled radio </label>
-
-      <br><br>
-      <input type="file" class="form-control-file">
-      <br><br>
-      <button class="btn"> Submit </button>
-    </fieldset>
-
-  </form>
-
-</div>
+</form>
