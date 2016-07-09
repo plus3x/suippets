@@ -65,6 +65,10 @@ const PAGES = {
   "tooltip": {
     "entry": "./app/views/components/tooltip/tooltip.html",
     "output": "./pages"
+  },
+  "select-buttons": {
+    "entry": "./app/views/components/select-buttons/select-buttons.html",
+    "output": "./pages"
   }
 };
 
