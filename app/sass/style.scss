@@ -1,33 +1,33 @@
 /* --- Base */
-@import "base/_colors.scss";
-@import "base/_reset.scss";
-@import "base/_type.scss";
-@import "base/_button.scss";
-@import "base/_form.scss";
-@import "base/_table.scss";
+@import "base/colors.scss";
+@import "base/reset.scss";
+@import "base/type.scss";
+@import "base/button.scss";
+@import "base/form.scss";
+@import "base/table.scss";
 
 /* --- Utils */
-@import "utils/_helpers.scss";
+@import "utils/helpers.scss";
 
 /* --- Layout */
-@import "layout/_header.scss";
-@import "layout/_sidebar.scss";
-@import "layout/_center.scss";
-@import "layout/_home.scss";
-@import "layout/_page.scss";
-@import "layout/_footer.scss";
+@import "layout/header.scss";
+@import "layout/sidebar.scss";
+@import "layout/center.scss";
+@import "layout/home.scss";
+@import "layout/page.scss";
+@import "layout/footer.scss";
 
 /* --- Components */
-@import "components/javascript/_expander.scss";
-@import "components/javascript/_modal.scss";
-@import "components/javascript/_tabs.scss";
-@import "components/javascript/_dropdown.scss";
-@import "components/javascript/_offcanvas.scss";
-@import "components/javascript/_alert.scss";
+@import "components/javascript/expander.scss";
+@import "components/javascript/modal.scss";
+@import "components/javascript/tabs.scss";
+@import "components/javascript/dropdown.scss";
+@import "components/javascript/offcanvas.scss";
+@import "components/javascript/alert.scss";
 
-@import "components/css/_checkbox.scss";
-@import "components/css/_radio.scss";
-@import "components/css/_menu.scss";
-@import "components/css/_switch.scss";
-@import "components/css/_tooltip.scss";
-@import "components/css/_select-buttons.scss";
+@import "components/css/checkbox.scss";
+@import "components/css/radio.scss";
+@import "components/css/menu.scss";
+@import "components/css/switch.scss";
+@import "components/css/tooltip.scss";
+@import "components/css/select-buttons.scss";
