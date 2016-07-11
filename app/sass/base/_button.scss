@@ -30,7 +30,6 @@ input[type=submit] {
   text-align: center;
   vertical-align: middle;
   color: $button-color;
-  
   border: solid 1px $button-border-color;
   border-radius: 3px;
   background: $background-color;
@@ -44,6 +43,7 @@ input[type=submit] {
   &:active {
     background: $button-background-active;
   }
+
 }
 
 button.btn[disabled],
@@ -55,4 +55,5 @@ input[type=submit].btn[disabled] {
   &:hover {
     border: solid $button-border-color 1px;
   }
+
 }

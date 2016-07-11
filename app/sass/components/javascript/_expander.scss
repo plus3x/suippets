@@ -1,7 +1,6 @@
 /* ==========================================================================
    Expander
    ========================================================================== */
-
 .expander {
   margin: 0 0 10px 0;
 }
@@ -14,7 +13,7 @@
   padding: 0 0 7px 0;
 }
 
-.expander-title::before{
+.expander-title::before {
   content: "►"
 }
 
@@ -23,7 +22,7 @@
   border-bottom: dotted #e24f4f 1px;
 }
 
-.expander-title-active::before{
+.expander-title-active::before {
   content: "▼"
 }
 

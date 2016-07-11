@@ -1,7 +1,6 @@
 /* ==========================================================================
    Checkbox
    ========================================================================== */
-
 .form-checkbox {
   display: none;
 }
@@ -28,7 +27,7 @@
   cursor: pointer;
   border: solid #333333 2px;
   box-shadow: inset 0 0 0 2px #fff;
-  transition: all .1s cubic-bezier(.65,.05,.36,1) 0s;
+  transition: all .1s cubic-bezier(.65, .05, .36, 1) 0s;
 }
 
 .form-checkbox:checked + label::before {
