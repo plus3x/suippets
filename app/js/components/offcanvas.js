@@ -5,6 +5,7 @@ function offcanvas() {
   var allOffCanvasWrapper = $( "[offcanvas-wrapper]" );
   var $window = $( window );
   var $document = $( document );
+  var ESC = 27;
 
   allOffCanvasWrapper.detach().addClass( "offcanvas-hidden" ).appendTo( "html" );
 
@@ -37,7 +38,7 @@ function offcanvas() {
     });
 
     $window.on("keydown", function( event ) {
-      if ( event.keyCode == 27 ) {
+      if ( event.keyCode == ESC ) {
         removeOffCanvas();
       }
     });

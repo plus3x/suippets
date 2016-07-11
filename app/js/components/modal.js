@@ -7,6 +7,7 @@ function modal() {
   var modalTargets = $( "[modal-target]" );
   var modalWrappers = $( "[modal-wrapper]" );
   var modalContent = $( "[modal-content]" );
+  var ESC = 27;
 
   modalWrappers.detach().addClass( "modal-hidden" ).appendTo( "html" );
 
@@ -48,7 +49,7 @@ function modal() {
     });
 
     $window.on( "keydown", function( event ) {
-      if ( event.keyCode == 27 ) {
+      if ( event.keyCode == ESC ) {
         hideModal( modalWrapper );
       }
     });
