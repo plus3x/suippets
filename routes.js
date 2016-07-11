@@ -1,4 +1,3 @@
-
 "use strict";
 
 const PAGES = {
@@ -46,8 +45,8 @@ const PAGES = {
     "entry": "./app/views/components/type/type.html",
     "output": "./pages"
   },
-  "forms": {
-    "entry": "./app/views/components/forms/forms.html",
+  "form": {
+    "entry": "./app/views/components/form/form.html",
     "output": "./pages"
   },
   "buttons": {
@@ -58,8 +57,8 @@ const PAGES = {
     "entry": "./app/views/components/table/table.html",
     "output": "./pages"
   },
-  "alerts": {
-    "entry": "./app/views/components/alerts/alerts.html",
+  "alert": {
+    "entry": "./app/views/components/alert/alert.html",
     "output": "./pages"
   },
   "tooltip": {
