@@ -4,7 +4,10 @@
   "description": "front-end snippets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm install && npm install -g gulp && npm install -g jscs",
+    "start": "gulp",
+    "production": "gulp production"
   },
   "author": "Carlos Costa (c4co)",
   "license": "ISC",
