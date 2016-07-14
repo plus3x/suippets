@@ -11,13 +11,13 @@ Node / Npm
 
 ### Install
 ```
-$ npm install
+$ npm run install
 ```
 
 ### Run
 
 ```
-gulp
+npm run start
 ```
 
 ### Syntax highlight
