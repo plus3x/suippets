@@ -7,18 +7,18 @@ import offcanvas from "./components/offcanvas.js";
 import alert from "./components/alert.js";
 import syntax from "./syntax.js";
 
-$(() => {
-	expander();
-	dropdown();
-	modal();
-	tabs();
-	offcanvas();
-	alert();
+$( () => {
+  expander();
+  dropdown();
+  modal();
+  tabs();
+  offcanvas();
+  alert();
 });
 
 // Mobile menu
-$('.open-menu').on('click', function(){
-	$('.sidebar').toggleClass('toggle-sidebar');
+$( ".open-menu" ).on( "click", function() {
+  $( ".sidebar" ).toggleClass( "toggle-sidebar" );
 });
 
 syntax();
