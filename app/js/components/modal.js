@@ -16,16 +16,16 @@ function modal() {
 
   function hideModal( modalWrapper ) {
     modalWrapper.addClass( "modal-hidden" ).removeClass( "modal-actived" );
-   
+
     $window.off( "scroll" );
   }
 
-  function stopScroll(){
+  function stopScroll() {
     var scrollPosition = $document.scrollTop();
 
     $window.on( "scroll", function() {
       $( this ).scrollTop( scrollPosition );
-    });    
+    });
   }
 
   function closeModalBykey() {

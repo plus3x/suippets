@@ -6,14 +6,18 @@ function dropdown() {
   var $document = $( document );
   var eventType = "click";
 
-  function activePanel( dropdownTarget, dropdownContent ){
+  function activePanel( dropdownTarget, dropdownContent ) {
     dropdownTarget.on( eventType, function( event ) {
       event.stopPropagation();
 
       allDropdownContent.not( dropdownContent ).removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
-      
+
       dropdownContent.toggleClass( "dropdown-activated" ).toggleClass( "dropdown-hidden" );
     });
+  }
+
+  function removePanels() {
+    allDropdownContent.removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
   }
 
   allDropdown.each(function( index, element ) {
@@ -21,6 +25,7 @@ function dropdown() {
     var dropdownTarget = $( element ).find( "[dropdown-target]" );
 
     dropdownContent.addClass( "dropdown-hidden" );
+
     activePanel( dropdownTarget, dropdownContent );
   });
 
@@ -29,7 +34,6 @@ function dropdown() {
   });
 
   $document.on( eventType, function() {
-    allDropdownContent.removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
   });
 }
 

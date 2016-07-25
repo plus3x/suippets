@@ -3,12 +3,12 @@ import $ from "jquery-slim";
 function alert() {
   var AlertCloses = $( "[alert-close]" );
 
-  function closeAlert( button ){
-    button.on( "click", function() {
-      button.parent().addClass( "alert-remove" );
+  function closeAlert( closeButton ) {
+    closeButton.on( "click", function() {
+      closeButton.parent().addClass( "alert-remove" );
 
       setTimeout(function() {
-        button.parent().hide();
+        closeButton.parent().hide();
       }, 200 );
     });
   }
@@ -16,7 +16,7 @@ function alert() {
   AlertCloses.each(function( index, element ) {
     var closeButton = $( element );
 
-    closeAlert(closeButton);
+    closeAlert( closeButton );
   });
 }
 

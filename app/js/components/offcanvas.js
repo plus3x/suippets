@@ -11,7 +11,7 @@ function offcanvas() {
     .addClass( "offcanvas-hidden" )
     .appendTo( "html" );
 
-  function openOffCanvas(target, wrapper){
+  function openOffCanvas( target, wrapper ) {
     target.on("click", function() {
       wrapper.toggleClass( "offcanvas-hidden offcanvas-active" );
 
@@ -21,20 +21,20 @@ function offcanvas() {
 
   function closeOffCanvas() {
     allOffCanvasWrapper.removeClass( "offcanvas-active" ).addClass( "offcanvas-hidden" );
-  
-    $window.off("scroll");
+
+    $window.off( "scroll" );
   }
 
-  function stopScroll(){
+  function stopScroll() {
     var scrollPosition = $document.scrollTop();
 
-    $window.on("scroll", function() {
+    $window.on( "scroll", function() {
       $( this ).scrollTop( scrollPosition );
     });
   }
 
-  function closeOffCanvasByKey(){
-    $window.on("keydown", function( event ) {
+  function closeOffCanvasByKey() {
+    $window.on( "keydown", function( event ) {
       if ( event.keyCode == ESC ) {
         closeOffCanvas();
       }
@@ -47,8 +47,8 @@ function offcanvas() {
     var wrapper = $( "[offcanvas-wrapper=" + targetIndex + "]" );
     var content = wrapper.find( "[offcanvas-content]" );
 
-    openOffCanvas(target, wrapper);
-    
+    openOffCanvas( target, wrapper );
+
     closeOffCanvasByKey();
 
     content.on("click", function( event ) {

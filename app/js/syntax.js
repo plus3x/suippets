@@ -3,7 +3,7 @@ import hljs from "highlight.js";
 import superagent from "superagent";
 
 function syntax() {
- let codeWrapper = $( "[code]" );
+  let codeWrapper = $( "[code]" );
 
   hljs.configure({
     "languages": [ "js", "html", "css", "scss", "xml" ],
@@ -13,10 +13,10 @@ function syntax() {
   hljs.initHighlightingOnLoad();
 
   codeWrapper.each( ( index, obj ) => {
-    let element = $( obj ); 
+    let element = $( obj );
     let path = element.attr( "code" );
- 
-    superagent.get(path).end( ( err, res ) => {
+
+    superagent.get( path ).end( ( err, res ) => {
       element.html( hljs.highlightAuto( res.text ).value );
     });
   });
