@@ -4,24 +4,38 @@ function tabs() {
   var allTabs = $( "[tabs]" );
   var activeTitleClass = "tab-title-active";
 
+  function initialTab(firstTabTitle, firstTabContent){
+    firstTabTitle.addClass( activeTitleClass );
+    firstTabContent.show();
+  }
+
+  function changeTab( tabTitle, tabWrapper, tabContent ){
+    tabTitle.on( "click", function() {
+      var tabIndex = $( this ).attr( "tab-title" );
+      var thisTabContent = tabWrapper.find( "[tab-content=" + tabIndex + "]" )
+      var thisTabTitle = tabWrapper.find( "[tab-title=" + tabIndex + "]" )
+
+      tabTitle.removeClass( activeTitleClass );
+      tabContent.hide();
+                 
+      thisTabTitle.addClass( activeTitleClass );
+      thisTabContent.show();
+    });
+  }
+
   allTabs.each(function( index, element ) {
     var tabWrapper = $( element );
     var tabTitle = $( element ).find( "[tab-title]" );
     var tabContent = $( element ).find( "[tab-content]" );
     var firstIndex = tabTitle.first().attr( "tab-title" );
+    var firstTabTitle = $( element ).find( "[tab-title]" ).first();
+    var firstTabContent = tabWrapper.find( "[tab-content=" + firstIndex + "]" )
 
-    tabTitle.first().addClass( activeTitleClass );
     tabContent.hide();
-    tabWrapper.find( "[tab-content=" + firstIndex + "]" ).show();
+    
+    initialTab(firstTabTitle, firstTabContent);
 
-    tabTitle.on( "click", function() {
-      var tabIndex = $( this ).attr( "tab-title" );
-
-      tabWrapper.find( "[tab-content]" ).hide();
-      tabWrapper.find( "[tab-content=" + tabIndex + "]" ).show();
-      tabWrapper.find( "[tab-title]" ).removeClass( activeTitleClass );
-      tabWrapper.find( "[tab-title=" + tabIndex + "]" ).addClass( activeTitleClass );
-    });
+    changeTab(tabTitle, tabWrapper, tabContent);
   });
 }
 

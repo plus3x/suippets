@@ -6,7 +6,6 @@ function modal() {
   var $document = $( document  );
   var modalTargets = $( "[modal-target]" );
   var modalWrappers = $( "[modal-wrapper]" );
-  var modalContent = $( "[modal-content]" );
   var ESC = 27;
 
   modalWrappers.detach().addClass( "modal-hidden" ).appendTo( "html" );
@@ -17,7 +16,24 @@ function modal() {
 
   function hideModal( modalWrapper ) {
     modalWrapper.addClass( "modal-hidden" ).removeClass( "modal-actived" );
+   
     $window.off( "scroll" );
+  }
+
+  function stopScroll(){
+    var scrollPosition = $document.scrollTop();
+
+    $window.on( "scroll", function() {
+      $( this ).scrollTop( scrollPosition );
+    });    
+  }
+
+  function closeModalBykey() {
+    $window.on( "keydown", function( event ) {
+      if ( event.keyCode == ESC ) {
+        hideModal( modalWrapper );
+      }
+    });
   }
 
   modalTargets.each(function( index, element ) {
@@ -29,11 +45,7 @@ function modal() {
 
     target.on( "click", function() {
       openModal( modalWrapper );
-      var scrollPosition = $document.scrollTop();
-
-      $window.on( "scroll", function() {
-        $( this ).scrollTop( scrollPosition );
-      });
+      stopScroll();
     });
 
     modalContent.on( "click", function( event ) {
@@ -46,12 +58,6 @@ function modal() {
 
     modalClose.on( "click", function() {
       hideModal( modalWrapper );
-    });
-
-    $window.on( "keydown", function( event ) {
-      if ( event.keyCode == ESC ) {
-        hideModal( modalWrapper );
-      }
     });
   });
 };

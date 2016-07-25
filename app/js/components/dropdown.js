@@ -6,17 +6,22 @@ function dropdown() {
   var $document = $( document );
   var eventType = "click";
 
+  function activePanel(){
+    dropdownTarget.on( eventType, function( event ) {
+      event.stopPropagation();
+
+      allDropdownContent.not( dropdownContent ).removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
+      
+      dropdownContent.toggleClass( "dropdown-activated" ).toggleClass( "dropdown-hidden" );
+    });
+  }
+
   allDropdown.each(function( index, element ) {
     var dropdownContent = $( element ).find( "[dropdown-content]" );
     var dropdownTarget = $( element ).find( "[dropdown-target]" );
 
-    dropdownContent.addClass("dropdown-hidden");
-
-    dropdownTarget.on( eventType, function( event ) {
-      event.stopPropagation();
-      allDropdownContent.not( dropdownContent ).removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
-      dropdownContent.toggleClass( "dropdown-activated" ).toggleClass( "dropdown-hidden" );
-    });
+    dropdownContent.addClass( "dropdown-hidden" );
+    activePanel( dropdownTarget );
   });
 
   allDropdownContent.on( eventType, function( event ) {
