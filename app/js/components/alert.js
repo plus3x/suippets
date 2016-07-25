@@ -3,7 +3,7 @@ import $ from "jquery-slim";
 function alert() {
   var AlertCloses = $( "[alert-close]" );
 
-  function closeAlert(button){
+  function closeAlert( button ){
     button.on( "click", function() {
       button.parent().addClass( "alert-remove" );
 

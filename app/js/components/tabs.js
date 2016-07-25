@@ -4,7 +4,7 @@ function tabs() {
   var allTabs = $( "[tabs]" );
   var activeTitleClass = "tab-title-active";
 
-  function initialTab(firstTabTitle, firstTabContent){
+  function initialTab( firstTabTitle, firstTabContent ){
     firstTabTitle.addClass( activeTitleClass );
     firstTabContent.show();
   }
