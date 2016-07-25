@@ -6,7 +6,7 @@ function dropdown() {
   var $document = $( document );
   var eventType = "click";
 
-  function activePanel(){
+  function activePanel( dropdownTarget, dropdownContent ){
     dropdownTarget.on( eventType, function( event ) {
       event.stopPropagation();
 
@@ -21,7 +21,7 @@ function dropdown() {
     var dropdownTarget = $( element ).find( "[dropdown-target]" );
 
     dropdownContent.addClass( "dropdown-hidden" );
-    activePanel( dropdownTarget );
+    activePanel( dropdownTarget, dropdownContent );
   });
 
   allDropdownContent.on( eventType, function( event ) {
