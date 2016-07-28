@@ -60,6 +60,8 @@ function modal() {
       hideModal( modalWrapper );
     });
   });
+
+  closeModalBykey();
 };
 
 export default modal;
