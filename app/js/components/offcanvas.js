@@ -7,9 +7,7 @@ function offcanvas() {
   var $document = $( document );
   var ESC = 27;
 
-  allOffCanvasWrapper.detach()
-    .addClass( "offcanvas-hidden" )
-    .appendTo( "html" );
+  allOffCanvasWrapper.detach().addClass( "offcanvas-hidden" ).appendTo( "html" );
 
   function openOffCanvas( target, wrapper ) {
     target.on("click", function() {
@@ -49,8 +47,6 @@ function offcanvas() {
 
     openOffCanvas( target, wrapper );
 
-    closeOffCanvasByKey();
-
     content.on("click", function( event ) {
       event.stopPropagation();
     });
@@ -59,6 +55,9 @@ function offcanvas() {
       closeOffCanvas();
     });
   });
+
+  closeOffCanvasByKey();
+
 };
 
 export default offcanvas;
