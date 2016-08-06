@@ -2,6 +2,7 @@ node:
   image: node
   ports:
     - 3000:3000
+    - 9898:9898
   volumes:
     - ./:/app
   container_name: suippets
