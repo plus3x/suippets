@@ -1,67 +1,84 @@
 import $ from "jquery-slim";
 
-function modal() {
-  var body = $( "body" );
-  var $window = $( window );
-  var $document = $( document  );
-  var modalTargets = $( "[modal-target]" );
-  var modalWrappers = $( "[modal-wrapper]" );
-  var ESC = 27;
+// ES5 support
 
-  modalWrappers.detach().addClass( "modal-hidden" ).appendTo( "html" );
+var modal = {
+  targets: $( "[modal-target]" ),
+  wrappers: $( "[modal-wrapper]" ),
+  closeButtons: $( "[modal-wrapper]" ).find( "[modal-close]" ),
+  scrollPosition: $( document ).scrollTop(),
+  ESC: 27
+}
 
-  function openModal( modalWrapper ) {
-    modalWrapper.removeClass( "modal-hidden" ).addClass( "modal-actived" );
+modal.detach = function() {
+  modal
+    .wrappers
+    .detach()
+    .addClass( "modal-hidden" )
+    .appendTo( "html" );
+}
+
+modal.open = function( wrapper ) {
+  wrapper
+    .removeClass( "modal-hidden" )
+    .addClass( "modal-actived" );
+}
+
+modal.hide = function( wrapper ) {
+  wrapper
+    .addClass( "modal-hidden" )
+    .removeClass( "modal-actived" );
+
+  modal.startScroll();
+}
+
+modal.stopScroll = function() {
+  $( window ).on( "scroll", function() {
+    $( this ).scrollTop( modal.scrollPosition );
+  });
+}
+
+modal.startScroll = function(){
+  $( window ).off( "scroll" );
+}
+
+modal.closeModalBykey = function( event ) {
+  if ( event.keyCode == modal.ESC ) {
+    modal.hide( modal.wrappers );
   }
+}
 
-  function hideModal( modalWrapper ) {
-    modalWrapper.addClass( "modal-hidden" ).removeClass( "modal-actived" );
+modal.init = function() {
+  modal.detach();
 
-    $window.off( "scroll" );
-  }
+  $( window ).on( "keydown", function( event ){
+    modal.closeModalBykey( event );
+  });
 
-  function stopScroll() {
-    var scrollPosition = $document.scrollTop();
-
-    $window.on( "scroll", function() {
-      $( this ).scrollTop( scrollPosition );
-    });
-  }
-
-  function closeModalBykey() {
-    $window.on( "keydown", function( event ) {
-      if ( event.keyCode == ESC ) {
-        hideModal( modalWrapper );
-      }
-    });
-  }
-
-  modalTargets.each(function( index, element ) {
+  modal.targets.each(function( index, element ) {
     var target = $( element );
     var targetIndex = $( element ).attr( "modal-target" );
-    var modalWrapper = $( "[modal-wrapper=" + targetIndex + "]" );
-    var modalClose = modalWrapper.find( "[modal-close]" );
-    var modalContent = modalWrapper.find( "[modal-content]" );
+    var wrapper = $( "[modal-wrapper=" + targetIndex + "]" );
+    var content = wrapper.find( "[modal-content]" );
+    var closeButton = wrapper.find( "[modal-close]" );
 
     target.on( "click", function() {
-      openModal( modalWrapper );
-      stopScroll();
+      modal.open( wrapper )
+      modal.stopScroll();
     });
 
-    modalContent.on( "click", function( event ) {
+    content.on( "click", function( event ) {
       event.stopPropagation();
     });
 
-    modalWrapper.on( "click", function() {
-      hideModal( modalWrapper );
+    wrapper.on( "click", function() {
+      modal.hide( wrapper );
     });
 
-    modalClose.on( "click", function() {
-      hideModal( modalWrapper );
+    closeButton.on( "click", function() {
+      modal.hide( wrapper );
     });
   });
-
-  closeModalBykey();
-};
+}
 
 export default modal;

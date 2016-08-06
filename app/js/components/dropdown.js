@@ -1,40 +1,47 @@
 import $ from "jquery-slim";
 
-function dropdown() {
-  var allDropdown = $( "[dropdown]" );
-  var allDropdownContent = allDropdown.find( "[dropdown-content]" );
-  var $document = $( document );
-  var eventType = "click";
+// ES5 support
 
-  function activePanel( dropdownTarget, dropdownContent ) {
-    dropdownTarget.on( eventType, function( event ) {
+var dropdown = {
+  all: $( "[dropdown]" ),
+  contents: $( "[dropdown]" ).find( "[dropdown-content]" ),
+};
+
+dropdown.activePanel = function( content ) {
+  dropdown
+    .contents
+    .not( content )
+    .removeClass( "dropdown-activated" )
+    .on( "click", function( event ) {
+        event.stopPropagation();
+    });
+
+  content.toggleClass( "dropdown-activated" );
+}
+
+dropdown.removePanels = function( contents ) {
+  contents.removeClass( "dropdown-activated" )
+}
+
+dropdown.clear = function( ) {
+  $( document ).on( "click", function() {
+    dropdown.removePanels( dropdown.contents );
+  });
+}
+
+dropdown.init = function() {
+  dropdown.all.each(function( index, element ) {
+    var content = $( element ).find( "[dropdown-content]" );
+    var target = $( element ).find( "[dropdown-target]" );
+
+    target.on( "click", function( event ) {
       event.stopPropagation();
 
-      allDropdownContent.not( dropdownContent ).removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
-
-      dropdownContent.toggleClass( "dropdown-activated" ).toggleClass( "dropdown-hidden" );
+      dropdown.activePanel( content );
     });
-  }
+  })
 
-  function removePanels() {
-    allDropdownContent.removeClass( "dropdown-activated" ).addClass( "dropdown-hidden" );
-  }
-
-  allDropdown.each(function( index, element ) {
-    var dropdownContent = $( element ).find( "[dropdown-content]" );
-    var dropdownTarget = $( element ).find( "[dropdown-target]" );
-
-    dropdownContent.addClass( "dropdown-hidden" );
-
-    activePanel( dropdownTarget, dropdownContent );
-  });
-
-  allDropdownContent.on( eventType, function( event ) {
-    event.stopPropagation();
-  });
-
-  $document.on( eventType, function() {
-  });
+  dropdown.clear();
 }
 
 export default dropdown;

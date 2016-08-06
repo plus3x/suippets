@@ -4,16 +4,16 @@ import modal from "./components/modal.js";
 import tabs from "./components/tabs.js";
 import dropdown from "./components/dropdown.js";
 import offcanvas from "./components/offcanvas.js";
-import alert from "./components/alert.js";
+import alertmsg from "./components/alertmsg.js";
 import syntax from "./syntax.js";
 
 $( () => {
   expander();
-  dropdown();
-  modal();
+  dropdown.init();
+  modal.init();
   tabs();
   offcanvas();
-  alert();
+  alertmsg.init();
 });
 
 // Mobile menu
