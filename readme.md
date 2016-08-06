@@ -11,17 +11,19 @@ Node / Npm
 
 ### Install
 ```
-$ npm run install
+$ npm install
 ```
 
 ### Run
 
 ```
-npm run start
+npm start
 ```
 
-### Syntax highlight
-Use github gists
+### Run unit tests Karma + Jasmine
+```
+npm test
+```
 
 ### Page structure
 
