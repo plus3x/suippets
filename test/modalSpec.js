@@ -34,22 +34,22 @@ describe( "Modal spec" , () => {
   });
 
   it( "Open modal, add {modal-active} class and remove {modal-hidden} class", () => {
-    expect( modal.wrappers ).not.toHaveClass( "modal-actived" );
+    expect( modal.wrappers ).not.toHaveClass( "modal-activated" );
     expect( modal.wrappers ).toHaveClass( "modal-hidden" );
 
     modal.open( modal.wrappers );
 
-    expect( modal.wrappers ).toHaveClass( "modal-actived" );
+    expect( modal.wrappers ).toHaveClass( "modal-activated" );
     expect( modal.wrappers ).not.toHaveClass( "modal-hidden" );
   });
 
   it( "Hidden modal, remove {modal-actived} class and add {modal-hidden} class", () => {
-    expect( modal.wrappers ).toHaveClass( "modal-actived" );
+    expect( modal.wrappers ).toHaveClass( "modal-activated" );
     expect( modal.wrappers ).not.toHaveClass( "modal-hidden" );
 
     modal.hide( modal.wrappers );
 
-    expect( modal.wrappers ).not.toHaveClass( "modal-actived" );
+    expect( modal.wrappers ).not.toHaveClass( "modal-activated" );
     expect( modal.wrappers ).toHaveClass( "modal-hidden" );
   });
 

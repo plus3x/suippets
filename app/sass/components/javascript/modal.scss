@@ -22,7 +22,7 @@
   visibility: hidden;
 }
 
-.modal-wrapper.modal-actived {
+.modal-wrapper.modal-activated {
   transition: background .1s linear 0s;
   background-color: rgba(#000, .3);
   visibility: visible;
@@ -40,7 +40,7 @@
   border-radius: 4px;
 }
 
-.modal-actived .modal-content {
+.modal-activated .modal-content {
   opacity: 1;
   transform: scale(1, 1);
 }

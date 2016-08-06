@@ -21,13 +21,13 @@ modal.detach = function() {
 modal.open = function( wrapper ) {
   wrapper
     .removeClass( "modal-hidden" )
-    .addClass( "modal-actived" );
+    .addClass( "modal-activated" );
 }
 
 modal.hide = function( wrapper ) {
   wrapper
     .addClass( "modal-hidden" )
-    .removeClass( "modal-actived" );
+    .removeClass( "modal-activated" );
 
   modal.startScroll();
 }
