@@ -10,11 +10,11 @@ var dropdown = {
 dropdown.activePanel = function( content ) {
   dropdown
     .contents
-    .not( content )
-    .removeClass( "dropdown-activated" )
-    .on( "click", function( event ) {
-        event.stopPropagation();
-    });
+      .not( content )
+      .removeClass( "dropdown-activated" )
+      .on( "click", function( event ) {
+          event.stopPropagation();
+      });
 
   content.toggleClass( "dropdown-activated" );
 }
