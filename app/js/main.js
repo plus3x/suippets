@@ -12,7 +12,7 @@ $( () => {
   dropdown.init();
   modal.init();
   tabs();
-  offcanvas();
+  offcanvas.init();
   alertmsg.init();
 });
 
