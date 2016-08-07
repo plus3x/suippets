@@ -37,7 +37,7 @@ describe( "Modal spec" , () => {
     expect( modal.wrappers ).not.toHaveClass( "modal-activated" );
     expect( modal.wrappers ).toHaveClass( "modal-hidden" );
 
-    modal.open( modal.wrappers );
+    modal.show( modal.wrappers );
 
     expect( modal.wrappers ).toHaveClass( "modal-activated" );
     expect( modal.wrappers ).not.toHaveClass( "modal-hidden" );

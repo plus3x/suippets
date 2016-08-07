@@ -18,7 +18,7 @@ describe( "Alert spec" , () => {
   it( "Add 'alert-remove' class in alert structure", () => {
     expect( alertStructure ).not.toHaveClass( "alert-remove" );
 
-    alertmsg.closeAlert( button );
+    alertmsg.removeAlert( button );
 
     expect( alertStructure ).toHaveClass( "alert-remove" );
   });
@@ -26,7 +26,7 @@ describe( "Alert spec" , () => {
   it( "Hidden element", () => {
     expect( alertStructure ).not.toHaveCss( {"display": "none"} );
 
-    alertmsg.hiddenAlert( button );
+    alertmsg.hideAlert( button );
 
     expect( alertStructure ).toHaveCss( {"display": "none"} );
   });
