@@ -13,12 +13,12 @@ var modal = {
 modal.detach = function() {
   modal
     .wrappers
-    .detach()
-    .addClass( "modal-hidden" )
-    .appendTo( "html" );
+      .detach()
+      .addClass( "modal-hidden" )
+      .appendTo( "html" );
 }
 
-modal.open = function( wrapper ) {
+modal.show = function( wrapper ) {
   wrapper
     .removeClass( "modal-hidden" )
     .addClass( "modal-activated" );
@@ -33,8 +33,10 @@ modal.hide = function( wrapper ) {
 }
 
 modal.stopScroll = function() {
+  var scrollPosition = $( document ).scrollTop();
+
   $( window ).on( "scroll", function() {
-    $( this ).scrollTop( modal.scrollPosition );
+    $( this ).scrollTop( scrollPosition );
   });
 }
 
@@ -42,18 +44,18 @@ modal.startScroll = function(){
   $( window ).off( "scroll" );
 }
 
-modal.closeModalBykey = function( event ) {
-  if ( event.keyCode == modal.ESC ) {
-    modal.hide( modal.wrappers );
-  }
+modal.hideByKey = function( event ) {
+  $( window ).on( "keydown", function( event ){
+    if ( event.keyCode == modal.ESC ) {
+      modal.hide( modal.wrappers );
+    }
+  });
 }
 
 modal.init = function() {
   modal.detach();
 
-  $( window ).on( "keydown", function( event ){
-    modal.closeModalBykey( event );
-  });
+  modal.hideByKey();
 
   modal.targets.each(function( index, element ) {
     var target = $( element );
@@ -63,7 +65,7 @@ modal.init = function() {
     var closeButton = wrapper.find( "[modal-close]" );
 
     target.on( "click", function() {
-      modal.open( wrapper )
+      modal.show( wrapper )
       modal.stopScroll();
     });
 
