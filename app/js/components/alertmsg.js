@@ -6,24 +6,24 @@ var alertmsg = {
   "buttons": $( "[alert-close]" ),
 }
 
-alertmsg.hiddenAlert = function( button ) {
+alertmsg.hideAlert = function( button ) {
   button.parent().hide();
 }
 
-alertmsg.closeAlert = function( button ) {
+alertmsg.removeAlert = function( button ) {
   button
     .parent()
     .addClass( "alert-remove" );
 
   setTimeout(function() {
-    alertmsg.hiddenAlert( button );
+    alertmsg.hideAlert( button );
   }, 200 );
 }
 
 alertmsg.init = function() {
   this.buttons.each( function( index, button ) {
     $( button ).on( 'click', function(){
-      alertmsg.closeAlert( $( button ) );
+      alertmsg.removeAlert( $( button ) );
     });
   });
 }
