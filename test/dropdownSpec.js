@@ -3,47 +3,35 @@ import dropdown from "../app/js/components/dropdown.js";
 
 describe( "Dropdown Spec", () => {
 
-  beforeEach(() => {
-    spyOn( dropdown, "clear" );
-    spyOn( dropdown, "init" );
+  beforeEach( () => {
+    const dropdownMarkup = $(`
+      <div dropdown class="dropdown">
+        <button dropdown-target class="btn" > </button>
+        <div dropdown-content class="dropdown-content"> </div>
+      </div>
+    `);
+
+    dropdown.all = dropdownMarkup;
+    dropdown.contents = dropdownMarkup.find( "[dropdown-content]" );
+
+    dropdown.init();
   });
 
-  const dropdownMarkup = $(`
-    <div dropdown class="dropdown">
-      <button dropdown-target class="btn" > </button>
-      <div dropdown-content class="dropdown-content"> </div>
-    </div>
-  `);
-
-  let target = dropdownMarkup.find( "[dropdown-target]" );
-  let content = dropdownMarkup.find( "[dropdown-content]" );
-
   it( "Add {dropdown-activated} class", () => {
-    expect( content ).not.toHaveClass( "dropdown-activated" );
+    expect( dropdown.contents ).not.toHaveClass( "dropdown-activated" );
 
-    dropdown.activePanel( content );
+    dropdown.activePanel( dropdown.contents );
 
-    expect( content ).toHaveClass( "dropdown-activated" );
+    expect( dropdown.contents ).toHaveClass( "dropdown-activated" );
   });
 
   it( "Remove {dropdown-activated} class", () => {
-    expect( content ).toHaveClass( "dropdown-activated" );
+    dropdown.activePanel( dropdown.contents );
 
-    dropdown.removePanels( content );
+    expect( dropdown.contents ).toHaveClass( "dropdown-activated" );
 
-    expect( content ).not.toHaveClass( "dropdown-activated" );
+    dropdown.removePanels();
+
+    expect( dropdown.contents ).not.toHaveClass( "dropdown-activated" );
   });
-
-  it( "Call clear method", function(){
-    dropdown.clear();
-
-    expect( dropdown.clear ).toHaveBeenCalled();
-  });
-
-  it( "Call init method", function(){
-    dropdown.init();
-
-    expect( dropdown.init ).toHaveBeenCalled();
-  });
-
 });

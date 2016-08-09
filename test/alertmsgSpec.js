@@ -3,38 +3,45 @@ import alertmsg from "../app/js/components/alertmsg.js";
 
 describe( "Alert spec" , () => {
 
-  beforeEach(() => {
-    spyOn( alertmsg, "init" );
+  beforeEach(()=> {
+    const alertStructure = $(`
+      <div>
+        <span alert-close> </span>
+      </div>
+    `);
+
+    let button = alertStructure.find( "[alert-close]" );
+
+    alertmsg.buttons = button;
+
+    alertmsg.init();
   });
 
-  const alertStructure = $(`
-    <div class="alert alert-danger">
-      <span alert-close class="alert-close"> </span>
-    </div>
-  `);
-
-  let button = alertStructure.find( "[alert-close]" );
-
   it( "Add 'alert-remove' class in alert structure", () => {
-    expect( alertStructure ).not.toHaveClass( "alert-remove" );
+    expect( alertmsg.buttons.parent() ).not.toHaveClass( "alert-remove" );
 
-    alertmsg.removeAlert( button );
+    alertmsg.removeAlert( alertmsg.buttons );
 
-    expect( alertStructure ).toHaveClass( "alert-remove" );
+    expect( alertmsg.buttons.parent() ).toHaveClass( "alert-remove" );
   });
 
   it( "Hidden element", () => {
-    expect( alertStructure ).not.toHaveCss( {"display": "none"} );
+    expect( alertmsg.buttons.parent() ).not.toHaveCss( {"display": "none"} );
 
-    alertmsg.hideAlert( button );
+    alertmsg.hideAlert( alertmsg.buttons );
 
-    expect( alertStructure ).toHaveCss( {"display": "none"} );
+    expect( alertmsg.buttons.parent() ).toHaveCss( {"display": "none"} );
   });
 
-  it( "Call init", () => {
-    alertmsg.init();
+  it( "Remove alerts on click", () => {
+    expect( alertmsg.buttons.parent() ).not.toHaveClass( "alert-remove" );
 
-    expect( alertmsg.init ).toHaveBeenCalled();
+    let spyEvent = spyOnEvent( alertmsg.buttons, "click" );
+
+    alertmsg.buttons.click();
+
+    expect( "click" ).toHaveBeenTriggeredOn( alertmsg.buttons );
+    expect( alertmsg.buttons.parent() ).toHaveClass( "alert-remove" );
   });
 
 });

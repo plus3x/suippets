@@ -11,6 +11,9 @@ describe( "Offcanvas Spec", () => {
     <div offcanvas-wrapper="1" class="offcanvas">
       <div offcanvas-content class="offcanvas-content">
       </div>
+    </div><div offcanvas-wrapper="2" class="offcanvas">
+      <div offcanvas-content class="offcanvas-content">
+      </div>
     </div>
   `);
 
@@ -31,8 +34,8 @@ describe( "Offcanvas Spec", () => {
 
     offcanvas.show( offcanvas.wrappers );
 
-    expect( offcanvas.wrappers).not.toHaveClass( "offcanvas-hidden" );
-    expect( offcanvas.wrappers).toHaveClass( "offcanvas-activated" );
+    expect( offcanvas.wrappers ).not.toHaveClass( "offcanvas-hidden" );
+    expect( offcanvas.wrappers ).toHaveClass( "offcanvas-activated" );
   })
 
   it( "Hide offcanvas, remove class {offcanvas-activated} and add {offcanvas-hidden}", () => {
@@ -43,6 +46,22 @@ describe( "Offcanvas Spec", () => {
 
     expect( offcanvas.wrappers ).not.toHaveClass( "offcanvas-activated" );
     expect( offcanvas.wrappers ).toHaveClass( "offcanvas-hidden" );
+  });
+
+  it( "Click handler was associate and triggred", () => {
+    let spyEvent = spyOnEvent( offcanvas.targets, "click" );
+
+    offcanvas.targets.click();
+
+    expect( "click" ).toHaveBeenTriggeredOn( offcanvas.targets );
+  });
+
+  it( "Click on target(#1) and open the corresponding wrapper(#1)", () => {
+    expect( offcanvas.wrappers[ 0 ] ).toHaveClass( "offcanvas-activated" );
+    expect( offcanvas.wrappers[ 0 ] ).not.toHaveClass( "offcanvas-hidden" );
+
+    expect( offcanvas.wrappers[ 1 ] ).not.toHaveClass( "offcanvas-activated" );
+    expect( offcanvas.wrappers[ 1 ] ).toHaveClass( "offcanvas-hidden" );
   });
 
 });

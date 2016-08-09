@@ -5,7 +5,6 @@ describe( "Modal spec" , () => {
 
   const modalTargetMarkup = $(`
     <button modal-target="1"> </button>
-    <button modal-target="2"> </button>
   `);
 
   const modalWrapperMarkup = $(`
@@ -13,9 +12,7 @@ describe( "Modal spec" , () => {
       <div modal-content class="modal-content">
         <button modal-close type="button"> </button>
       </div>
-    </div>
-
-    <div modal-wrapper="2" class="modal-wrapper">
+    </div><div modal-wrapper="2" class="modal-wrapper">
       <div modal-content class="modal-content">
         <button modal-close type="button"> </button>
       </div>
@@ -52,5 +49,21 @@ describe( "Modal spec" , () => {
     expect( modal.wrappers ).not.toHaveClass( "modal-activated" );
     expect( modal.wrappers ).toHaveClass( "modal-hidden" );
   });
+
+  it( "Click handler was associate and triggred", () => {
+    let spyEvent = spyOnEvent( modal.targets, "click" );
+
+    modal.targets.click();
+
+    expect( "click" ).toHaveBeenTriggeredOn( modal.targets );
+  });
+
+  it( "Click on target(#1) and open the corresponding wrapper(#1)", () => {
+    expect( modal.wrappers[ 0 ] ).toHaveClass( "modal-activated" );
+    expect( modal.wrappers[ 0 ] ).not.toHaveClass( "modal-hidden" );
+
+    expect( modal.wrappers[ 1 ] ).toHaveClass( "modal-hidden" );
+    expect( modal.wrappers[ 1 ] ).not.toHaveClass( "modal-activated" );
+  })
 
 });
