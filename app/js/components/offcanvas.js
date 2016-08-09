@@ -30,6 +30,14 @@ offcanvas.hide = function() {
   offcanvas.startScroll();
 }
 
+offcanvas.hideByKey = function() {
+  $( window ).on( "keydown", function( event ) {
+    if ( event.keyCode == offcanvas.ESC ) {
+      offcanvas.hide();
+    }
+  });
+}
+
 offcanvas.stopScroll = function() {
   var scrollPosition = $( document ).scrollTop();
 
@@ -40,14 +48,6 @@ offcanvas.stopScroll = function() {
 
 offcanvas.startScroll = function () {
   $( window ).off( "scroll" );
-}
-
-offcanvas.hideByKey = function() {
-  $( window ).on( "keydown", function( event ) {
-    if ( event.keyCode == offcanvas.ESC ) {
-      offcanvas.hide();
-    }
-  });
 }
 
 offcanvas.init = function() {

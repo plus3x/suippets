@@ -19,14 +19,10 @@ dropdown.activePanel = function( content ) {
   content.toggleClass( "dropdown-activated" );
 }
 
-dropdown.removePanels = function( contents ) {
-  contents.removeClass( "dropdown-activated" )
-}
-
-dropdown.clear = function( ) {
-  $( document ).on( "click", function() {
-    dropdown.removePanels( dropdown.contents );
-  });
+dropdown.removePanels = function() {
+  dropdown
+    .contents
+      .removeClass( "dropdown-activated" );
 }
 
 dropdown.init = function() {
@@ -36,12 +32,11 @@ dropdown.init = function() {
 
     target.on( "click", function( event ) {
       event.stopPropagation();
-
       dropdown.activePanel( content );
     });
   })
 
-  dropdown.clear();
+  $( document ).on( "click", dropdown.removePanels );
 }
 
 export default dropdown;
