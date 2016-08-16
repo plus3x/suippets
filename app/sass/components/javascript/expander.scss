@@ -17,12 +17,12 @@
   content: "►"
 }
 
-.expander-title-active {
+.expander-title-activated {
   color: #e24f4f;
   border-bottom: dotted #e24f4f 1px;
 }
 
-.expander-title-active::before {
+.expander-title-activated::before {
   content: "▼"
 }
 
