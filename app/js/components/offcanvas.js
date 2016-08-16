@@ -6,7 +6,7 @@ var offcanvas = {
   targets: $( "[offcanvas-target]" ),
   wrappers: $( "[offcanvas-wrapper]" ),
   ESC: 27
-}
+};
 
 offcanvas.deatch = function() {
   offcanvas
@@ -14,12 +14,12 @@ offcanvas.deatch = function() {
       .detach()
       .addClass( "offcanvas-hidden" )
       .appendTo( "html" );
-}
+};
 
 offcanvas.show = function( wrapper ) {
   wrapper.toggleClass( "offcanvas-hidden offcanvas-activated" );
   offcanvas.stopScroll();
-}
+};
 
 offcanvas.hide = function() {
   offcanvas
@@ -28,7 +28,7 @@ offcanvas.hide = function() {
       .addClass( "offcanvas-hidden" );
 
   offcanvas.startScroll();
-}
+};
 
 offcanvas.hideByKey = function() {
   $( window ).on( "keydown", function( event ) {
@@ -36,7 +36,7 @@ offcanvas.hideByKey = function() {
       offcanvas.hide();
     }
   });
-}
+};
 
 offcanvas.stopScroll = function() {
   var scrollPosition = $( document ).scrollTop();
@@ -44,11 +44,11 @@ offcanvas.stopScroll = function() {
   $( window ).on( "scroll", function() {
     $( this ).scrollTop( scrollPosition );
   });
-}
+};
 
-offcanvas.startScroll = function () {
+offcanvas.startScroll = function() {
   $( window ).off( "scroll" );
-}
+};
 
 offcanvas.init = function() {
   offcanvas.deatch();
@@ -61,9 +61,9 @@ offcanvas.init = function() {
     var wrapper = $( "[offcanvas-wrapper=" + targetIndex + "]" );
     var content = wrapper.find( "[offcanvas-content]" );
 
-    target.on( "click", function(){
+    target.on( "click", function() {
       offcanvas.show( wrapper );
-    })
+    });
 
     content.on( "click", function( event ) {
       event.stopPropagation();
@@ -73,6 +73,6 @@ offcanvas.init = function() {
       offcanvas.hide();
     });
   });
-}
+};
 
 export default offcanvas;

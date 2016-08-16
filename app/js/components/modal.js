@@ -8,7 +8,7 @@ var modal = {
   closeButtons: $( "[modal-wrapper]" ).find( "[modal-close]" ),
   scrollPosition: $( document ).scrollTop(),
   ESC: 27
-}
+};
 
 modal.detach = function() {
   modal
@@ -16,13 +16,13 @@ modal.detach = function() {
       .detach()
       .addClass( "modal-hidden" )
       .appendTo( "html" );
-}
+};
 
 modal.show = function( wrapper ) {
   wrapper
     .removeClass( "modal-hidden" )
     .addClass( "modal-activated" );
-}
+};
 
 modal.hide = function( wrapper ) {
   wrapper
@@ -30,7 +30,7 @@ modal.hide = function( wrapper ) {
     .removeClass( "modal-activated" );
 
   modal.startScroll();
-}
+};
 
 modal.stopScroll = function() {
   var scrollPosition = $( document ).scrollTop();
@@ -38,19 +38,19 @@ modal.stopScroll = function() {
   $( window ).on( "scroll", function() {
     $( this ).scrollTop( scrollPosition );
   });
-}
+};
 
-modal.startScroll = function(){
+modal.startScroll = function() {
   $( window ).off( "scroll" );
-}
+};
 
-modal.hideByKey = function( event ) {
-  $( window ).on( "keydown", function( event ){
+modal.hideByKey = function() {
+  $( window ).on( "keydown", function( event ) {
     if ( event.keyCode == modal.ESC ) {
       modal.hide( modal.wrappers );
     }
   });
-}
+};
 
 modal.init = function() {
   modal.detach();
@@ -65,7 +65,7 @@ modal.init = function() {
     var closeButton = wrapper.find( "[modal-close]" );
 
     target.on( "click", function() {
-      modal.show( wrapper )
+      modal.show( wrapper );
       modal.stopScroll();
     });
 
@@ -81,6 +81,6 @@ modal.init = function() {
       modal.hide( wrapper );
     });
   });
-}
+};
 
 export default modal;

@@ -4,7 +4,7 @@ import $ from "jquery-slim";
 
 var dropdown = {
   all: $( "[dropdown]" ),
-  contents: $( "[dropdown]" ).find( "[dropdown-content]" ),
+  contents: $( "[dropdown]" ).find( "[dropdown-content]" )
 };
 
 dropdown.activePanel = function( content ) {
@@ -14,16 +14,16 @@ dropdown.activePanel = function( content ) {
       .removeClass( "dropdown-activated" )
       .on( "click", function( event ) {
           event.stopPropagation();
-      });
+        });
 
   content.toggleClass( "dropdown-activated" );
-}
+};
 
 dropdown.removePanels = function() {
   dropdown
     .contents
       .removeClass( "dropdown-activated" );
-}
+};
 
 dropdown.init = function() {
   dropdown.all.each(function( index, element ) {
@@ -34,9 +34,9 @@ dropdown.init = function() {
       event.stopPropagation();
       dropdown.activePanel( content );
     });
-  })
+  });
 
   $( document ).on( "click", dropdown.removePanels );
-}
+};
 
 export default dropdown;
