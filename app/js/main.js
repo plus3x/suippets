@@ -8,10 +8,10 @@ import alertmsg from "./components/alertmsg.js";
 import syntax from "./syntax.js";
 
 $( () => {
-  expander();
+  expander.init();
   dropdown.init();
   modal.init();
-  tabs();
+  tabs.init();
   offcanvas.init();
   alertmsg.init();
 });
