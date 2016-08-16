@@ -1,14 +1,16 @@
 import $ from "jquery-slim";
 import alertmsg from "../app/js/components/alertmsg.js";
 
-describe( "Alert spec" , () => {
+describe( "Alert spec", () => {
 
-  beforeEach(()=> {
-    const alertStructure = $(`
-      <div>
-        <span alert-close> </span>
-      </div>
-    `);
+  beforeEach( ()=> {
+    const alertStructure = $(
+      `
+        <div>
+          <span alert-close> </span>
+        </div>
+      `
+    );
 
     let button = alertStructure.find( "[alert-close]" );
 
@@ -26,11 +28,11 @@ describe( "Alert spec" , () => {
   });
 
   it( "Hidden element", () => {
-    expect( alertmsg.buttons.parent() ).not.toHaveCss( {"display": "none"} );
+    expect( alertmsg.buttons.parent() ).not.toHaveCss({ "display": "none" });
 
     alertmsg.hideAlert( alertmsg.buttons );
 
-    expect( alertmsg.buttons.parent() ).toHaveCss( {"display": "none"} );
+    expect( alertmsg.buttons.parent() ).toHaveCss({ "display": "none" });
   });
 
   it( "Remove alerts on click", () => {

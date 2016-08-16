@@ -4,12 +4,14 @@ import expander from "../app/js/components/expander.js";
 describe( "expander spec", () => {
 
   beforeEach( () => {
-    const expandersMarkup = $(`
-      <div expander>
-        <p expander-title > </p>
-        <div expander-content > </div>
-      </div>
-    `);
+    const expandersMarkup = $(
+      `
+        <div expander>
+          <p expander-title > </p>
+          <div expander-content > </div>
+        </div>
+      `
+    );
 
     expander.expanders = expandersMarkup;
 

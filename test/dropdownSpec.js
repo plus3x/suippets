@@ -4,12 +4,14 @@ import dropdown from "../app/js/components/dropdown.js";
 describe( "Dropdown Spec", () => {
 
   beforeEach( () => {
-    const dropdownMarkup = $(`
-      <div dropdown class="dropdown">
-        <button dropdown-target class="btn" > </button>
-        <div dropdown-content class="dropdown-content"> </div>
-      </div>
-    `);
+    const dropdownMarkup = $(
+      `
+        <div dropdown class="dropdown">
+          <button dropdown-target class="btn" > </button>
+          <div dropdown-content class="dropdown-content"> </div>
+        </div>
+      `
+    );
 
     dropdown.all = dropdownMarkup;
     dropdown.contents = dropdownMarkup.find( "[dropdown-content]" );

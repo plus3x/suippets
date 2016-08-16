@@ -3,19 +3,23 @@ import offcanvas from "../app/js/components/offcanvas.js";
 
 describe( "Offcanvas Spec", () => {
 
-  const offcanvasTargetMarkupt = $(`
-    <button offcanvas-target="1"> </button>
-  `);
+  const offcanvasTargetMarkupt = $(
+    `
+      <button offcanvas-target="1"> </button>
+    `
+  );
 
-  const offcanvasWrapperMarkup = $(`
-    <div offcanvas-wrapper="1" class="offcanvas">
-      <div offcanvas-content class="offcanvas-content">
+  const offcanvasWrapperMarkup = $(
+    `
+      <div offcanvas-wrapper="1" class="offcanvas">
+        <div offcanvas-content class="offcanvas-content">
+        </div>
+      </div><div offcanvas-wrapper="2" class="offcanvas">
+        <div offcanvas-content class="offcanvas-content">
+        </div>
       </div>
-    </div><div offcanvas-wrapper="2" class="offcanvas">
-      <div offcanvas-content class="offcanvas-content">
-      </div>
-    </div>
-  `);
+    `
+  );
 
   offcanvas.targets = offcanvasTargetMarkupt;
   offcanvas.wrappers = offcanvasWrapperMarkup;
@@ -25,7 +29,7 @@ describe( "Offcanvas Spec", () => {
 
     offcanvas.init();
 
-    expect( offcanvas.wrappers).toHaveClass( "offcanvas-hidden" );
+    expect( offcanvas.wrappers ).toHaveClass( "offcanvas-hidden" );
   });
 
   it( "Show offcanvas, add class {offcanvas-activated} and remove {offcanvas-hidden}", () => {
@@ -36,7 +40,7 @@ describe( "Offcanvas Spec", () => {
 
     expect( offcanvas.wrappers ).not.toHaveClass( "offcanvas-hidden" );
     expect( offcanvas.wrappers ).toHaveClass( "offcanvas-activated" );
-  })
+  });
 
   it( "Hide offcanvas, remove class {offcanvas-activated} and add {offcanvas-hidden}", () => {
     expect( offcanvas.wrappers ).not.toHaveClass( "offcanvas-hidden" );

@@ -1,23 +1,27 @@
 import $ from "jquery-slim";
 import modal from "../app/js/components/modal.js";
 
-describe( "Modal spec" , () => {
+describe( "Modal spec", () => {
 
-  const modalTargetMarkup = $(`
-    <button modal-target="1"> </button>
-  `);
+  const modalTargetMarkup = $(
+    `
+      <button modal-target="1"> </button>
+    `
+  );
 
-  const modalWrapperMarkup = $(`
-    <div modal-wrapper="1" class="modal-wrapper">
-      <div modal-content class="modal-content">
-        <button modal-close type="button"> </button>
+  const modalWrapperMarkup = $(
+    `
+      <div modal-wrapper="1" class="modal-wrapper">
+        <div modal-content class="modal-content">
+          <button modal-close type="button"> </button>
+        </div>
+      </div><div modal-wrapper="2" class="modal-wrapper">
+        <div modal-content class="modal-content">
+          <button modal-close type="button"> </button>
+        </div>
       </div>
-    </div><div modal-wrapper="2" class="modal-wrapper">
-      <div modal-content class="modal-content">
-        <button modal-close type="button"> </button>
-      </div>
-    </div>
-  `);
+    `
+  );
 
   modal.wrappers = modalWrapperMarkup;
   modal.targets = modalTargetMarkup;
@@ -64,6 +68,6 @@ describe( "Modal spec" , () => {
 
     expect( modal.wrappers[ 1 ] ).toHaveClass( "modal-hidden" );
     expect( modal.wrappers[ 1 ] ).not.toHaveClass( "modal-activated" );
-  })
+  });
 
 });
