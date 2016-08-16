@@ -1,29 +1,33 @@
 import $ from "jquery-slim";
 
-function tabs() {
-  var allTabs = $( "[tabs]" );
-  var activeTitleClass = "tab-title-active";
+// ES5 support
 
-  function initialTab( firstTabTitle, firstTabContent ) {
-    firstTabTitle.addClass( activeTitleClass );
-    firstTabContent.show();
-  }
+var tabs = {
+  all: $( "[tabs]" ),
+  activatedTitleClass: "tab-title-activated"
+};
 
-  function changeTab( tabTitle, tabWrapper, tabContent ) {
-    tabTitle.on( "click", function() {
-      var tabIndex = $( this ).attr( "tab-title" );
-      var thisTabContent = tabWrapper.find( "[tab-content=" + tabIndex + "]" );
-      var thisTabTitle = tabWrapper.find( "[tab-title=" + tabIndex + "]" );
+tabs.initialTab = function( firstTabTitle, firstTabContent ) {
+  firstTabTitle.addClass( tabs.activatedTitleClass );
+  firstTabContent.show();
+};
 
-      tabTitle.removeClass( activeTitleClass );
-      tabContent.hide();
+tabs.changeTab = function( tabTitle, tabWrapper, tabContent ) {
+  tabTitle.on( "click", function() {
+    var tabIndex = $( this ).attr( "tab-title" );
+    var thisTabContent = tabWrapper.find( "[tab-content=" + tabIndex + "]" );
+    var thisTabTitle = tabWrapper.find( "[tab-title=" + tabIndex + "]" );
 
-      thisTabTitle.addClass( activeTitleClass );
-      thisTabContent.show();
-    });
-  }
+    tabTitle.removeClass( tabs.activatedTitleClass );
+    tabContent.hide();
 
-  allTabs.each(function( index, element ) {
+    thisTabTitle.addClass( tabs.activatedTitleClass );
+    thisTabContent.show();
+  });
+};
+
+tabs.init = function() {
+  tabs.all.each(function( index, element ) {
     var tabWrapper = $( element );
     var tabTitle = $( element ).find( "[tab-title]" );
     var tabContent = $( element ).find( "[tab-content]" );
@@ -33,10 +37,10 @@ function tabs() {
 
     tabContent.hide();
 
-    initialTab( firstTabTitle, firstTabContent );
+    tabs.initialTab( firstTabTitle, firstTabContent );
 
-    changeTab( tabTitle, tabWrapper, tabContent );
+    tabs.changeTab( tabTitle, tabWrapper, tabContent );
   });
-}
+};
 
 export default tabs;

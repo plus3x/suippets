@@ -1,24 +1,28 @@
 import $ from "jquery-slim";
 
-function expander() {
-  var expanderElement = $( "[expander]" );
-  var activeTitleClass = "expander-title-active";
+// ES5 support
 
-  function toggleExpander( expanderTitle, expanderContent ) {
-    expanderTitle.on( "click", function( event ) {
-      $( this ).toggleClass( activeTitleClass );
+var expander = {
+  expanders: $( "[expander]" ),
+  activatedTitleClass: "expander-title-activated"
+};
 
-      expanderContent.toggle();
+expander.toggle = function( expanderTitle, expanderContent ) {
+  expanderTitle.on( "click", function( event ) {
+    expanderTitle.toggleClass( expander.activatedTitleClass );
 
-      event.stopPropagation();
-    });
-  }
+    expanderContent.toggle();
 
-  expanderElement.each(function( index, element ) {
+    event.stopPropagation();
+  });
+};
+
+expander.init = function() {
+  expander.expanders.each(function( index, element ) {
     var expanderContent = $( element ).find( "[expander-content]" ).first().hide();
     var expanderTitle = $( element ).find( "[expander-title]" ).first();
 
-    toggleExpander( expanderTitle, expanderContent );
+    expander.toggle( expanderTitle, expanderContent );
   });
 };
 
