@@ -16,7 +16,7 @@ describe( "expander spec", () => {
     expander.expanders = expandersMarkup;
 
     expander.init();
-  });
+  } );
 
   it( "this is my first test", () => {
     let expanderTitle = expander.expanders.find( "[expander-title]" );
@@ -30,6 +30,6 @@ describe( "expander spec", () => {
     expanderTitle.click();
 
     expect( expanderTitle ).not.toHaveClass( "expander-title-activated" );
-  });
+  } );
 
-});
+} );

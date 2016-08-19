@@ -32,7 +32,7 @@ describe( "Modal spec", () => {
     modal.init();
 
     expect( modal.wrappers ).toHaveClass( "modal-hidden" );
-  });
+  } );
 
   it( "Open modal, add {modal-active} class and remove {modal-hidden} class", () => {
     expect( modal.wrappers ).not.toHaveClass( "modal-activated" );
@@ -42,7 +42,7 @@ describe( "Modal spec", () => {
 
     expect( modal.wrappers ).toHaveClass( "modal-activated" );
     expect( modal.wrappers ).not.toHaveClass( "modal-hidden" );
-  });
+  } );
 
   it( "Hidden modal, remove {modal-actived} class and add {modal-hidden} class", () => {
     expect( modal.wrappers ).toHaveClass( "modal-activated" );
@@ -52,22 +52,16 @@ describe( "Modal spec", () => {
 
     expect( modal.wrappers ).not.toHaveClass( "modal-activated" );
     expect( modal.wrappers ).toHaveClass( "modal-hidden" );
-  });
-
-  it( "Click handler was associate and triggred", () => {
-    let spyEvent = spyOnEvent( modal.targets, "click" );
-
-    modal.targets.click();
-
-    expect( "click" ).toHaveBeenTriggeredOn( modal.targets );
-  });
+  } );
 
   it( "Click on target(#1) and open the corresponding wrapper(#1)", () => {
+    modal.targets.click();
+
     expect( modal.wrappers[ 0 ] ).toHaveClass( "modal-activated" );
     expect( modal.wrappers[ 0 ] ).not.toHaveClass( "modal-hidden" );
 
     expect( modal.wrappers[ 1 ] ).toHaveClass( "modal-hidden" );
     expect( modal.wrappers[ 1 ] ).not.toHaveClass( "modal-activated" );
-  });
+  } );
 
-});
+} );

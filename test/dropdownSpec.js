@@ -17,7 +17,7 @@ describe( "Dropdown Spec", () => {
     dropdown.contents = dropdownMarkup.find( "[dropdown-content]" );
 
     dropdown.init();
-  });
+  } );
 
   it( "Add {dropdown-activated} class", () => {
     expect( dropdown.contents ).not.toHaveClass( "dropdown-activated" );
@@ -25,7 +25,7 @@ describe( "Dropdown Spec", () => {
     dropdown.activePanel( dropdown.contents );
 
     expect( dropdown.contents ).toHaveClass( "dropdown-activated" );
-  });
+  } );
 
   it( "Remove {dropdown-activated} class", () => {
     dropdown.activePanel( dropdown.contents );
@@ -35,5 +35,5 @@ describe( "Dropdown Spec", () => {
     dropdown.removePanels();
 
     expect( dropdown.contents ).not.toHaveClass( "dropdown-activated" );
-  });
-});
+  } );
+} );

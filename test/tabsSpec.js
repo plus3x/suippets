@@ -40,12 +40,12 @@ describe( "Tabs specs", () => {
 
   const isTabActivated = ( tab ) => {
     expect( tab.title ).toHaveClass( "tab-title-activated" );
-    expect( tab.content ).not.toHaveCss({ "display": "none" });
+    expect( tab.content ).not.toHaveCss( { "display": "none" } );
   };
 
   const isTabHidden = ( tab ) => {
     expect( tab.title ).not.toHaveClass( "tab-title-activated" );
-    expect( tab.content ).toHaveCss({ "display": "none" });
+    expect( tab.content ).toHaveCss( { "display": "none" } );
   };
 
   it( "Initial tab is selected", () => {
@@ -53,7 +53,7 @@ describe( "Tabs specs", () => {
 
     isTabHidden( second );
     isTabHidden( third );
-  });
+  } );
 
   it( "Click on second tab, show the second content and hide others contents", () => {
     second.title.click();
@@ -61,6 +61,6 @@ describe( "Tabs specs", () => {
 
     isTabHidden( first );
     isTabHidden( third );
-  });
+  } );
 
-});
+} );
