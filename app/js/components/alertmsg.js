@@ -2,8 +2,8 @@ import $ from "jquery-slim";
 
 // ES5 support
 
-var alertmsg = {
-  "buttons": $( "[alert-close]" )
+const alertmsg = {
+  "buttons": $( "[alert-close]" ),
 };
 
 alertmsg.hideAlert = function( button ) {
@@ -17,17 +17,17 @@ alertmsg.removeAlert = function( button ) {
     .parent()
     .addClass( "alert-remove" );
 
-  setTimeout(function() {
+  setTimeout( function() {
     alertmsg.hideAlert( button );
   }, 200 );
 };
 
 alertmsg.init = function() {
-  this.buttons.each(function( index, button ) {
+  this.buttons.each( function( index, button ) {
     $( button ).on( "click", function() {
       alertmsg.removeAlert( $( button ) );
-    });
-  });
+    } );
+  } );
 };
 
 export default alertmsg;
