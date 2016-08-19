@@ -11,11 +11,10 @@ Node / Npm
 
 ### Install
 ```
-$ npm install
+$ npm install && npm run globals
 ```
 
 ### Run
-
 ```
 npm start
 ```
@@ -26,7 +25,6 @@ npm test
 ```
 
 ### Page structure
-
 ```
   views
   |
