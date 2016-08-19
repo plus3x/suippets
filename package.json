@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js",
-    "install": "npm install && npm install -g gulp && npm install -g jscs && npm install -g karma-cli",
+    "globals": "npm i -g gulp karma-cli eslint eslint-config-idiomatic",
     "start": "gulp",
     "production": "gulp production"
   },
