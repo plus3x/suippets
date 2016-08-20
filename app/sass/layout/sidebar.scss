@@ -4,8 +4,9 @@
 
 .sidebar{
   width: 200px;
-  flex-shrink: 0;
   border-right: solid #e5e5e5 1px;
+
+  flex-shrink: 0;
 }
 
 .toggle-sidebar{
@@ -13,10 +14,10 @@
 }
 
 .logo{
+  display: block;
   width: 120px;
   margin: 50px auto 50px auto;
-  padding: 0px;
-  display: block;
+  padding: 0;
 
   img{
     display: block;
@@ -27,7 +28,7 @@
 .sidebar-menu{
   width: 120px;
   min-height: 200px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 50px auto;
 }
 
 .sidebar-menu-title{
@@ -35,12 +36,12 @@
 }
 
 .sidebar-menu-item{
-  cursor: pointer;
   display: block;
   max-width: auto;
+  cursor: pointer;
 }
 
-@media all and (max-width: 800px){ 
+@media all and (max-width: 800px){
   .sidebar{
     display: none;
   }

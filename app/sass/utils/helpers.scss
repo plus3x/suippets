@@ -2,7 +2,7 @@
    Helpers
    ========================================================================== */
 
-.hidden {
+.hidden{
   position: absolute;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
@@ -13,9 +13,9 @@
 }
 
 .clearfix:before,
-.clearfix:after {
+.clearfix:after{
   display: table;
-  content: '';
+  content: "";
 }
 
 .align-center{

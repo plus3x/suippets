@@ -1,42 +1,43 @@
 /* ==========================================================================
    Dropdown
    ========================================================================== */
-.dropdown {
+
+.dropdown{
   position: relative;
   display: inline-block;
 }
 
-.dropdown-content {
+.dropdown-content{
   position: absolute;
+  z-index: 10;
   top: 72px;
   right: 0;
   left: 0;
   width: 300px;
   margin: 0;
   padding: 20px;
+  transition: .1s cubic-bezier(.86, 0, .07, 1) 0s;
+  transition-property: visibility, top, opacity;
+  opacity: 0;
   color: #fff;
   border-radius: 3px;
   background: #3193cb;
-  z-index: 10;
-  transition-property: visibility, top, opacity;
-  transition: .1s cubic-bezier(.86, 0, .07, 1) 0s;
-  opacity: 0;
 }
 
-.dropdown-content.dropdown-activated {
-  visibility: visible;
+.dropdown-content.dropdown-activated{
   top: 52px;
+  visibility: visible;
   opacity: 1;
 }
 
-.dropdown-content::after {
+.dropdown-content::after{
   position: absolute;
   bottom: 100%;
   left: 25px;
   width: 0;
   height: 0;
   margin-left: -9px;
-  content: ' ';
+  content: " ";
   pointer-events: none;
   border: solid transparent;
   border-width: 9px;

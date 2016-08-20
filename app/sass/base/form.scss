@@ -21,17 +21,17 @@ $disabled-background: #f5f5f5;
 
 /* Fieldset and label
 ========================================================================== */
-label {
+label{
   display: inline-block;
   margin: 0 0 5px 0;
 }
 
-fieldset {
+fieldset{
   padding: 15px;
   border: solid $fieldset-border-color 1px;
 }
 
-legend {
+legend{
   font-weight: bold;
   margin: 0 0 0 30px;
   padding: 0 15px 0 15px;
@@ -40,7 +40,7 @@ legend {
 
 /* Basic inputs and textarea
 ========================================================================== */
-.form-control {
+.form-control{
   font-family: inherit;
   font-size: 1em;
   width: 100%;
@@ -53,34 +53,32 @@ legend {
   border-radius: 3px;
   background: $input-background;
 
-  &:focus {
+  &:focus{
     border: solid 1px $input-border-color-focus;
     outline: none;
     background: $input-background-focus;
   }
 
-  &[disabled] {
+  &[disabled]{
     cursor: no-drop;
     background: $disabled-background;
   }
-
 }
 
-textarea.form-control {
+textarea.form-control{
   font-family: inherit;
   min-height: 100px;
   margin: 0 0 15px 0;
   padding: 10px 15px 10px 15px;
   color: $form-font-color;
 
-  &[disabled] {
+  &[disabled]{
     cursor: no-drop;
     background: $disabled-background;
   }
-
 }
 
-.form-control-file {
+.form-control-file{
   font-size: .9em;
   width: 100%;
   padding: 4px;
@@ -90,7 +88,7 @@ textarea.form-control {
 
 /* Select
 ========================================================================== */
-.form-select {
+.form-select{
   font-size: .95em;
   width: 100%;
   height: 35px;
@@ -103,29 +101,27 @@ textarea.form-control {
   border-radius: 3px;
   background: $input-background;
 
-  &[disabled] {
+  &[disabled]{
     cursor: no-drop;
     background: $disabled-background;
   }
 
-  &:focus {
+  &:focus{
     border: solid 1px $input-border-color-focus;
     outline: none;
     background: $input-background-focus;
   }
 
-  &::after {
-    content: 'teste';
+  &::after{
+    content: "teste";
   }
-
 }
 
 /* State input
 ========================================================================== */
 input[type=number],
-input[type=email] {
-  &:invalid {
+input[type=email]{
+  &:invalid{
     box-shadow: none;
   }
-
 }

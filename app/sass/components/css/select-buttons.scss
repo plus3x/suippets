@@ -1,37 +1,37 @@
 /* ==========================================================================
    Select buttons
    ========================================================================== */
-.form-select-buttons {
+
+.form-select-buttons{
   display: flex;
 
-  input[type=radio] {
+  input[type=radio]{
     display: none;
   }
 
-  input[type=radio] + label {
-    border: solid #cccccc 1px;
-    margin: 0px;
+  input[type=radio] + label{
+    display: inline-block;
     height: 35px;
+    margin: 0;
+    margin: 0 0 0 -1px;
     padding: 4px 20px 4px 20px;
     cursor: pointer;
-    display: inline-block;
-    margin: 0 0 0 -1px;
+    border: solid #ccc 1px;
   }
 
-  input[type=radio] + label:first-of-type {
+  input[type=radio] + label:first-of-type{
     border-radius: 3px 0 0 3px;
   }
 
-  input[type=radio] + label:last-of-type {
+  input[type=radio] + label:last-of-type{
     border-radius: 0 3px 3px 0;
   }
 
-  input[type=radio]:checked + label {
-    background: #3193cb;
-    border: solid #3193cb 1px;
-    color: #fff;
+  input[type=radio]:checked + label{
     position: relative;
     z-index: 99;
+    color: #fff;
+    border: solid #3193cb 1px;
+    background: #3193cb;
   }
-
 }

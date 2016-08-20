@@ -12,11 +12,11 @@ $button-color: #747474;
 $button-disabled-background: #f2f2f2;
 
 button,
-input[type=submit] {
+input[type=submit]{
   appearance: none;
 }
 
-.btn {
+.btn{
   font-family: inherit;
   font-size: .96em;
   line-height: .1em;
@@ -34,26 +34,30 @@ input[type=submit] {
   border-radius: 3px;
   background: $background-color;
 
-  &:hover {
+  &:hover{
     text-decoration: none;
     border: solid 1px $button-border-color-hover;
     background: $background-color;
   }
 
-  &:active {
+  &:active{
     background: $button-background-active;
   }
-
 }
 
 button.btn[disabled],
 a.btn[disabled],
-input[type=submit].btn[disabled] {
+input[type=submit].btn[disabled]{
   cursor: no-drop;
   background: $button-disabled-background;
 
-  &:hover {
+  &:hover{
     border: solid $button-border-color 1px;
   }
+}
 
+a.btn{
+  &:active{
+    color: $button-color;
+  }
 }

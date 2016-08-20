@@ -4,31 +4,30 @@
 
 $table-border-color: #e4e4e4;
 
-.table {
+.table{
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 
-  td {
-    padding: 10px 0px 10px 0px;
-    border-bottom: solid $table-border-color 1px;
+  td{
     width: 2%;
+    padding: 10px 0 10px 0;
+    border-bottom: solid $table-border-color 1px;
   }
 
-  th {
+  th{
     font-weight: bold;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0 10px 0;
     text-align: left;
     border-bottom: solid $table-border-color 1px;
   }
 
-  caption {
-    margin: 0 0 -1px 0;
-    padding: 10px 0px 10px 0px;
-    border-bottom: solid $table-border-color 1px;
-    border-top: solid $table-border-color 1px;
+  caption{
     font-weight: bold;
+    margin: 0 0 -1px 0;
+    padding: 10px 0 10px 0;
+    border-top: solid $table-border-color 1px;
+    border-bottom: solid $table-border-color 1px;
   }
-
 }

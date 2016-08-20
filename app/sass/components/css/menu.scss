@@ -1,86 +1,87 @@
 /* ==========================================================================
    Menu
    ========================================================================== */
-.menu {
+
+.menu{
   width: 100%;
   background: #3193cb;
 }
 
-.menu ul {
-  padding: 0px;
+.menu ul{
+  padding: 0;
   list-style: none;
 }
 
 /* Level 1
    ========================================================================== */
-.menu-lv1 {
+.menu-lv1{
   display: flex;
 }
 
-.menu-lv1-item {
+.menu-lv1-item{
   position: relative;
 }
 
 .menu-lv1-item:hover,
-.menu-lv1-item:hover .menu-lv2 {
-  background: #27729d;
+.menu-lv1-item:hover .menu-lv2{
   visibility: visible;
+  background: #27729d;
 }
 
-.menu-lv1-item > a {
-  width: 90px;
+.menu-lv1-item > a{
   display: block;
-  text-align: center;
+  width: 90px;
   padding: 10px 10px 10px 10px;
-  color: #fff;
+  text-align: center;
   text-decoration: none;
+  color: #fff;
 }
 
 /* Level 2
    ========================================================================== */
-.menu-lv2 {
+.menu-lv2{
   position: absolute;
   z-index: 10;
-  width: 150px;
   visibility: hidden;
+  width: 150px;
 }
 
-.menu-lv2-item {
+.menu-lv2-item{
   position: relative;
 }
 
 .menu-lv2-item:hover,
-.menu-lv2-item:hover > .menu-lv3 {
-  background: #222;
+.menu-lv2-item:hover > .menu-lv3{
   display: block;
+  background: #222;
 }
 
-.menu-lv2-item > a {
+.menu-lv2-item > a{
   display: block;
   width: 100%;
-  color: #fff;
   padding: 7px 20px 7px 20px;
   text-decoration: none;
+  color: #fff;
 }
 
 /* Level 3
   ========================================================================== */
-.menu-lv3 {
+.menu-lv3{
   position: absolute;
+  top: 0;
   left: 150px;
-  top: 0px;
   display: none;
   width: 200px;
 }
 
-.menu-lv3-item > a {
-  padding: 7px 20px 7px 20px;
-  color: #999999;
+.menu-lv3-item > a{
   display: block;
+  padding: 7px 20px 7px 20px;
   text-decoration: none;
+  color: #999;
 }
 
-.menu-lv3-item > a:hover {
-  background: #000;
+.menu-lv3-item > a:hover{
   color: #fff;
+  background: #000;
 }

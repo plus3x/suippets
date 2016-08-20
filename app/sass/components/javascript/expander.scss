@@ -1,31 +1,32 @@
 /* ==========================================================================
    Expander
    ========================================================================== */
-.expander {
+
+.expander{
   margin: 0 0 10px 0;
 }
 
-.expander-title {
+.expander-title{
   margin: 0;
-  cursor: pointer;
-  color: #0066cc;
-  border-bottom: dotted #0066cc 1px;
   padding: 0 0 7px 0;
+  cursor: pointer;
+  color: #06c;
+  border-bottom: dotted #06c 1px;
 }
 
-.expander-title::before {
-  content: "►"
+.expander-title::before{
+  content: "►";
 }
 
-.expander-title-activated {
+.expander-title-activated{
   color: #e24f4f;
   border-bottom: dotted #e24f4f 1px;
 }
 
-.expander-title-activated::before {
-  content: "▼"
+.expander-title-activated::before{
+  content: "▼";
 }
 
-.expander-content {
+.expander-content{
   padding: 10px 0 10px 0;
 }
