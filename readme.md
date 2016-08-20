@@ -24,6 +24,11 @@ npm start
 npm test
 ```
 
+### Run CSScomb
+```
+npm run csscomb
+```
+
 ### Page structure
 ```
   views
