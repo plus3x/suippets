@@ -57,7 +57,7 @@ modal.init = function() {
 
   modal.hideByKey();
 
-  modal.targets.each(function( index, element ) {
+  modal.targets.each( function( index, element ) {
     var target = $( element );
     var targetIndex = $( element ).attr( "modal-target" );
     var wrapper = $( "[modal-wrapper=" + targetIndex + "]" );

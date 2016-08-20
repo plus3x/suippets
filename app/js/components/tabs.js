@@ -27,7 +27,7 @@ tabs.changeTab = function( tabTitle, tabWrapper, tabContent ) {
 };
 
 tabs.init = function() {
-  tabs.all.each(function( index, element ) {
+  tabs.all.each( function( index, element ) {
     var tabWrapper = $( element );
     var tabTitle = $( element ).find( "[tab-title]" );
     var tabContent = $( element ).find( "[tab-content]" );

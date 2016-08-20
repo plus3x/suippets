@@ -13,8 +13,8 @@ dropdown.activePanel = function( content ) {
       .not( content )
       .removeClass( "dropdown-activated" )
       .on( "click", function( event ) {
-          event.stopPropagation();
-        });
+        event.stopPropagation();
+      });
 
   content.toggleClass( "dropdown-activated" );
 };
@@ -26,7 +26,7 @@ dropdown.removePanels = function() {
 };
 
 dropdown.init = function() {
-  dropdown.all.each(function( index, element ) {
+  dropdown.all.each( function( index, element ) {
     var content = $( element ).find( "[dropdown-content]" );
     var target = $( element ).find( "[dropdown-target]" );
 

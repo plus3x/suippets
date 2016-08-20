@@ -26,8 +26,8 @@ alertmsg.init = function() {
   this.buttons.each( function( index, button ) {
     $( button ).on( "click", function() {
       alertmsg.removeAlert( $( button ) );
-    } );
-  } );
+    });
+  });
 };
 
 export default alertmsg;

@@ -55,7 +55,7 @@ offcanvas.init = function() {
 
   offcanvas.hideByKey();
 
-  offcanvas.targets.each(function( index, element ) {
+  offcanvas.targets.each( function( index, element ) {
     var target = $( element );
     var targetIndex = target.attr( "offcanvas-target" );
     var wrapper = $( "[offcanvas-wrapper=" + targetIndex + "]" );

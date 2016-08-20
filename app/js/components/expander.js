@@ -18,7 +18,7 @@ expander.toggle = function( expanderTitle, expanderContent ) {
 };
 
 expander.init = function() {
-  expander.expanders.each(function( index, element ) {
+  expander.expanders.each( function( index, element ) {
     var expanderContent = $( element ).find( "[expander-content]" ).first().hide();
     var expanderTitle = $( element ).find( "[expander-title]" ).first();
 

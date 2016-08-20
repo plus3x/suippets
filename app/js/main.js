@@ -14,11 +14,11 @@ $( () => {
   tabs.init();
   offcanvas.init();
   alertmsg.init();
-} );
+});
 
 // Mobile menu
 $( ".open-menu" ).on( "click", function() {
   $( ".sidebar" ).toggleClass( "toggle-sidebar" );
-} );
+});
 
 syntax();
