@@ -7,7 +7,10 @@
     "test": "karma start karma.conf.js",
     "globals": "npm i -g gulp karma-cli eslint eslint-config-idiomatic",
     "start": "gulp",
-    "production": "gulp production"
+    "production": "gulp production",
+    "csscomb": "csscomb app/sass/**/*.scss && csscomb app/sass/**/**/*.scss",
+    "lint": "eslint app/js/components/*.js; exit 0",
+    "lint-fix": "eslint app/js/**/*.js --fix; exit 0"
   },
   "author": "Carlos Costa (c4co)",
   "license": "ISC",
@@ -21,6 +24,7 @@
     "browser-sync": "^2.12.3",
     "browserify": "^13.1.0",
     "browserify-istanbul": "^2.0.0",
+    "eslint-config-idiomatic": "^2.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
