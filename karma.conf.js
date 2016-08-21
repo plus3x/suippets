@@ -17,7 +17,7 @@ module.exports = function(config) {
         ],
         browserify: {
             debug: true,
-            transform: [ "babelify", istanbul({
+            transform: ["babelify", istanbul({
                ignore: ["**/node_modules/**", "**/test/**"]
             })]
         },
@@ -27,8 +27,11 @@ module.exports = function(config) {
         },
         reporters: ["progress", "coverage"],
         coverageReporter: {
-            type : "text",
-            dir : "coverage/"
+            dir : "coverage/",
+            type: "text",
+            reporters: [
+                { type: 'lcov', subdir: 'report-lcov' },
+            ]
         },
         hostname: "0.0.0.0",
         port: 9898,
