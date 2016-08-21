@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js",
-    "globals": "npm i -g gulp karma-cli eslint eslint-config-idiomatic",
+    "globals": "npm i -g gulp karma-cli eslint eslint-config-idiomatic csscomb",
     "start": "gulp",
     "production": "gulp production",
     "csscomb": "csscomb app/sass/**/*.scss && csscomb app/sass/**/**/*.scss",
@@ -26,6 +26,7 @@
     "browser-sync": "^2.12.3",
     "browserify": "^13.1.0",
     "browserify-istanbul": "^2.0.0",
+    "codacy-coverage": "^2.0.0",
     "eslint-config-idiomatic": "^2.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
