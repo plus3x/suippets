@@ -28,10 +28,7 @@ module.exports = function(config) {
         reporters: ["progress", "coverage"],
         coverageReporter: {
             dir : "coverage/",
-            type: "text",
-            reporters: [
-                { type: 'lcov', subdir: 'report-lcov' },
-            ]
+            type: "text"
         },
         hostname: "0.0.0.0",
         port: 9898,
