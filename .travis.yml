@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "6"
+install:
+  - npm install
+  - npm run globals
+script:
+  - npm run csscomb
+  - npm run lint
+  - npm run lint-fix
+  - npm run lint-test
+  - npm run lint-test-fix
+  - npm test
