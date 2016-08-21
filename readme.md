@@ -14,14 +14,23 @@ Node / Npm
 $ npm install && npm run globals
 ```
 
-### Run
+### Run project
 ```
-npm start
+$ npm start
 ```
 
-### Run unit tests Karma + Jasmine
+### Unit tests Karma + Jasmine
 ```
-npm test
+$ npm test
+```
+
+### Eslint
+```
+$ npm lint
+$ npm lint-test
+
+$ npm lint-fix
+$ npm lint-test-fix
 ```
 
 ### Run CSScomb
@@ -45,7 +54,7 @@ npm run csscomb
   | | ├─ code.html
 ```
 
-Registre page in routes.js
+Registre new page in routes.js
 
 ````
 "page": {
@@ -53,7 +62,6 @@ Registre page in routes.js
   "output": "./pages"
 }
 ````
-Registre page
 
 ### License
 
