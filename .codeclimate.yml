@@ -1,5 +1,0 @@
-ratings:
-   paths:
-   - "app/js/components/**"
-   - "test/**"
-   - "**.js"
