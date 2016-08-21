@@ -1,7 +1,5 @@
-engines:
-  eslint:
-    enabled: false
-
 ratings:
    paths:
+   - "app/js/components/**"
+   - "test/**"
    - "**.js"
