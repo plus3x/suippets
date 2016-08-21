@@ -10,12 +10,6 @@
         "sourceType": "module"
     },
     "rules": {
-        "space-in-parens": [
-            "error",
-            "always",
-            { "exceptions": ["{}"] }
-        ],
-
         "one-var": [
             "error",
             "never"
