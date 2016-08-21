@@ -1,10 +1,5 @@
 var istanbul = require("browserify-istanbul");
 
-var PATH = {
-    TEST: "test/**/*Spec.js",
-    APP: "app/js/components/*.js"
-};
-
 module.exports = function(config) {
     config.set({
         basePath: "",
@@ -14,8 +9,8 @@ module.exports = function(config) {
             "browserify",
         ],
         files: [
-            PATH.TEST,
-            PATH.APP
+            "test/**/*Spec.js",
+            "app/js/components/*.js"
         ],
         exclude: [
             "yes"
@@ -27,8 +22,8 @@ module.exports = function(config) {
             })]
         },
         preprocessors: {
-            PATH.TEST: ["browserify"],
-            PATH.APP: ["browserify"]
+            "test/**/*Spec.js": ["browserify"],
+            "app/js/components/*.js": ["browserify"]
         },
         reporters: ["progress", "coverage"],
         coverageReporter: {
@@ -43,5 +38,5 @@ module.exports = function(config) {
         browsers: ["PhantomJS"],
         singleRun: false,
         concurrency: Infinity
-    })
+    });
 }
