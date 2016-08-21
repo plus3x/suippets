@@ -14,7 +14,7 @@ dropdown.activePanel = function( content ) {
       .removeClass( "dropdown-activated" )
       .on( "click", function( event ) {
         event.stopPropagation();
-      });
+      } );
 
   content.toggleClass( "dropdown-activated" );
 };
@@ -33,8 +33,8 @@ dropdown.init = function() {
     target.on( "click", function( event ) {
       event.stopPropagation();
       dropdown.activePanel( content );
-    });
-  });
+    } );
+  } );
 
   $( document ).on( "click", dropdown.removePanels );
 };

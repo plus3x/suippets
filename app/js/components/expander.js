@@ -14,7 +14,7 @@ expander.toggle = function( expanderTitle, expanderContent ) {
     expanderContent.toggle();
 
     event.stopPropagation();
-  });
+  } );
 };
 
 expander.init = function() {
@@ -23,7 +23,7 @@ expander.init = function() {
     var expanderTitle = $( element ).find( "[expander-title]" ).first();
 
     expander.toggle( expanderTitle, expanderContent );
-  });
+  } );
 };
 
 export default expander;
