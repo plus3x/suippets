@@ -10,4 +10,4 @@ script:
   - npm run lint-fix
   - npm run lint-test
   - npm run lint-test-fix
-  - npm test
+  - karma start karma.conf.js --single-run
