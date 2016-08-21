@@ -35,7 +35,7 @@ offcanvas.hideByKey = function() {
     if ( event.keyCode == offcanvas.ESC ) {
       offcanvas.hide();
     }
-  } );
+  });
 };
 
 offcanvas.stopScroll = function() {
@@ -43,7 +43,7 @@ offcanvas.stopScroll = function() {
 
   $( window ).on( "scroll", function() {
     $( this ).scrollTop( scrollPosition );
-  } );
+  });
 };
 
 offcanvas.startScroll = function() {
@@ -63,16 +63,16 @@ offcanvas.init = function() {
 
     target.on( "click", function() {
       offcanvas.show( wrapper );
-    } );
+    });
 
     content.on( "click", function( event ) {
       event.stopPropagation();
-    } );
+    });
 
     wrapper.on( "click", function() {
       offcanvas.hide();
-    } );
-  } );
+    });
+  });
 };
 
 export default offcanvas;

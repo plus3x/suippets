@@ -37,7 +37,7 @@ modal.stopScroll = function() {
 
   $( window ).on( "scroll", function() {
     $( this ).scrollTop( scrollPosition );
-  } );
+  });
 };
 
 modal.startScroll = function() {
@@ -49,7 +49,7 @@ modal.hideByKey = function() {
     if ( event.keyCode == modal.ESC ) {
       modal.hide( modal.wrappers );
     }
-  } );
+  });
 };
 
 modal.init = function() {
@@ -67,20 +67,20 @@ modal.init = function() {
     target.on( "click", function() {
       modal.show( wrapper );
       modal.stopScroll();
-    } );
+    });
 
     content.on( "click", function( event ) {
       event.stopPropagation();
-    } );
+    });
 
     wrapper.on( "click", function() {
       modal.hide( wrapper );
-    } );
+    });
 
     closeButton.on( "click", function() {
       modal.hide( wrapper );
-    } );
-  } );
+    });
+  });
 };
 
 export default modal;

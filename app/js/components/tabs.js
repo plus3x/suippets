@@ -23,7 +23,7 @@ tabs.changeTab = function( tabTitle, tabWrapper, tabContent ) {
 
     thisTabTitle.addClass( tabs.activatedTitleClass );
     thisTabContent.show();
-  } );
+  });
 };
 
 tabs.init = function() {
@@ -40,7 +40,7 @@ tabs.init = function() {
     tabs.initialTab( firstTabTitle, firstTabContent );
 
     tabs.changeTab( tabTitle, tabWrapper, tabContent );
-  } );
+  });
 };
 
 export default tabs;

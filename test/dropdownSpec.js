@@ -21,7 +21,7 @@ describe( "Dropdown Spec", () => {
     dropdown.targets = dropdownMarkup.find( "[dropdown-target]" );
 
     dropdown.init();
-  } );
+  });
 
   it( "Add {dropdown-activated} class", () => {
     expect( dropdown.contents ).not.toHaveClass( "dropdown-activated" );
@@ -29,7 +29,7 @@ describe( "Dropdown Spec", () => {
     dropdown.activePanel( dropdown.contents );
 
     expect( dropdown.contents ).toHaveClass( "dropdown-activated" );
-  } );
+  });
 
   it( "Remove {dropdown-activated} class", () => {
     dropdown.activePanel( dropdown.contents );
@@ -39,17 +39,17 @@ describe( "Dropdown Spec", () => {
     dropdown.removePanels( dropdown.contents );
 
     expect( dropdown.contents ).not.toHaveClass( "dropdown-activated" );
-  } );
+  });
 
   it( "Click and active the #1 dropdown, and remove others", () => {
     dropdown.targets[ 0 ].click();
     expect( dropdown.contents[ 0 ] ).toHaveClass( "dropdown-activated" );
     expect( dropdown.contents[ 1 ] ).not.toHaveClass( "dropdown-activated" );
-  } );
+  });
 
   it( "Click and active the #2 dropdown, and remove others", () => {
     dropdown.targets[ 1 ].click();
     expect( dropdown.contents[ 1 ] ).toHaveClass( "dropdown-activated" );
     expect( dropdown.contents[ 0 ] ).not.toHaveClass( "dropdown-activated" );
-  } );
-} );
+  });
+});
