@@ -1,6 +1,7 @@
 <img width=100 src="https://dl.dropboxusercontent.com/s/f90hi2k99xxw5xn/suippets-logo.png?dl=0">
 
 # Suippets
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/250b64a0bb6b48858fc33a26eaf3f421)](https://www.codacy.com/app/carllos-nc/suippets?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=C4co/suippets&amp;utm_campaign=Badge_Grade)
 
 Micro front-end snippets
 
