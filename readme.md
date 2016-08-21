@@ -31,6 +31,8 @@ $ npm test
 $ npm lint
 $ npm lint-test
 
+or to fix erros
+
 $ npm lint-fix
 $ npm lint-test-fix
 ```
