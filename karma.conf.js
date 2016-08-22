@@ -30,7 +30,7 @@ module.exports = function(config) {
             dir : "coverage/",
             reporters: [
                 { type: 'text' },
-                { type: 'lcov' }
+                { type: 'lcov', subdir: 'report-lcov' }
             ]
         },
         hostname: "0.0.0.0",
