@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/C4co/suippetss.svg?branch=master)](https://travis-ci.org/C4co/suippetss)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/250b64a0bb6b48858fc33a26eaf3f421)](https://www.codacy.com/app/carllos-nc/suippets?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=C4co/suippets&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/777cd172e4f34886a25a01e57d9d77f7)](https://www.codacy.com/app/carllos-nc/suippets?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=C4co/suippets&amp;utm_campaign=Badge_Coverage)
 
 # Suippets
 
