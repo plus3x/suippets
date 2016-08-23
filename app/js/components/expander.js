@@ -26,4 +26,6 @@ expander.init = function() {
   });
 };
 
+// Usage - expander.init();
+
 export default expander;

@@ -2,7 +2,7 @@ import $ from "jquery-slim";
 
 // ES5 support
 
-const alertmsg = {
+var alertmsg = {
   "buttons": $( "[alert-close]" ),
 };
 
@@ -29,5 +29,7 @@ alertmsg.init = function() {
     });
   });
 };
+
+// Usage - alertmsg.init();
 
 export default alertmsg;

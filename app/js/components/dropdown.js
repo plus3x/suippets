@@ -39,4 +39,6 @@ dropdown.init = function() {
   $( document ).on( "click", dropdown.removePanels );
 };
 
+// Usage - dropdown.init();
+
 export default dropdown;

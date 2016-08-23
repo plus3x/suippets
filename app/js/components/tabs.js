@@ -43,4 +43,6 @@ tabs.init = function() {
   });
 };
 
+// Usage - tabs.init();
+
 export default tabs;

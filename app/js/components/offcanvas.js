@@ -75,4 +75,6 @@ offcanvas.init = function() {
   });
 };
 
+// Usage - offcanvas.init();
+
 export default offcanvas;

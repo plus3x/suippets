@@ -83,4 +83,6 @@ modal.init = function() {
   });
 };
 
+// Usage - modal.init();
+
 export default modal;
