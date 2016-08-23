@@ -34,7 +34,7 @@ const PAGES = {
     "output": "./pages"
   },
   "menu": {
-    "entry": "./app/views/components/menu/menu.html",
+    "entry": "./app/views/components/level-menu/level-menu.html",
     "output": "./pages"
   },
   "switch": {
