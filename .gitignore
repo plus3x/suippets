@@ -4,3 +4,4 @@ pages/
 coverage/
 *.browserify
 karma-*
+index.html
