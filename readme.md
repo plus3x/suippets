@@ -41,7 +41,12 @@ $ npm lint-test-fix
 
 ### Run CSScomb
 ```
-npm run csscomb
+$ npm run csscomb
+```
+
+### Generate new component
+```
+$ node generator/generator.js "component-name"
 ```
 
 ### Page structure
