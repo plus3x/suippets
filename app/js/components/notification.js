@@ -1,4 +1,4 @@
-import $ from "jquery-slim"
+import $ from "jquery-slim";
 
 // support ES5
 
@@ -12,19 +12,19 @@ notification.detach = function( wrapper ) {
     .detach()
     .addClass( "notification-wrapper" )
     .prependTo( "html" );
-}
+};
 
 notification.removeByTime = function( notifier ) {
   setTimeout( function() {
     notifier.remove();
   }, notification.delay );
-}
+};
 
-notification.removeByClick = function( notifier ){
+notification.removeByClick = function( notifier ) {
   notifier.on( "click", function() {
     notifier.remove();
   });
-}
+};
 
 notification.create = function( message, classes ) {
   var notifier = $( "<div> </div>" );
@@ -36,10 +36,10 @@ notification.create = function( message, classes ) {
   notification.removeByClick( notifier );
 
   return notifier;
-}
+};
 
 notification.init = function() {
   notification.detach( notification.wrapper );
-}
+};
 
 export default notification;
