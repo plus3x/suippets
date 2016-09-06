@@ -18,7 +18,8 @@ module.exports = function(config) {
         browserify: {
             debug: true,
             transform: ["babelify", istanbul({
-               ignore: ["**/node_modules/**", "**/test/**"]
+                instrumenterConfig: { embedSource: true },
+                ignore: ["**/node_modules/**", "**/test/**"]
             })]
         },
         preprocessors: {
