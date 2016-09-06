@@ -18,16 +18,17 @@
 @import "layout/footer.scss";
 
 /* --- Components */
-@import "components/javascript/expander.scss";
-@import "components/javascript/modal.scss";
-@import "components/javascript/tabs.scss";
-@import "components/javascript/dropdown.scss";
-@import "components/javascript/offcanvas.scss";
-@import "components/javascript/alert.scss";
+@import "components/expander.scss";
+@import "components/modal.scss";
+@import "components/tabs.scss";
+@import "components/dropdown.scss";
+@import "components/offcanvas.scss";
+@import "components/alert.scss";
+@import "components/notification.scss";
 
-@import "components/css/checkbox.scss";
-@import "components/css/radio.scss";
-@import "components/css/level-menu.scss";
-@import "components/css/switch.scss";
-@import "components/css/tooltip.scss";
-@import "components/css/select-buttons.scss";
+@import "components/checkbox.scss";
+@import "components/radio.scss";
+@import "components/level-menu.scss";
+@import "components/switch.scss";
+@import "components/tooltip.scss";
+@import "components/select-buttons.scss";

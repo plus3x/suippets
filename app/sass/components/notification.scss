@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Notification
+   ========================================================================== */
+
+.notification-wrapper{
+  position: absolute;
+  top: 0px;
+  z-index: 999;
+}
+
+@keyframes show {
+  0% {
+    top: -30px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.notification{
+  animation-name: show;
+  animation-duration: 0.2s;
+  width: 260px;
+  position: relative;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.notification-info{
+  background: #3297fc;
+}
+
+.notification-success{
+  background: #009999;
+}
+
+.notification-error{
+  background: #de5050;
+}
+
+.notification-warnning{
+  background: #ef963e;
+}
+
+.notification-normal{
+  background: #000;
+}
