@@ -68,6 +68,10 @@ const PAGES = {
   "select-buttons": {
     "entry": "./app/views/components/select-buttons/select-buttons.html",
     "output": "./pages"
+  },
+  "notification": {
+    "entry": "./app/views/components/notification/notification.html",
+    "output": "./pages"
   }
 };
 
