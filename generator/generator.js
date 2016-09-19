@@ -2,11 +2,13 @@ let fs = require( "fs" );
 let componentTemplate = require( "./component.template.js" );
 let codeTemplate = require( "./code.template.js" );
 let styleTemplate = require( "./style.template.js" );
+let testTemplate = require( "./test.template.js" );
 
 const name = process.argv[2];
 const viewPath = "../app/views/components";
 const sassPath = "../app/sass/components";
-const jsPath = "../app/js/components"
+const jsPath = "../app/js/components";
+const testPath = "../test";
 
 const newDir = () => {
   if ( !fs.existsSync( name ) ) {
@@ -14,13 +16,13 @@ const newDir = () => {
   }
 }
 
-const newFile = (path, file, template="Default template") => {
-  fs.writeFile(`${path}/${file}`, template, (err) => {
-    if (err){
+const newFile = ( path, file, template="Default template" ) => {
+  fs.writeFile( `${path}/${file}`, template, ( err ) => {
+    if ( err ) {
       return console.log(err);
     }
 
-    console.log(`${file} was created!`);
+    console.log( `${file} Created!` );
   });
 }
 
@@ -30,3 +32,4 @@ newFile( `${viewPath}/${name}`, "code.html", codeTemplate( name ) );
 newFile( `${viewPath}/${name}`, "example.html", "<!-- example -->" );
 newFile( sassPath, `${name}.scss`, styleTemplate( name ) );
 newFile( jsPath, `${name}.js`, "//javascript" );
+newFile( testPath, `${name}Spec.js`, testTemplate( name ) );
