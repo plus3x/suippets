@@ -72,6 +72,10 @@ const PAGES = {
   "notification": {
     "entry": "./app/views/components/notification/notification.html",
     "output": "./pages"
+  },
+  "upload-button": {
+    "entry": "./app/views/components/upload-button/upload-button.html",
+    "output": "./pages"
   }
 };
 
