@@ -34,16 +34,5 @@ describe( "Notification spec", () => {
     expect( notification.wrapper ).not.toContainElement( ".notification" );
   });
 
-  it( "Remome notifyer by time", () => {
-    const notifyer = notification.create( "New notifyer", "style-class" );
-    expect( notification.wrapper ).toContainElement( ".notification" );
-
-    notification.removeByTime( notifyer );
-
-    setTimeout( () => {
-      expect( notification.wrapper ).not.toContainElement( ".notification" );
-    }, 5000 );
-  });
-
 });
 
