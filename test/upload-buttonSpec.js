@@ -34,9 +34,9 @@ describe( "upload-button spec", () => {
     name: "File name",
     type: "image/png",
     size: 118450
-  }
+  };
 
-  it( "Modify number of counter" , () => {
+  it( "Modify number of counter", () => {
     expect( counter ).toContainText( "Nenhum arquivos selecionado" );
 
     uploadButton.count( counter, 10 );
@@ -76,11 +76,11 @@ describe( "upload-button spec", () => {
   const addingFiles = () => {
     let file1 = uploadButton.createFile( button, file, 0 );
     let file2 = uploadButton.createFile( button, file, 0 );
-    let files = [file1[ 0 ], file2[ 0 ]];
+    let files = [ file1[ 0 ], file2[ 0 ] ];
 
     uploadButton.showFiles( button, files );
     uploadButton.count( counter, 10 );
-  }
+  };
 
   it( "Clear input file", () => {
     addingFiles();
