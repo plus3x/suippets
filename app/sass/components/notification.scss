@@ -2,12 +2,6 @@
    Notification
    ========================================================================== */
 
-.notification-wrapper{
-  position: absolute;
-  z-index: 999;
-  top: 0;
-}
-
 @keyframes show{
   0%{
     top: -30px;
@@ -17,6 +11,12 @@
     top: 0;
     opacity: 1;
   }
+}
+
+.notification-wrapper{
+  position: absolute;
+  z-index: 999;
+  top: 0;
 }
 
 .notification{
