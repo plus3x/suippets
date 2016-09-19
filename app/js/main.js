@@ -7,6 +7,7 @@ import offcanvas from "./components/offcanvas.js";
 import alertmsg from "./components/alertmsg.js";
 import syntax from "./syntax.js";
 import notification from "./components/notification.js";
+import uploadButton from "./components/upload-button.js";
 
 $( () => {
   expander.init();
@@ -16,6 +17,7 @@ $( () => {
   offcanvas.init();
   alertmsg.init();
   notification.init();
+  uploadButton.init();
 });
 
 // Mobile menu
