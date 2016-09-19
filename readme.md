@@ -46,7 +46,8 @@ $ npm run csscomb
 
 ### Generate new component
 ```
-$ node generator/generator.js "component-name"
+$ cd generator
+$ node generator.js "component-name"
 ```
 
 ### Page structure
