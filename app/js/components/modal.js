@@ -22,6 +22,8 @@ modal.show = function( wrapper ) {
   wrapper
     .removeClass( "modal-hidden" )
     .addClass( "modal-activated" );
+
+  modal.stopScroll();
 };
 
 modal.hide = function( wrapper ) {
@@ -54,7 +56,6 @@ modal.hideByKey = function() {
 
 modal.init = function() {
   modal.detach();
-
   modal.hideByKey();
 
   modal.targets.each( function( index, element ) {
@@ -66,7 +67,6 @@ modal.init = function() {
 
     target.on( "click", function() {
       modal.show( wrapper );
-      modal.stopScroll();
     });
 
     content.on( "click", function( event ) {
