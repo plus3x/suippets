@@ -23,9 +23,21 @@ $ npm install && npm run globals
 $ npm start
 ```
 
-### Unit tests Karma + Jasmine
+### Unit tests with Karma + Jasmine
 ```
 $ npm test
+```
+
+### End to End tests with NightWatch
+```
+$ npm install -g selenium-standalone
+
+$ selenium-standalone install
+$ selenium-standalone start
+
+$ npm install -g nigthwatch
+$ nightwatch
+
 ```
 
 ### Eslint
