@@ -4,6 +4,8 @@ node_js:
 install:
   - npm install
   - npm run globals
+addons:
+  sauce_connect: true
 script:
   - npm run csscomb
   - npm run lint
@@ -12,3 +14,4 @@ script:
   - npm run lint-test-fix
   - karma start karma.conf.js --single-run
   - cat ./coverage/report-lcov/lcov.info | ./node_modules/.bin/codacy-coverage --token 965523ece909409f999426c96c4af094
+  - nightwatch --config nightwatch.saucelab.js --env chrome,ie11,firefox
