@@ -51,6 +51,14 @@ module.exports = {
       }
     },
 
+    "chrome" : {
+      "desiredCapabilities" : {
+        "browserName" : "chrome",
+        "platform" : "Linux",
+        "version" : "52.0"
+      }
+    },
+
     "ie11" : {
       "desiredCapabilities" : {
         "browserName" : "internet explorer",
@@ -75,13 +83,21 @@ module.exports = {
       }
     },
 
-    // "opera" : {
-    //   "desiredCapabilities" : {
-    //     "browserName" : "opera",
-    //     "platform" : "Linux",
-    //     "version" : "12.15"
-    //   }
-    // },
+    "firefox" : {
+      "desiredCapabilities" : {
+        "browserName" : "firefox",
+        "platform" : "Linux",
+        "version" : "47"
+      }
+    },
+
+    "opera" : {
+      "desiredCapabilities" : {
+        "browserName" : "opera",
+        "platform" : "Linux",
+        "version" : "12.15"
+      }
+    },
 
     "safari" : {
       "desiredCapabilities" : {
@@ -90,6 +106,5 @@ module.exports = {
         "version" : "9.0"
       }
     }
-
   }
 }
