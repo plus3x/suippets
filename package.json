@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js",
+    "e2e": "nightwatch --config nightwatch.js --env chrome,firefox",
     "globals": "npm i -g gulp karma-cli eslint eslint-config-idiomatic csscomb nightwatch",
     "start": "gulp",
     "production": "gulp production",
