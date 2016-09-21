@@ -2,7 +2,7 @@ const host = require('../host');
 const sauce = require('../sauce');
 
 module.exports = {
-  "Test modal component" : client => {
+  "Modal: open and close with [modal-close]" : client => {
     client
       .url( host )
       .waitForElementVisible( "body", 1000 )
