@@ -9,7 +9,7 @@ module.exports = function(config) {
             "browserify",
         ],
         files: [
-            "test/**/*Spec.js",
+            "./__TESTS__/unit/**/*Spec.js",
             "app/js/components/*.js"
         ],
         exclude: [
@@ -19,11 +19,11 @@ module.exports = function(config) {
             debug: true,
             transform: ["babelify", istanbul({
                 instrumenterConfig: { embedSource: true },
-                ignore: ["**/node_modules/**", "**/test/**"]
+                ignore: ["**/node_modules/**", "**/__TESTS__/unit/**"]
             })]
         },
         preprocessors: {
-            "test/**/*Spec.js": ["browserify"],
+            "./__TESTS__/unit/**/*Spec.js": ["browserify"],
             "app/js/components/*.js": ["browserify"]
         },
         reporters: ["progress", "coverage"],
