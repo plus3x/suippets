@@ -1,7 +1,9 @@
 require('dotenv').config({silent: true})
 
+const TRAVIS_JOB_NUMBER = process.env.TRAVIS_JOB_NUMBER;
+
 module.exports = {
-  "src_folders" : ["end2end/"],
+  "src_folders" : ["__TESTS__/end2end/"],
   "output_folder" : "reports",
   "custom_commands_path" : "",
   "custom_assertions_path" : "",
@@ -9,7 +11,7 @@ module.exports = {
   "globals_path" : "",
 
   "selenium" : {
-    "start_process" : false,
+    "start_process" : true,
     "server_path" : "",
     "log_path" : "",
     "host" : "127.0.0.1",
@@ -32,18 +34,21 @@ module.exports = {
         "enabled" : false,
         "path" : ""
       },
-      "desiredCapabilities": {
-        "browserName": "firefox",
-        "javascriptEnabled": true,
-        "acceptSslCerts": true
+      desiredCapabilities: {
+        "build" : `build-${TRAVIS_JOB_NUMBER}`,
+        "tunnel-identifier": TRAVIS_JOB_NUMBER,
+      },
+
+      globals: {
+        "waitForConditionTimeout": 10000,
       }
     },
 
     "chrome" : {
       "desiredCapabilities" : {
         "browserName" : "chrome",
-        "platform" : "OS X 10.11",
-        "version" : "47"
+        "platform" : "Windows 10",
+        "version" : "52.0"
       }
     },
 
@@ -55,12 +60,37 @@ module.exports = {
       }
     },
 
+    "edge" : {
+      "desiredCapabilities" : {
+        "browserName" : "MicrosoftEdge",
+        "platform" : "Windows 10",
+        "version" : "13.10586"
+      }
+    },
+
     "firefox" : {
       "desiredCapabilities" : {
         "browserName" : "firefox",
         "platform" : "Windows 10",
-        "version" : "48"
+        "version" : "47"
+      }
+    },
+
+    "opera" : {
+      "desiredCapabilities" : {
+        "browserName" : "opera",
+        "platform" : "Linux",
+        "version" : "12.15"
+      }
+    },
+
+    "safari" : {
+      "desiredCapabilities" : {
+        "browserName" : "safari",
+        "platform" : "OS X 10.11",
+        "version" : "9.0"
       }
     }
+
   }
 }
