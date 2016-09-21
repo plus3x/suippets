@@ -1,5 +1,5 @@
 module.exports = {
-  "src_folders" : ["end2end/"],
+  "src_folders" : ["__TESTS__/end2end/"],
   "output_folder" : "reports",
   "custom_commands_path" : "",
   "custom_assertions_path" : "",
