@@ -36,7 +36,7 @@ module.exports = {
       desiredCapabilities: {
         "build" : `build-${TRAVIS_JOB_NUMBER}`,
         "tunnel-identifier": TRAVIS_JOB_NUMBER,
-        "public": "public",
+        "public": "public"
       },
       globals: {
         "waitForConditionTimeout": 10000,
