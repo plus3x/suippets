@@ -43,18 +43,10 @@ module.exports = {
       }
     },
 
-    "chrome-win" : {
+    "chrome" : {
       "desiredCapabilities" : {
         "browserName" : "chrome",
         "platform" : "Windows 10",
-        "version" : "52.0"
-      }
-    },
-
-    "chrome-linux" : {
-      "desiredCapabilities" : {
-        "browserName" : "chrome",
-        "platform" : "Linux",
         "version" : "52.0"
       }
     },
@@ -75,18 +67,10 @@ module.exports = {
       }
     },
 
-    "firefox-win" : {
+    "firefox" : {
       "desiredCapabilities" : {
         "browserName" : "firefox",
         "platform" : "Windows 10",
-        "version" : "47"
-      }
-    },
-
-    "firefox-linux" : {
-      "desiredCapabilities" : {
-        "browserName" : "firefox",
-        "platform" : "Linux",
         "version" : "47"
       }
     },

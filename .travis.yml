@@ -18,4 +18,4 @@ script:
   - npm run lint-test-fix
   - karma start karma.conf.js --single-run
   - cat ./coverage/report-lcov/lcov.info | ./node_modules/.bin/codacy-coverage --token 965523ece909409f999426c96c4af094
-  - nightwatch --config nightwatch.saucelab.js --env chrome-win,chrome-linux,firefox-win,firefox-linux,edge,safari,ie11
+  - nightwatch --config nightwatch.saucelab.js --env chrome,firefox,edge,safari,ie11,opera
