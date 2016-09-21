@@ -1,5 +1,5 @@
 import $ from "jquery-slim";
-import offcanvas from "../app/js/components/offcanvas.js";
+import offcanvas from "../../app/js/components/offcanvas.js";
 
 describe( "Offcanvas Spec", () => {
 

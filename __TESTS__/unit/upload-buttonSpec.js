@@ -1,5 +1,5 @@
 import $ from "jquery-slim";
-import uploadButton from "../app/js/components/upload-button.js";
+import uploadButton from "../../app/js/components/upload-button.js";
 
 describe( "upload-button spec", () => {
 

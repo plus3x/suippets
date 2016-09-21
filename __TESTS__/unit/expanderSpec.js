@@ -1,5 +1,5 @@
 import $ from "jquery-slim";
-import expander from "../app/js/components/expander.js";
+import expander from "../../app/js/components/expander.js";
 
 describe( "expander spec", () => {
 

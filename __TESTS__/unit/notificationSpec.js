@@ -1,5 +1,5 @@
 import $ from "jquery-slim";
-import notification from "../app/js/components/notification.js";
+import notification from "../../app/js/components/notification.js";
 
 describe( "Notification spec", () => {
 

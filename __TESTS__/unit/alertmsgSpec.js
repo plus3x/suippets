@@ -1,5 +1,5 @@
 import $ from "jquery-slim";
-import alertmsg from "../app/js/components/alertmsg.js";
+import alertmsg from "../../app/js/components/alertmsg.js";
 
 describe( "Alert spec", () => {
 

@@ -1,5 +1,5 @@
 import $ from "jquery-slim";
-import tabs from "../app/js/components/tabs.js";
+import tabs from "../../app/js/components/tabs.js";
 
 describe( "Tabs specs", () => {
 

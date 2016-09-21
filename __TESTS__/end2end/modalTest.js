@@ -1,4 +1,5 @@
 const host = "https://c4co.github.io/suippets/";
+const sauce = require('../sauce');
 
 module.exports = {
   "Test modal component" : client => {
@@ -21,5 +22,7 @@ module.exports = {
       .click( "[modal-wrapper='2'] button[modal-close]" )
 
       .end();
-  }
+  },
+
+  tearDown: sauce
 };

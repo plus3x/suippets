@@ -1,5 +1,5 @@
 import $ from "jquery-slim";
-import dropdown from "../app/js/components/dropdown.js";
+import dropdown from "../../app/js/components/dropdown.js";
 
 describe( "Dropdown Spec", () => {
 

@@ -1,5 +1,5 @@
 import $ from "jquery-slim";
-import modal from "../app/js/components/modal.js";
+import modal from "../../app/js/components/modal.js";
 
 describe( "Modal spec", () => {
 
