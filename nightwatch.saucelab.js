@@ -43,7 +43,7 @@ module.exports = {
       }
     },
 
-    "chrome" : {
+    "chrome-win" : {
       "desiredCapabilities" : {
         "browserName" : "chrome",
         "platform" : "Windows 10",
@@ -51,7 +51,7 @@ module.exports = {
       }
     },
 
-    "chrome" : {
+    "chrome-linux" : {
       "desiredCapabilities" : {
         "browserName" : "chrome",
         "platform" : "Linux",
@@ -75,7 +75,7 @@ module.exports = {
       }
     },
 
-    "firefox" : {
+    "firefox-win" : {
       "desiredCapabilities" : {
         "browserName" : "firefox",
         "platform" : "Windows 10",
@@ -83,7 +83,7 @@ module.exports = {
       }
     },
 
-    "firefox" : {
+    "firefox-linux" : {
       "desiredCapabilities" : {
         "browserName" : "firefox",
         "platform" : "Linux",
