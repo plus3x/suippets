@@ -6,6 +6,9 @@ module.exports = {
     client
       .url( host )
       .waitForElementVisible( "body", 1000 )
+
+      .pause(300)
+
       .assert.title( "Suippets" )
       .click( "a[href*='/pages/modal.html']" )
 
