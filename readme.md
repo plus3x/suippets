@@ -32,6 +32,8 @@ $ npm test
 ```
 
 ### End to End tests with NightWatch
+
+install
 ```
 $ npm install -g selenium-standalone
 
@@ -39,8 +41,12 @@ $ selenium-standalone install
 $ selenium-standalone start
 
 $ npm install -g nigthwatch
-$ nightwatch
 
+```
+
+and run
+```
+$ npm run e2e
 ```
 
 ### Eslint
