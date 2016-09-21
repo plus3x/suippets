@@ -1,3 +1,6 @@
+// Report Nightwatch results to SauceLabs
+// https://gist.github.com/mikberg/ce463e09d6adf46f987c
+
 /* eslint no-console:0 */
 const https = require('https');
 
