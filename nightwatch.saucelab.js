@@ -75,14 +75,6 @@ module.exports = {
       }
     },
 
-    "opera" : {
-      "desiredCapabilities" : {
-        "browserName" : "opera",
-        "platform" : "Linux",
-        "version" : "12.15"
-      }
-    },
-
     "safari" : {
       "desiredCapabilities" : {
         "browserName" : "safari",
