@@ -1,4 +1,4 @@
-const host = "https://c4co.github.io/suippets/";
+const host = require('../host');
 const sauce = require('../sauce');
 
 module.exports = {
