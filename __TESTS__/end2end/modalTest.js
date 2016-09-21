@@ -1,10 +1,11 @@
-const host = require('../host');
-const sauce = require('../sauce');
+require( 'dotenv' ).config( { silent: true } );
+
+const sauce = require( '../sauce' );
 
 module.exports = {
   "Modal: open and close with [modal-close]" : client => {
     client
-      .url( host )
+      .url( process.env.SAUCE_HOST )
       .waitForElementVisible( "body", 1000 )
 
       .pause(300)
