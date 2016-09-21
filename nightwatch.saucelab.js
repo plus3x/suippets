@@ -75,13 +75,13 @@ module.exports = {
       }
     },
 
-    "opera" : {
-      "desiredCapabilities" : {
-        "browserName" : "opera",
-        "platform" : "Linux",
-        "version" : "12.15"
-      }
-    },
+    // "opera" : {
+    //   "desiredCapabilities" : {
+    //     "browserName" : "opera",
+    //     "platform" : "Linux",
+    //     "version" : "12.15"
+    //   }
+    // },
 
     "safari" : {
       "desiredCapabilities" : {
