@@ -1,5 +1,4 @@
-require('dotenv').config({silent: true})
-
+require('dotenv').config({silent: true});
 const TRAVIS_JOB_NUMBER = process.env.TRAVIS_JOB_NUMBER;
 
 module.exports = {
@@ -38,7 +37,6 @@ module.exports = {
         "build" : `build-${TRAVIS_JOB_NUMBER}`,
         "tunnel-identifier": TRAVIS_JOB_NUMBER,
       },
-
       globals: {
         "waitForConditionTimeout": 10000,
       }
