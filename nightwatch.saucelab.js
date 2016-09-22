@@ -75,12 +75,12 @@ module.exports = {
       }
     },
 
-    // "safari" : {
-    //   "desiredCapabilities" : {
-    //     "browserName" : "safari",
-    //     "platform" : "OS X 10.11",
-    //     "version" : "9.0"
-    //   }
-    // }
+    "safari" : {
+      "desiredCapabilities" : {
+        "browserName" : "safari",
+        "platform" : "OS X 10.11",
+        "version" : "9.0"
+      }
+    }
   }
 }
