@@ -17,5 +17,7 @@ module.exports = {
       .click( ".open-menu" )
       .assert.cssClassNotPresent( "section.sidebar", "toggle-sidebar" )
       .pause( 1000 ).end()
-  }
-}
+  },
+
+  tearDown: sauce
+};
