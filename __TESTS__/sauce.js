@@ -33,7 +33,7 @@ module.exports = function sauce(callback) {
     res.setEncoding('utf8');
     console.log('Response: ', res.statusCode, JSON.stringify(res.headers));
     res.on('data', function onData(chunk) {
-      console.log('BODY: ' + chunk);
+      //console.log('BODY: ' + chunk);
     });
     res.on('end', function onEnd() {
       console.info('Finished updating saucelabs');
