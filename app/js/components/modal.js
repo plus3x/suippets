@@ -7,7 +7,8 @@ var modal = {
   wrappers: $( "[modal-wrapper]" ),
   closeButtons: $( "[modal-wrapper]" ).find( "[modal-close]" ),
   scrollPosition: $( document ).scrollTop(),
-  ESC: 27
+  ESC_PC: 27,
+  ESC_MAC: 35
 };
 
 modal.detach = function() {
@@ -48,7 +49,7 @@ modal.startScroll = function() {
 
 modal.hideByKey = function() {
   $( window ).on( "keydown", function( event ) {
-    if ( event.keyCode == modal.ESC ) {
+    if ( event.keyCode == modal.ESC_PC || event.keyCode == modal.ESC_MAC ) {
       modal.hide( modal.wrappers );
     }
   });
