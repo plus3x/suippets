@@ -10,6 +10,8 @@ module.exports = {
       .resizeWindow( 1000, 1000 )
       .assert.title( "Suippets" )
 
+      .pause( 300 )
+
       .click( "a[href*='/pages/expander.html']" )
       .assert.containsText( ".page-title", "Expander" )
       .assert.hidden( ".expander-content" )
