@@ -10,7 +10,7 @@ install:
 addons:
   sauce_connect: true
 
-script:
+after_script:
   - npm run csscomb
   - npm run lint
   - npm run lint-fix
