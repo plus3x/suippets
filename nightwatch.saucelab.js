@@ -74,5 +74,13 @@ module.exports = {
         "version" : "47"
       }
     },
+
+    "safari" : {
+      "desiredCapabilities" : {
+        "browserName" : "safari",
+        "platform" : "OS X 10.11",
+        "version" : "9.0"
+      }
+    }
   }
 }
