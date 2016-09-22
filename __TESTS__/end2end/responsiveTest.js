@@ -3,7 +3,7 @@ require( 'dotenv' ).config( { silent: true } );
 const sauce = require( '../sauce' );
 
 module.exports = {
-  "Test responsive design": client => {
+  "Responsive design": client => {
     client
       .url( process.env.SAUCE_HOST )
       .waitForElementVisible( "body", 1000 )
