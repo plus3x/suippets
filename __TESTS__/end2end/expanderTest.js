@@ -24,7 +24,7 @@ module.exports = {
       .assert.cssClassNotPresent(".expander-title", "expander-title-activated")
       .assert.hidden( ".expander-content" )
 
-      .pause( 1000 ).end();
+      .end();
   },
 
   tearDown: sauce
