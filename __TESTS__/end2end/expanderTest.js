@@ -13,6 +13,9 @@ module.exports = {
       .pause( 300 )
 
       .click( "a[href*='/pages/expander.html']" )
+
+      .pause( 300 )
+
       .assert.containsText( ".page-title", "Expander" )
       .assert.hidden( ".expander-content" )
 
