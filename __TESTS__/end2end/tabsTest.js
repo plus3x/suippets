@@ -10,7 +10,12 @@ module.exports = {
       .resizeWindow( 1000, 1000 )
       .assert.title( "Suippets" )
 
+      .pause( 300 )
+
       .click( "a[href*='/pages/tabs.html']" )
+
+      .pause( 300 )
+
       .assert.containsText( ".page-title", "Tabs" )
 
       .assert.cssClassPresent( "[tab-title='1']", "tab-title-activated" )
