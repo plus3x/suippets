@@ -13,6 +13,7 @@ module.exports = {
 
       .assert.title( "Suippets" )
       .click( "a[href*='/pages/modal.html']" )
+      .assert.containsText( ".page-title", "Modal" )
 
       .click( "button[modal-target='1']" )
       .assert.elementPresent( "[modal-wrapper='1']" )
@@ -46,10 +47,10 @@ module.exports = {
 
       .pause( 300 )
 
-      .keys([ client.Keys.ESCAPE ])
+      .keys( [ client.Keys.ESCAPE ] )
       .assert.cssClassPresent( "[modal-wrapper='1']", "modal-hidden" )
 
-      .pause( 1000 ).end()
+      .end()
   },
 
   tearDown: sauce
