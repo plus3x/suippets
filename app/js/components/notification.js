@@ -42,4 +42,8 @@ notification.init = function() {
   notification.detach( notification.wrapper );
 };
 
+// Usage
+// notification.init()
+// notification.create( "messages", "class1 class2 class3" );
+
 export default notification;
