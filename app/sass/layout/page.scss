@@ -9,11 +9,11 @@
 
 .page-section{
   font-size: 1.1em;
+  font-weight: normal;
   margin: 0 0 30px 0;
   padding: 0 0 5px 0;
   text-transform: uppercase;
   border-bottom: solid #e5e5e5 1px;
-  font-weight: normal;
 }
 
 .page-example{
@@ -30,9 +30,9 @@
   background: #fdfdfd;
 
   pre{
+    overflow: auto;
     margin: 0;
     padding: 20px;
-    overflow: auto;
   }
 }
 
