@@ -38,14 +38,14 @@ install
 $ npm install -g selenium-standalone
 
 $ selenium-standalone install
-$ selenium-standalone start
 
 $ npm install -g nigthwatch
 
 ```
 
-and run
+and run (start selenium server before)
 ```
+$ selenium-standalone start
 $ npm run e2e
 ```
 
