@@ -17,11 +17,10 @@ module.exports = {
 
   "Alert: close": client => {
     client
-      .click( ".alert-danger [alert-close]" )
-      .click( ".alert-info [alert-close]" )
-      .click( ".alert-success [alert-close]" )
-      .click( ".alert-warnning [alert-close]" )
-      .pause( 500 )
+      .click( ".alert-danger [alert-close]" ).pause( 300 )
+      .click( ".alert-info [alert-close]" ).pause( 300 )
+      .click( ".alert-success [alert-close]" ).pause( 300 )
+      .click( ".alert-warnning [alert-close]" ).pause( 300 )
       .assert.hidden( ".alert-danger" )
       .assert.hidden( ".alert-info" )
       .assert.hidden( ".alert-success" )
