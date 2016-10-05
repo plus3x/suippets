@@ -33,11 +33,8 @@ $ npm test
 install
 ```
 $ npm install -g selenium-standalone
-
 $ selenium-standalone install
-
 $ npm install -g nigthwatch
-
 ```
 
 and run (start selenium server before)
