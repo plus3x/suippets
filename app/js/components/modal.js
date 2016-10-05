@@ -5,8 +5,6 @@ import $ from "jquery-slim";
 var modal = {
   targets: $( "[modal-target]" ),
   wrappers: $( "[modal-wrapper]" ),
-  closeButtons: $( "[modal-wrapper]" ).find( "[modal-close]" ),
-  scrollPosition: $( document ).scrollTop(),
   ESC: 27,
 };
 
