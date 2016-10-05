@@ -48,7 +48,7 @@ $ npm run e2e
 $ npm lint
 $ npm lint-test
 
-or to fix erros
+or for fix errors
 
 $ npm lint-fix
 $ npm lint-test-fix
