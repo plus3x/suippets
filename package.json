@@ -1,7 +1,7 @@
 {
   "name": "suippets",
   "version": "1.0.0",
-  "description": "front-end snippets",
+  "description": "micro front-end snippets",
   "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js",
