@@ -47,14 +47,14 @@ describe('Tabs specs', () => {
     expect(tab.content).toHaveCss({ 'display': 'none' })
   }
 
-  it('Initial tab is selected', () => {
+  it('at initial state, should be activated the first tab', () => {
     isTabActivated(first)
 
     isTabHidden(second)
     isTabHidden(third)
   })
 
-  it('Click on second tab, show the second content and hide others contents', () => {
+  it('when i click on second tab, should be shown the second content and hide others', () => {
     second.title.click()
     isTabActivated(second)
 

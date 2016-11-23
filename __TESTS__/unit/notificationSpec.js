@@ -4,7 +4,7 @@ import notification from '../../app/js/components/notification.js'
 describe('Notification spec', () => {
   notification.wrapper = $('<div notification-wrapper></div>')
 
-  it('Add wrapper state adding {notification-wrapper} class', () => {
+  it('should add {.notification-wrapper} class', () => {
     expect(notification.wrapper).not.toHaveClass('notification-wrapper')
 
     notification.init()
@@ -12,7 +12,7 @@ describe('Notification spec', () => {
     expect(notification.wrapper).toHaveClass('notification-wrapper')
   })
 
-  it('Create new element', () => {
+  it('should create new element', () => {
     const notifyer = notification.create('New notifyer', 'style-class')
 
     expect(notifyer).toHaveClass('notification')
@@ -25,7 +25,7 @@ describe('Notification spec', () => {
     notifyer.click()
   })
 
-  it('Remove element by click', () => {
+  it('When i click on notification it should be removed', () => {
     const notifyer = notification.create('New notifyer', 'style-class')
     expect(notification.wrapper).toContainElement('.notification')
     notifyer.click()
@@ -33,4 +33,3 @@ describe('Notification spec', () => {
     expect(notification.wrapper).not.toContainElement('.notification')
   })
 })
-

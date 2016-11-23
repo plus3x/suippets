@@ -25,7 +25,7 @@ describe('Modal spec', () => {
   modal.wrappers = modalWrapperMarkup
   modal.targets = modalTargetMarkup
 
-  it('Initial state, add {modal-hidden} class', () => {
+  it('At Initial state, should add {modal-hidden} class', () => {
     expect(modal.wrappers).not.toHaveClass('modal-hidden')
 
     modal.init()
@@ -33,7 +33,7 @@ describe('Modal spec', () => {
     expect(modal.wrappers).toHaveClass('modal-hidden')
   })
 
-  it('Open modal, add {modal-active} class and remove {modal-hidden} class', () => {
+  it('When modal is opened, should add {.modal-active} class and remove {.modal-hidden} class', () => {
     expect(modal.wrappers).not.toHaveClass('modal-activated')
     expect(modal.wrappers).toHaveClass('modal-hidden')
 
@@ -43,7 +43,7 @@ describe('Modal spec', () => {
     expect(modal.wrappers).not.toHaveClass('modal-hidden')
   })
 
-  it('Hidden modal, remove {modal-actived} class and add {modal-hidden} class', () => {
+  it('When modal is Hidden, should remove {.modal-actived} class and add {.modal-hidden} class', () => {
     expect(modal.wrappers).toHaveClass('modal-activated')
     expect(modal.wrappers).not.toHaveClass('modal-hidden')
 
@@ -53,7 +53,7 @@ describe('Modal spec', () => {
     expect(modal.wrappers).toHaveClass('modal-hidden')
   })
 
-  it('Click on target(#1) and open the corresponding wrapper(#1)', () => {
+  it('When i click on target(#1) shoud to open the corresponding wrapper(#1)', () => {
     modal.targets.click()
 
     expect(modal.wrappers[ 0 ]).toHaveClass('modal-activated')

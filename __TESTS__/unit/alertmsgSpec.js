@@ -18,7 +18,7 @@ describe('Alert spec', () => {
     alertmsg.init()
   })
 
-  it("Add 'alert-remove' class in alert structure", () => {
+  it('should add ".alert-remove" in alert structure', () => {
     expect(alertmsg.buttons.parent()).not.toHaveClass('alert-remove')
 
     alertmsg.removeAlert(alertmsg.buttons)
@@ -26,7 +26,7 @@ describe('Alert spec', () => {
     expect(alertmsg.buttons.parent()).toHaveClass('alert-remove')
   })
 
-  it('Hidden element', () => {
+  it('should hide the alert', () => {
     expect(alertmsg.buttons.parent()).not.toHaveCss({ 'display': 'none' })
 
     alertmsg.hideAlert(alertmsg.buttons)
@@ -34,7 +34,7 @@ describe('Alert spec', () => {
     expect(alertmsg.buttons.parent()).toHaveCss({ 'display': 'none' })
   })
 
-  it('Remove alerts on click', () => {
+  it('should remove alerts when i click on .alert-remove', () => {
     expect(alertmsg.buttons.parent()).not.toHaveClass('alert-remove')
 
     alertmsg.buttons.click()

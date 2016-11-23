@@ -23,7 +23,7 @@ describe('Offcanvas Spec', () => {
   offcanvas.targets = offcanvasTargetMarkupt
   offcanvas.wrappers = offcanvasWrapperMarkup
 
-  it('initial state, add {offcanvas-hidden} class in wrapper', () => {
+  it('at initial state, should add {offcanvas-hidden} class in wrapper', () => {
     expect(offcanvas.wrappers).not.toHaveClass('offcanvas-hidden')
 
     offcanvas.init()
@@ -31,7 +31,7 @@ describe('Offcanvas Spec', () => {
     expect(offcanvas.wrappers).toHaveClass('offcanvas-hidden')
   })
 
-  it('Show offcanvas, add class {offcanvas-activated} and remove {offcanvas-hidden}', () => {
+  it('when show offcanvas, should add class {.offcanvas-activated} and remove {.offcanvas-hidden}', () => {
     expect(offcanvas.wrappers).not.toHaveClass('offcanvas-activated')
     expect(offcanvas.wrappers).toHaveClass('offcanvas-hidden')
 
@@ -41,7 +41,7 @@ describe('Offcanvas Spec', () => {
     expect(offcanvas.wrappers).toHaveClass('offcanvas-activated')
   })
 
-  it('Hide offcanvas, remove class {offcanvas-activated} and add {offcanvas-hidden}', () => {
+  it('when hide offcanvas, should remove class {.offcanvas-activated} and add {.offcanvas-hidden}', () => {
     expect(offcanvas.wrappers).not.toHaveClass('offcanvas-hidden')
     expect(offcanvas.wrappers).toHaveClass('offcanvas-activated')
 
@@ -51,7 +51,7 @@ describe('Offcanvas Spec', () => {
     expect(offcanvas.wrappers).toHaveClass('offcanvas-hidden')
   })
 
-  it('Click on target(#1) and open the corresponding wrapper(#1)', () => {
+  it('when i click on target(#1) should open the corresponding wrapper(#1)', () => {
     offcanvas.targets.click()
 
     expect(offcanvas.wrappers[ 0 ]).toHaveClass('offcanvas-activated')

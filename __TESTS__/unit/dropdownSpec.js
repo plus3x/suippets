@@ -22,7 +22,7 @@ describe('Dropdown Spec', () => {
     dropdown.init()
   })
 
-  it('Add {dropdown-activated} class', () => {
+  it('should add .dropdown-activated', () => {
     expect(dropdown.contents).not.toHaveClass('dropdown-activated')
 
     dropdown.activePanel(dropdown.contents)
@@ -30,7 +30,7 @@ describe('Dropdown Spec', () => {
     expect(dropdown.contents).toHaveClass('dropdown-activated')
   })
 
-  it('Remove {dropdown-activated} class', () => {
+  it('should remove .dropdown-activated', () => {
     dropdown.activePanel(dropdown.contents)
 
     expect(dropdown.contents).toHaveClass('dropdown-activated')
@@ -40,13 +40,13 @@ describe('Dropdown Spec', () => {
     expect(dropdown.contents).not.toHaveClass('dropdown-activated')
   })
 
-  it('Click and active the #1 dropdown, and remove others', () => {
+  it('when i click on #1 dropdown-title must activate the #1 dropdown-content, and deactivate the others', () => {
     dropdown.targets[ 0 ].click()
     expect(dropdown.contents[ 0 ]).toHaveClass('dropdown-activated')
     expect(dropdown.contents[ 1 ]).not.toHaveClass('dropdown-activated')
   })
 
-  it('Click and active the #2 dropdown, and remove others', () => {
+  it('when i click on #2 dropdown-title must activate the #2 dropdown-content, and deactivate the others', () => {
     dropdown.targets[ 1 ].click()
     expect(dropdown.contents[ 1 ]).toHaveClass('dropdown-activated')
     expect(dropdown.contents[ 0 ]).not.toHaveClass('dropdown-activated')
