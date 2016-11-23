@@ -1,4 +1,4 @@
-const componentTemplate = ( name ) => `
+const componentTemplate = (name) => `
 @@include("parts/header.html", {"local": "../"})
 
   <main class="main">
@@ -21,6 +21,6 @@ const componentTemplate = ( name ) => `
   </main>
 
 @@include("parts/footer.html", {"local": "../"})
-`;
+`
 
-module.exports = componentTemplate;
+module.exports = componentTemplate

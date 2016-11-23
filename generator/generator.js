@@ -1,35 +1,35 @@
-let fs = require( "fs" );
-let componentTemplate = require( "./component.template.js" );
-let codeTemplate = require( "./code.template.js" );
-let styleTemplate = require( "./style.template.js" );
-let testTemplate = require( "./test.template.js" );
+let fs = require('fs')
+let componentTemplate = require('./component.template.js')
+let codeTemplate = require('./code.template.js')
+let styleTemplate = require('./style.template.js')
+let testTemplate = require('./test.template.js')
 
-const name = process.argv[2];
-const viewPath = "../app/views/components";
-const sassPath = "../app/sass/components";
-const jsPath = "../app/js/components";
-const testPath = "../test";
+const name = process.argv[2]
+const viewPath = '../app/views/components'
+const sassPath = '../app/sass/components'
+const jsPath = '../app/js/components'
+const testPath = '../test'
 
 const newDir = () => {
-  if ( !fs.existsSync( name ) ) {
-    fs.mkdirSync(`${viewPath}/${name}`);
+  if (!fs.existsSync(name)) {
+    fs.mkdirSync(`${viewPath}/${name}`)
   }
 }
 
-const newFile = ( path, file, template="Default template" ) => {
-  fs.writeFile( `${path}/${file}`, template, ( err ) => {
-    if ( err ) {
-      return console.log(err);
+const newFile = (path, file, template = 'Default template') => {
+  fs.writeFile(`${path}/${file}`, template, (err) => {
+    if (err) {
+      return console.log(err)
     }
 
-    console.log( `${file} Created!` );
-  });
+    console.log(`${file} Created!`)
+  })
 }
 
-newDir();
-newFile( `${viewPath}/${name}`, `${name}.html`, componentTemplate( name ) );
-newFile( `${viewPath}/${name}`, "code.html", codeTemplate( name ) );
-newFile( `${viewPath}/${name}`, "example.html", "<!-- example -->" );
-newFile( sassPath, `${name}.scss`, styleTemplate( name ) );
-newFile( jsPath, `${name}.js`, "//javascript" );
-newFile( testPath, `${name}Spec.js`, testTemplate( name ) );
+newDir()
+newFile(`${viewPath}/${name}`, `${name}.html`, componentTemplate(name))
+newFile(`${viewPath}/${name}`, 'code.html', codeTemplate(name))
+newFile(`${viewPath}/${name}`, 'example.html', '<!-- example -->')
+newFile(sassPath, `${name}.scss`, styleTemplate(name))
+newFile(jsPath, `${name}.js`, '//javascript')
+newFile(testPath, `${name}Spec.js`, testTemplate(name))

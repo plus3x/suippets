@@ -1,7 +1,7 @@
-const componentTemplate = ( name ) => `
+const componentTemplate = (name) => `
 /* ==========================================================================
-   ${ name }
+   ${name}
    ========================================================================== */
-`;
+`
 
-module.exports = componentTemplate;
+module.exports = componentTemplate

@@ -1,49 +1,49 @@
-import $ from "jquery-slim";
-import expander from "./components/expander.js";
-import modal from "./components/modal.js";
-import tabs from "./components/tabs.js";
-import dropdown from "./components/dropdown.js";
-import offcanvas from "./components/offcanvas.js";
-import alertmsg from "./components/alertmsg.js";
-import syntax from "./syntax.js";
-import notification from "./components/notification.js";
-import uploadButton from "./components/upload-button.js";
+import $ from 'jquery-slim'
+import expander from './components/expander.js'
+import modal from './components/modal.js'
+import tabs from './components/tabs.js'
+import dropdown from './components/dropdown.js'
+import offcanvas from './components/offcanvas.js'
+import alertmsg from './components/alertmsg.js'
+import syntax from './syntax.js'
+import notification from './components/notification.js'
+import uploadButton from './components/upload-button.js'
 
-$( () => {
-  expander.init();
-  dropdown.init();
-  modal.init();
-  tabs.init();
-  offcanvas.init();
-  alertmsg.init();
-  notification.init();
-  uploadButton.init();
-});
+$(() => {
+  expander.init()
+  dropdown.init()
+  modal.init()
+  tabs.init()
+  offcanvas.init()
+  alertmsg.init()
+  notification.init()
+  uploadButton.init()
+})
 
 // Mobile menu
-$( ".open-menu" ).on( "click", () => {
-  $( ".sidebar" ).toggleClass( "toggle-sidebar" );
-});
+$('.open-menu').on('click', () => {
+  $('.sidebar').toggleClass('toggle-sidebar')
+})
 
 // Usage notification
-$( "[notification-info]" ).on("click", () => {
-  notification.create( "Info message...", "notification-info" )
-});
+$('[notification-info]').on('click', () => {
+  notification.create('Info message...', 'notification-info')
+})
 
-$( "[notification-error]" ).on("click", () => {
-  notification.create( "Error message...", "notification-error" )
-});
+$('[notification-error]').on('click', () => {
+  notification.create('Error message...', 'notification-error')
+})
 
-$( "[notification-warnning]" ).on("click", () => {
-  notification.create( "Warnning message...", "notification-warnning" )
-});
+$('[notification-warnning]').on('click', () => {
+  notification.create('Warnning message...', 'notification-warnning')
+})
 
-$( "[notification-success]" ).on("click", () => {
-  notification.create( "Success message...", "notification-success" )
-});
+$('[notification-success]').on('click', () => {
+  notification.create('Success message...', 'notification-success')
+})
 
-$( "[notification-normal]" ).on("click", () => {
-  notification.create( "Normal message...", "notification-normal" )
-});
+$('[notification-normal]').on('click', () => {
+  notification.create('Normal message...', 'notification-normal')
+})
 
-syntax();
+syntax()

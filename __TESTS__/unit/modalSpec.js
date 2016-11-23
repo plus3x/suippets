@@ -1,13 +1,12 @@
-import $ from "jquery-slim";
-import modal from "../../app/js/components/modal.js";
+import $ from 'jquery-slim'
+import modal from '../../app/js/components/modal.js'
 
-describe( "Modal spec", () => {
-
+describe('Modal spec', () => {
   const modalTargetMarkup = $(
     `
       <button modal-target="1"> </button>
     `
-  );
+  )
 
   const modalWrapperMarkup = $(
     `
@@ -21,47 +20,46 @@ describe( "Modal spec", () => {
         </div>
       </div>
     `
-  );
+  )
 
-  modal.wrappers = modalWrapperMarkup;
-  modal.targets = modalTargetMarkup;
+  modal.wrappers = modalWrapperMarkup
+  modal.targets = modalTargetMarkup
 
-  it( "Initial state, add {modal-hidden} class", () => {
-    expect( modal.wrappers ).not.toHaveClass( "modal-hidden" );
+  it('Initial state, add {modal-hidden} class', () => {
+    expect(modal.wrappers).not.toHaveClass('modal-hidden')
 
-    modal.init();
+    modal.init()
 
-    expect( modal.wrappers ).toHaveClass( "modal-hidden" );
-  });
+    expect(modal.wrappers).toHaveClass('modal-hidden')
+  })
 
-  it( "Open modal, add {modal-active} class and remove {modal-hidden} class", () => {
-    expect( modal.wrappers ).not.toHaveClass( "modal-activated" );
-    expect( modal.wrappers ).toHaveClass( "modal-hidden" );
+  it('Open modal, add {modal-active} class and remove {modal-hidden} class', () => {
+    expect(modal.wrappers).not.toHaveClass('modal-activated')
+    expect(modal.wrappers).toHaveClass('modal-hidden')
 
-    modal.show( modal.wrappers );
+    modal.show(modal.wrappers)
 
-    expect( modal.wrappers ).toHaveClass( "modal-activated" );
-    expect( modal.wrappers ).not.toHaveClass( "modal-hidden" );
-  });
+    expect(modal.wrappers).toHaveClass('modal-activated')
+    expect(modal.wrappers).not.toHaveClass('modal-hidden')
+  })
 
-  it( "Hidden modal, remove {modal-actived} class and add {modal-hidden} class", () => {
-    expect( modal.wrappers ).toHaveClass( "modal-activated" );
-    expect( modal.wrappers ).not.toHaveClass( "modal-hidden" );
+  it('Hidden modal, remove {modal-actived} class and add {modal-hidden} class', () => {
+    expect(modal.wrappers).toHaveClass('modal-activated')
+    expect(modal.wrappers).not.toHaveClass('modal-hidden')
 
-    modal.hide( modal.wrappers );
+    modal.hide(modal.wrappers)
 
-    expect( modal.wrappers ).not.toHaveClass( "modal-activated" );
-    expect( modal.wrappers ).toHaveClass( "modal-hidden" );
-  });
+    expect(modal.wrappers).not.toHaveClass('modal-activated')
+    expect(modal.wrappers).toHaveClass('modal-hidden')
+  })
 
-  it( "Click on target(#1) and open the corresponding wrapper(#1)", () => {
-    modal.targets.click();
+  it('Click on target(#1) and open the corresponding wrapper(#1)', () => {
+    modal.targets.click()
 
-    expect( modal.wrappers[ 0 ] ).toHaveClass( "modal-activated" );
-    expect( modal.wrappers[ 0 ] ).not.toHaveClass( "modal-hidden" );
+    expect(modal.wrappers[ 0 ]).toHaveClass('modal-activated')
+    expect(modal.wrappers[ 0 ]).not.toHaveClass('modal-hidden')
 
-    expect( modal.wrappers[ 1 ] ).toHaveClass( "modal-hidden" );
-    expect( modal.wrappers[ 1 ] ).not.toHaveClass( "modal-activated" );
-  });
-
-});
+    expect(modal.wrappers[ 1 ]).toHaveClass('modal-hidden')
+    expect(modal.wrappers[ 1 ]).not.toHaveClass('modal-activated')
+  })
+})

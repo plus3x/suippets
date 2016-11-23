@@ -1,4 +1,4 @@
-const codeTemplate = ( name ) => `
+const codeTemplate = (name) => `
 <h4 class="page-section"> Code </h4>
 
 <div class="code">
@@ -15,6 +15,6 @@ const codeTemplate = ( name ) => `
   <h1 class="code-title"> Javascript (with jQuery slim) </h1>
   <pre code="./../app/js/components/${name}.js"> Loading ... </pre>
 </div>
-`;
+`
 
-module.exports = codeTemplate;
+module.exports = codeTemplate

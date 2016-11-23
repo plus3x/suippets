@@ -1,8 +1,7 @@
-import $ from "jquery-slim";
-import tabs from "../../app/js/components/tabs.js";
+import $ from 'jquery-slim'
+import tabs from '../../app/js/components/tabs.js'
 
-describe( "Tabs specs", () => {
-
+describe('Tabs specs', () => {
   let tabsMarkup = $(
     `
       <div tabs>
@@ -17,50 +16,49 @@ describe( "Tabs specs", () => {
         <div tab-content="3" class="tab-content"></div>
       </div>
     `
-  );
+  )
 
-  tabs.all = tabsMarkup;
+  tabs.all = tabsMarkup
 
-  tabs.init();
+  tabs.init()
 
   let first = {
-    title: tabs.all.find( "[tab-title=1]" ),
-    content: tabs.all.find( "[tab-content=1]" )
-  };
+    title: tabs.all.find('[tab-title=1]'),
+    content: tabs.all.find('[tab-content=1]')
+  }
 
   let second = {
-    title: tabs.all.find( "[tab-title=2]" ),
-    content: tabs.all.find( "[tab-content=2]" )
-  };
+    title: tabs.all.find('[tab-title=2]'),
+    content: tabs.all.find('[tab-content=2]')
+  }
 
   let third = {
-    title: tabs.all.find( "[tab-title=3]" ),
-    content: tabs.all.find( "[tab-content=3]" )
-  };
+    title: tabs.all.find('[tab-title=3]'),
+    content: tabs.all.find('[tab-content=3]')
+  }
 
-  const isTabActivated = ( tab ) => {
-    expect( tab.title ).toHaveClass( "tab-title-activated" );
-    expect( tab.content ).not.toHaveCss({ "display": "none" });
-  };
+  const isTabActivated = (tab) => {
+    expect(tab.title).toHaveClass('tab-title-activated')
+    expect(tab.content).not.toHaveCss({ 'display': 'none' })
+  }
 
-  const isTabHidden = ( tab ) => {
-    expect( tab.title ).not.toHaveClass( "tab-title-activated" );
-    expect( tab.content ).toHaveCss({ "display": "none" });
-  };
+  const isTabHidden = (tab) => {
+    expect(tab.title).not.toHaveClass('tab-title-activated')
+    expect(tab.content).toHaveCss({ 'display': 'none' })
+  }
 
-  it( "Initial tab is selected", () => {
-    isTabActivated( first );
+  it('Initial tab is selected', () => {
+    isTabActivated(first)
 
-    isTabHidden( second );
-    isTabHidden( third );
-  });
+    isTabHidden(second)
+    isTabHidden(third)
+  })
 
-  it( "Click on second tab, show the second content and hide others contents", () => {
-    second.title.click();
-    isTabActivated( second );
+  it('Click on second tab, show the second content and hide others contents', () => {
+    second.title.click()
+    isTabActivated(second)
 
-    isTabHidden( first );
-    isTabHidden( third );
-  });
-
-});
+    isTabHidden(first)
+    isTabHidden(third)
+  })
+})

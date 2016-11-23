@@ -1,4 +1,4 @@
-const testTemplate = ( name ) => `
+const testTemplate = (name) => `
 import $ from "jquery-slim";
 
 describe( "${name} spec", () => {
@@ -9,4 +9,4 @@ describe( "${name} spec", () => {
 
 });
 `
-module.exports = testTemplate;
+module.exports = testTemplate
