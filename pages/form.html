@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Suippets</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../app/icons/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/github-gist.min.css">
+
+</head>
+<body>
+
+<header class="header"> 
+	<button class="btn open-menu"> Menu </button>
+</header>
+
+
+<main class="main">
+  <section class="sidebar">
+    <a class="logo" href="/suippets/">
+  <img src="../app/img/logo.svg" alt="logo">
+</a>
+
+<nav class="sidebar-menu">
+  <p class="sidebar-menu-title"> Javascript </p>
+  <a href="/suippets/pages/expander.html" class="sidebar-menu-item"> Expander </a>
+  <a href="/suippets/pages/modal.html" class="sidebar-menu-item"> Modal </a>
+  <a href="/suippets/pages/tabs.html" class="sidebar-menu-item"> Tabs </a>
+  <a href="/suippets/pages/dropdown.html" class="sidebar-menu-item"> Dropdown </a>
+  <a href="/suippets/pages/drawer.html" class="sidebar-menu-item"> Drawer </a>
+  <a href="/suippets/pages/alert.html" class="sidebar-menu-item"> Alert </a>
+  <a href="/suippets/pages/notification.html" class="sidebar-menu-item"> Notification </a>
+  <a href="/suippets/pages/upload-button.html" class="sidebar-menu-item"> Upload button </a>
+
+  <p class="sidebar-menu-title"> Pure CSS </p>
+  <a href="/suippets/pages/radio.html" class="sidebar-menu-item"> Radio </a>
+  <a href="/suippets/pages/checkbox.html" class="sidebar-menu-item"> Checkbox </a>
+  <a href="/suippets/pages/level-menu.html" class="sidebar-menu-item"> Level menu </a>
+  <a href="/suippets/pages/table.html" class="sidebar-menu-item"> Table </a>
+  <a href="/suippets/pages/switch.html" class="sidebar-menu-item"> Switch </a>
+  <a href="/suippets/pages/type.html" class="sidebar-menu-item"> Type </a>
+  <a href="/suippets/pages/form.html" class="sidebar-menu-item"> Form </a>
+  <a href="/suippets/pages/buttons.html" class="sidebar-menu-item"> Buttons </a>
+  <a href="/suippets/pages/tooltip.html" class="sidebar-menu-item"> Text Tooltip </a>
+  <a href="/suippets/pages/select-buttons.html" class="sidebar-menu-item"> Select buttons </a>
+</nav>
+  </section>
+
+  <section class="center">
+    <div class="container">
+      <h1 class="page-title"> Form </h1>
+
+      <div class="page-example">
+        <h4 class="page-section"> Example </h4>
+        <form action="">
+  <fieldset>
+    <legend> Legend </legend>
+
+    <label> Input text </label>
+    <input class="form-control" type="text" placeholder="Placeholder"/>
+
+    <label> Input password </label>
+    <input class="form-control" type="password" placeholder="Placeholder" value="132456789"/>
+
+    <label> Input Number </label>
+    <input class="form-control" type="number" placeholder="Placeholder"/>
+
+    <label> Disable input </label>
+    <input class="form-control" type="password" placeholder="Placeholder" disabled=""/>
+
+    <label> Select </label>
+    <select class="form-select">
+      <option> First </option>
+      <option> Second </option>
+      <option> Thrid </option>
+    </select>
+
+    <label>Text area </label>
+    <textarea class="form-control" placeholder="insert a value"></textarea>
+
+    <input id="first-check" type="checkbox"/>
+    <label for="first-check"> Checkbox </label>
+
+    <br/>
+
+    <input id="second-check" type="checkbox" disabled />
+    <label for="second-check"> Disabled checkbox </label>
+
+    <br/>
+
+    <input id="primeiro-radio" type="radio" name="foo"/>
+    <label for="primeiro-radio"> Radio </label>
+
+    <br/>
+
+    <input id="segundo-radio" type="radio" name="foo" disabled />
+    <label for="segundo-radio"> Disabled radio </label>
+
+    <br><br>
+    <input type="file" class="form-control-file">
+    <br><br>
+    <button class="btn"> Submit </button>
+  </fieldset>
+</form>
+      </div>  
+
+      <h4 class="page-section"> Code </h4>
+
+<div class="code">
+  <h1 class="code-title"> HTML </h1>
+  <pre code="./../app/views/components/form/example.html"> Loading ... </pre>
+</div>
+
+<div class="code">
+  <h1 class="code-title"> CSS (with nested and variables)</h1>
+  <pre code="./../app/sass/base/form.scss"> Loading ... </pre>
+</div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  Suippets made with ❤ by Carlos Costa
+</footer>
+
+<script src="../dist/vendors.js"></script>
+<script src="../dist/bundle.js"></script>
+
+</body>
+</html>
+

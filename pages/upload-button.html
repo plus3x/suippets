@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
 	<title>Suippets</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="dist/css/style.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="../app/icons/style.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/github-gist.min.css">
@@ -21,7 +22,7 @@
   <main class="main">
     <section class="sidebar">
       <a class="logo" href="/suippets/">
-  <img src="app/img/logo.svg" alt="logo">
+  <img src="../app/img/logo.svg" alt="logo">
 </a>
 
 <nav class="sidebar-menu">
@@ -51,13 +52,47 @@
 
     <section class="center">
       <div class="container">
-        <div class="home-logo">
-  <img src="app/img/logo-big.svg" alt="logo-big">
+        <h1 class="page-title"> Upload Button </h1>
+
+        <div class="page-example">
+          <h4 class="page-section"> Example </h4>
+          <div class="form-up-button" upload-button>
+  <div class="form-up-button-wrapper">
+    <div class="form-up-button-select">
+      <svg class="icon icon-upload">
+        <use xlink:href="./../app/icons/symbol-defs.svg#icon-upload3"></use>
+      </svg>
+    </div>
+
+    <div class="form-up-button-counter" up-counter>
+      Nenhum arquivos selecionado
+    </div>
+
+    <input type="file" multiple >
+
+    <div class="form-up-button-reset" up-reset> Reset </div>
+  </div>
 </div>
 
-<p class="home-description">
-  Micro front-end snippets
-</p>
+        </div>
+
+        
+<h4 class="page-section"> Code </h4>
+
+<div class="code">
+  <h1 class="code-title"> HTML </h1>
+  <pre code="./../app/views/components/upload-button/example.html"> Loading ... </pre>
+</div>
+
+<div class="code">
+  <h1 class="code-title"> SASS </h1>
+  <pre code="./../app/sass/components/upload-button.scss"> Loading ... </pre>
+</div>
+
+<div class="code">
+  <h1 class="code-title"> Javascript (with jQuery slim) </h1>
+  <pre code="./../app/js/components/upload-button.js"> Loading ... </pre>
+</div>
 
       </div>
     </section>
@@ -67,8 +102,8 @@
   Suippets made with ❤ by Carlos Costa
 </footer>
 
-<script src="dist/vendors.js"></script>
-<script src="dist/bundle.js"></script>
+<script src="../dist/vendors.js"></script>
+<script src="../dist/bundle.js"></script>
 
 </body>
 </html>

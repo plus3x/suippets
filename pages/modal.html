@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Suippets</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../app/icons/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/github-gist.min.css">
+
+</head>
+<body>
+
+<header class="header"> 
+	<button class="btn open-menu"> Menu </button>
+</header>
+
+
+<main class="main">
+  <section class="sidebar">
+    <a class="logo" href="/suippets/">
+  <img src="../app/img/logo.svg" alt="logo">
+</a>
+
+<nav class="sidebar-menu">
+  <p class="sidebar-menu-title"> Javascript </p>
+  <a href="/suippets/pages/expander.html" class="sidebar-menu-item"> Expander </a>
+  <a href="/suippets/pages/modal.html" class="sidebar-menu-item"> Modal </a>
+  <a href="/suippets/pages/tabs.html" class="sidebar-menu-item"> Tabs </a>
+  <a href="/suippets/pages/dropdown.html" class="sidebar-menu-item"> Dropdown </a>
+  <a href="/suippets/pages/drawer.html" class="sidebar-menu-item"> Drawer </a>
+  <a href="/suippets/pages/alert.html" class="sidebar-menu-item"> Alert </a>
+  <a href="/suippets/pages/notification.html" class="sidebar-menu-item"> Notification </a>
+  <a href="/suippets/pages/upload-button.html" class="sidebar-menu-item"> Upload button </a>
+
+  <p class="sidebar-menu-title"> Pure CSS </p>
+  <a href="/suippets/pages/radio.html" class="sidebar-menu-item"> Radio </a>
+  <a href="/suippets/pages/checkbox.html" class="sidebar-menu-item"> Checkbox </a>
+  <a href="/suippets/pages/level-menu.html" class="sidebar-menu-item"> Level menu </a>
+  <a href="/suippets/pages/table.html" class="sidebar-menu-item"> Table </a>
+  <a href="/suippets/pages/switch.html" class="sidebar-menu-item"> Switch </a>
+  <a href="/suippets/pages/type.html" class="sidebar-menu-item"> Type </a>
+  <a href="/suippets/pages/form.html" class="sidebar-menu-item"> Form </a>
+  <a href="/suippets/pages/buttons.html" class="sidebar-menu-item"> Buttons </a>
+  <a href="/suippets/pages/tooltip.html" class="sidebar-menu-item"> Text Tooltip </a>
+  <a href="/suippets/pages/select-buttons.html" class="sidebar-menu-item"> Select buttons </a>
+</nav>
+  </section>
+
+  <section class="center">
+    <div class="container">
+      <h1 class="page-title"> Modal </h1>
+
+      <div class="page-example">
+        <h4 class="page-section"> Example </h4>
+        <button class="btn" modal-target="1"> Open modal 1 </button>
+<button class="btn" modal-target="2"> Open modal 2 </button>
+<button class="btn" modal-target="1"> Open modal 1 </button>
+
+<div modal-wrapper="1" class="modal-wrapper">
+  <div modal-content class="modal-content">
+    <h1> Modal 1 </h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Dolore repellat iste repudiandae! Assumenda, velit, 
+      accusantium. Quisquam molestiae, nemo assumenda. 
+      Consectetur ullam totam necessitatibus quaerat sapiente atque 
+      voluptatem amet eos eum.Lorem ipsum dolor sit amet, consectetur 
+    </p>
+    <button modal-close class="btn" type="button"> Close modal </button>
+  </div>
+</div>
+
+<div modal-wrapper="2" class="modal-wrapper">
+  <div modal-content class="modal-content">
+    <h1> Modal 2 </h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Dolore repellat iste repudiandae! Assumenda, velit, 
+      accusantium. Quisquam molestiae, nemo assumenda. 
+      Consectetur ullam totam necessitatibus quaerat sapiente atque 
+      voluptatem amet eos eum.Lorem ipsum dolor sit amet, consectetur 
+    </p>
+    <button modal-close class="btn" type="button"> Close modal </button>
+  </div>
+</div>
+      </div>
+
+      <h4 class="page-section"> Code </h4>
+
+<div class="code">
+  <h1 class="code-title"> HTML </h1>
+  <pre code="./../app/views/components/modal/example.html"> Loading ... </pre>
+</div>
+
+<div class="code">
+  <h1 class="code-title"> CSS </h1>
+  <pre code="./../app/sass/components/modal.scss"> Loading ... </pre>
+</div>
+
+<div class="code">
+  <h1 class="code-title"> Javascript (with jquery slim) </h1>
+  <pre code="./../app/js/components/modal.js"> Loading ... </pre>
+</div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  Suippets made with ❤ by Carlos Costa
+</footer>
+
+<script src="../dist/vendors.js"></script>
+<script src="../dist/bundle.js"></script>
+
+</body>
+</html>
+

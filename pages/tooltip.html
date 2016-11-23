@@ -5,7 +5,7 @@
 	<title>Suippets</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="dist/css/style.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../dist/css/style.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="../app/icons/style.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/github-gist.min.css">
@@ -18,10 +18,10 @@
 </header>
 
 
-  <main class="main">
-    <section class="sidebar">
-      <a class="logo" href="/suippets/">
-  <img src="app/img/logo.svg" alt="logo">
+<main class="main">
+  <section class="sidebar">
+    <a class="logo" href="/suippets/">
+  <img src="../app/img/logo.svg" alt="logo">
 </a>
 
 <nav class="sidebar-menu">
@@ -47,28 +47,42 @@
   <a href="/suippets/pages/tooltip.html" class="sidebar-menu-item"> Text Tooltip </a>
   <a href="/suippets/pages/select-buttons.html" class="sidebar-menu-item"> Select buttons </a>
 </nav>
-    </section>
+  </section>
 
-    <section class="center">
-      <div class="container">
-        <div class="home-logo">
-  <img src="app/img/logo-big.svg" alt="logo-big">
-</div>
+  <section class="center">
+    <div class="container">
+      <h1 class="page-title"> Text Tootip </h1>
 
-<p class="home-description">
-  Micro front-end snippets
+      <div class="page-example">
+        <h4 class="page-section"> Example </h4>
+        <p> 
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+  <a href="#" class="tooltip" tooltip-message="Hello!"> Tooltip (Hover me!) </a>
 </p>
 
       </div>
-    </section>
-  </main>
+      
+      <h4 class="page-section"> Code </h4>
+
+<div class="code">
+  <h1 class="code-title"> HTML </h1>
+  <pre code="./../app/views/components/tooltip/example.html"> Loading ... </pre>
+</div>
+
+<div class="code">
+  <h1 class="code-title"> CSS </h1>
+  <pre code="./../app/sass/components/tooltip.scss"> Loading ... </pre>
+</div>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
   Suippets made with ❤ by Carlos Costa
 </footer>
 
-<script src="dist/vendors.js"></script>
-<script src="dist/bundle.js"></script>
+<script src="../dist/vendors.js"></script>
+<script src="../dist/bundle.js"></script>
 
 </body>
 </html>

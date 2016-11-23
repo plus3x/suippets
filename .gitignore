@@ -1,9 +1,9 @@
 node_modules/
-dist/
-pages/
+#dist/
+#pages/
 coverage/
 *.browserify
 karma-*
-index.html
+#index.html
 .env
 reports/
