@@ -12,10 +12,6 @@ install:
 
 script:
   - npm run csscomb
-  - npm run lint
-  - npm run lint-fix
-  - npm run lint-test
-  - npm run lint-test-fix
   - karma start karma.conf.js --single-run
 
 after_script:
