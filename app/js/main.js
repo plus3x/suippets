@@ -3,7 +3,7 @@ import expander from './components/expander.js'
 import modal from './components/modal.js'
 import tabs from './components/tabs.js'
 import dropdown from './components/dropdown.js'
-import offcanvas from './components/offcanvas.js'
+import drawer from './components/drawer.js'
 import alertmsg from './components/alertmsg.js'
 import syntax from './syntax.js'
 import notification from './components/notification.js'
@@ -14,7 +14,7 @@ $(() => {
   dropdown.init()
   modal.init()
   tabs.init()
-  offcanvas.init()
+  drawer.init()
   alertmsg.init()
   notification.init()
   uploadButton.init()

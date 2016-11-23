@@ -29,8 +29,8 @@ const PAGES = {
     'entry': './app/views/components/checkbox/checkbox.html',
     'output': './pages'
   },
-  'offcanvas': {
-    'entry': './app/views/components/offcanvas/offcanvas.html',
+  'drawer': {
+    'entry': './app/views/components/drawer/drawer.html',
     'output': './pages'
   },
   'menu': {
