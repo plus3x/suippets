@@ -44,11 +44,6 @@ $ selenium-standalone start
 $ npm run e2e
 ```
 
-### Run CSScomb
-```
-$ npm run csscomb
-```
-
 ### Generate new component
 ```
 $ cd generator
